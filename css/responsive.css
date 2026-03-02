@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1399px) {}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (max-width: 991px) {
+    .row {
+        --bs-gutter-y: 1.5rem;
+    }
+
+    .section-padding {
+        padding-top: calc(var(--padding) * 0.5);
+        padding-bottom: calc(var(--padding) * 0.5);
+    }
+
+    /* .section-padding-sm {
+        padding-top: calc(var(--padding) * 0.5);
+        padding-bottom: calc(var(--padding) * 0.5);
+    } */
+
+    .section-padding-lg {
+        padding-top: calc(var(--padding) * 0.75);
+        padding-bottom: calc(var(--padding) * 0.75);
+    }
+
+    .top-padding {
+        padding-top: calc(var(--padding) * 0.5);
+    }
+
+    .bottom-padding {
+        padding-bottom: calc(var(--padding) * 0.5);
+    }
+
+    /* .bottom-padding-sm {
+        padding-bottom: calc(var(--padding) * 0.5);
+    } */
+}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 575px) {}

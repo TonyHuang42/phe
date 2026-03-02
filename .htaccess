@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www
+RewriteCond %{HTTP_HOST} ^www\.i-nova\.ca [NC]
+RewriteRule ^(.*)$ https://i-nova.ca/$1 [L,R=301]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  ExpiresDefault "access plus 6 months"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch ".*">
+    Header set Cache-Control "public, max-age=15552000"
+  </FilesMatch>
+</IfModule>

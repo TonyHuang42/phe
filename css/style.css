@@ -1,0 +1,67 @@
+:root {
+    --padding: 100px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h5 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+h6 {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+.section-padding {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.section-padding-sm {
+    padding-top: calc(var(--padding) * 0.5);
+    padding-bottom: calc(var(--padding) * 0.5);
+}
+
+.section-padding-lg {
+    padding-top: calc(var(--padding) * 1.5);
+    padding-bottom: calc(var(--padding) * 1.5);
+}
+
+.top-padding {
+    padding-top: var(--padding);
+}
+
+.bottom-padding {
+    padding-bottom: var(--padding);
+}
+
+.bottom-padding-sm {
+    padding-bottom: calc(var(--padding) * 0.5);
+}
+
+.logo {
+    height: 20px;
+}
