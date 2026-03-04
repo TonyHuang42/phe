@@ -55,6 +55,6 @@
         <div id="smooth-content">
             <div class="site-logo">
                 <a href="index.php">
-                    <img src="img/home/phe_logo.svg" alt="PHE Logo">
+                    <img src="img/home/phe_logo_white.svg" alt="PHE Logo">
                 </a>
             </div>
