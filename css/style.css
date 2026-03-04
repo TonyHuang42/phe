@@ -7,28 +7,47 @@
     outline: none;
 }
 
-h1 {
-    font-size: clamp(3rem, 6vw, 4rem);
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #282828;
 }
 
-h2 {
+h1 {
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-family: "Urbanist", sans-serif;
+}
+
+/* h2 {
     font-size: clamp(2.5rem, 5vw, 3rem);
+    font-family: "Urbanist", sans-serif;
+} */
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-family: "Urbanist", sans-serif;
+    font-weight: 300;
 }
 
 h3 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-family: "Urbanist", sans-serif;
 }
 
 h4 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-family: "Urbanist", sans-serif;
 }
 
 h5 {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-family: "Urbanist", sans-serif;
 }
 
-h6 {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+p {
+    font-size: 14px;
+    font-weight: 300;
 }
 
 a {
@@ -64,4 +83,292 @@ a {
 
 .logo {
     height: 20px;
+}
+
+/* Styled links with underline */
+.link-underline {
+    color: var(--bs-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px solid var(--bs-dark);
+    padding-bottom: 0.25rem;
+}
+
+.link-underline:hover {
+    color: var(--bs-dark);
+}
+
+/* Nav links (no underline) */
+.link-nav {
+    color: var(--bs-dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.link-nav:hover {
+    color: var(--bs-dark);
+}
+
+.long-section {
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.short-section {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Stats banner */
+.stats-banner {
+    background: url("../img/home/banner_img_1.jpg") center/cover no-repeat;
+    color: white;
+}
+
+.stats-number {
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.stats-label {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Hero section */
+.hero-banner {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.hero-bg-video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+} */
+
+.hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-headline {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.hero-tagline {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Split feature blocks */
+.split-feature-dark {
+    background-color: #282828;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-feature-light {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-feature {
+    width: 330px;
+}
+
+.split-feature-number {
+    font-size: 100px;
+    font-weight: 700;
+}
+
+/* Project cards */
+.card-project {
+    border: none;
+    border-radius: 0;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-project .card-img-top {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card-project:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-project .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+}
+
+.link-project {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.link-project:hover {
+    color: white;
+}
+
+/* Building applications section */
+.building-applications {
+    background: url("../img/home/banner_img_2.jpg") center/cover no-repeat;
+}
+
+/* Building applications overlay card */
+.app-card {
+    background-color: white;
+    padding: 50px 30px 30px;
+    border-radius: 10px;
+}
+
+.app-card-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.app-card-nav .btn-nav-swiper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #345d43;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.app-card-nav .btn-nav-swiper:hover {
+    background-color: #1e2c24;
+    color: white;
+}
+
+.app-card-nav .btn-nav-swiper.swiper-button-disabled {
+    background-color: #8fa096;
+    cursor: not-allowed;
+}
+
+.app-card-list {
+    margin-left: -14px;
+}
+
+.app-card-list li {
+    margin-bottom: 0.5rem;
+}
+
+.experience-heading {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #e3e0de;
+    color: #282828;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-nav-link {
+    color: #282828;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    color: #000;
+}
+
+.btn-footer-outline {
+    border: 1px solid #c2c0bb;
+    color: #282828;
+    background: transparent;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-footer-outline:hover {
+    background-color: #282828;
+    color: #fff;
+    border-color: #282828;
+}
+
+.footer-legal a, .footer-legal span {
+    font-size: 13px;
+    color: #7b7a77 !important;
+}
+
+/* Decorative background lines */
+.footer-bg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }

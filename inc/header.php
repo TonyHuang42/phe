@@ -21,46 +21,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/logo/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/logo/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md" data-bs-theme="dark">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="index.php">
-                    <img src="" alt="logo" class="logo">
-                </a>
-
-                <!-- Toggle Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <i class="fas fa-bars text-white"></i>
-                </button>
-
-                <!-- Navbar Content -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-start w-100 gap-0 column-gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">
-                                Home
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">
-                                About
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <header>
+                
+            </header>
