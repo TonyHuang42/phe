@@ -29,3 +29,41 @@ const buildingAppSwiper = new Swiper('.building-applications-swiper', {
   },
 });
 
+// Floating Header Navigation Hover Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link-item');
+  const navDetails = document.querySelectorAll('.nav-detail-text');
+  const headerInner = document.querySelector('.floating-header-inner');
+
+  if (navLinks.length > 0 && navDetails.length > 0 && headerInner) {
+    // Handle hovering over individual links
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        const targetId = link.getAttribute('data-target');
+        
+        // Hide all details
+        navDetails.forEach(detail => {
+          detail.classList.remove('active-detail');
+        });
+        
+        // Show the targeted detail
+        const targetDetail = document.getElementById(targetId);
+        if (targetDetail) {
+          targetDetail.classList.add('active-detail');
+        }
+      });
+    });
+
+    // Reset to "Build Smarter" when mouse leaves the entire header area
+    headerInner.addEventListener('mouseleave', () => {
+      navDetails.forEach(detail => {
+        detail.classList.remove('active-detail');
+      });
+      const defaultDetail = document.getElementById('detail-build');
+      if (defaultDetail) {
+        defaultDetail.classList.add('active-detail');
+      }
+    });
+  }
+});
+

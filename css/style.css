@@ -27,7 +27,8 @@ h1 {
 h2 {
     font-size: clamp(2rem, 4vw, 2.5rem);
     font-family: "Urbanist", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -81,8 +82,108 @@ a {
     padding-bottom: calc(var(--padding) * 0.5);
 }
 
-.logo {
-    height: 20px;
+/* Logo */
+.site-logo {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 1000;
+}
+
+.site-logo img {
+    height: 45px;
+    width: auto;
+}
+
+/* Floating Header */
+.floating-header {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.floating-header-inner {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 5px 5px 5px 36px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    width: 460px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.floating-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.floating-nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.floating-nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.floating-nav-links a:hover,
+.floating-nav-links a.active {
+    color: #000000;
+}
+
+.btn-contact {
+    background-color: #384e41;
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #2a3a31;
+    color: #ffffff;
+}
+
+.floating-nav-details {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.floating-nav-details p {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.floating-nav-details p.active-detail {
+    opacity: 1;
+    position: relative;
+}
+
+.floating-header-inner:hover .floating-nav-details {
+    max-height: 100px;
+    opacity: 1;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /* Styled links with underline */
@@ -99,7 +200,7 @@ a {
     color: var(--bs-dark);
 }
 
-/* Nav links (no underline) */
+/* Nav links */
 .link-nav {
     color: var(--bs-dark);
     text-decoration: none;
@@ -183,10 +284,8 @@ a {
 }
 
 .hero-headline {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: 120px;
     font-weight: 700;
-    letter-spacing: -2px;
-    line-height: 0.9;
 }
 
 .hero-tagline {

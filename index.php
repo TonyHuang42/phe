@@ -15,11 +15,9 @@ include 'inc/header.php';
             <!-- <div class="hero-bg-overlay"></div> -->
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 text-white">
-                    <h1 class="hero-headline mb-3">FAST.<br>AFFORDABLE.<br>SUSTAINABLE.</h1>
-                    <p class="hero-tagline">Leader in quality eco-friendly construction materials and building systems.</p>
-                </div>
+            <div class="text-white">
+                <h1 class="hero-headline mb-3">COST-EFFECTIVE.<br>TIME-EFFICIENT.<br>ECO-FRIENDLY.</h1>
+                <p class="hero-tagline">Innovative building systems designed to address global housing challenges.</p>
             </div>
         </div>
     </section>
@@ -32,12 +30,12 @@ include 'inc/header.php';
                     <div class="col-lg-7">
                         <img src="https://placehold.co/600x400/eee/999?text=Isometric+Building+Graphic" alt="Isometric Building" class="img-fluid">
                     </div>
-                    <div class="col-lg-5">
-                        <h2 class="mb-4">A better, faster way<br>to build homes</h2>
-                        <p class="mb-4">By pre-producing our home kits, we drastically reduce construction time, energy, and materials. We maximize efficiency, reduce waste and keep costs low for you.</p>
+                    <div class="col-lg-4">
+                        <h2 class="mb-4">Innovative Modular Construction Solutions.</h2>
+                        <p class="mb-4">PHE designs and manufactures high-performance composite construction materials and modular building systems that improve efficiency, durability, and scalability in modern housing.</p>
                         <div class="d-flex gap-4">
-                            <a href="#" class="link-underline">LEARN MORE</a>
-                            <a href="#" class="link-underline">HOW IT WORKS</a>
+                            <a href="#" class="link-underline">Explore Our Products</a>
+                            <a href="#" class="link-underline">More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -69,11 +67,11 @@ include 'inc/header.php';
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 px-lg-5">
-                        <h2 class="mb-0">We don't just build homes, we build responsibly.</h2>
+                        <h2 class="mb-0">Engineered for Cost Effectiveness.</h2>
                     </div>
 
                     <div class="col-lg-6">
-                        <p>Our building systems are modern, technologically advanced, and quality controlled under strict standards to ensure the highest comfort of living space.</p>
+                        <p>PHE’s modular construction system minimizes site work and accelerates assembly, delivering measurable savings in both time and labour.</p>
                         <a href="#" class="link-underline">LEARN MORE</a>
                     </div>
                 </div>
@@ -86,8 +84,8 @@ include 'inc/header.php';
             <div class="row g-0 align-items-stretch short-section">
                 <div class="col-lg-7 split-feature-dark">
                     <div class="split-feature">
-                        <div class="split-feature-number mb-4">95%</div>
-                        <p>Whether you're looking to build a residential home, industrial warehouse, or storage unit, our kits are built to last. They are made from the highest quality materials, designed to withstand the elements and stand the test of time.</p>
+                        <div class="split-feature-number mb-4">24 Hour</div>
+                        <p>1 day delivers structural completion of a two-bedroom single-unit kit home by 8 trained installers, enabled by pre-designed components, engineered composite materials, and factory-prepared connection slots that allow rapid, precise on-site installation.</p>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -99,8 +97,8 @@ include 'inc/header.php';
             <div class="row g-0 align-items-stretch short-section">
                 <div class="col-lg-7 split-feature-light">
                     <div class="split-feature">
-                        <div class="split-feature-number mb-4">1 DAY</div>
-                        <p>PHE's acoustic insulation systems for modular building panels offer excellent fire protection, are long-lasting, and are highly cost-effective. Our special preparation of our products ensures a quick installation.</p>
+                        <div class="split-feature-number mb-4">90% Recycled Content</div>
+                        <p>forms the foundation of our proprietary composite panels, engineered in-house for wall and roofing applications in our kit homes, ensuring structural integrity, durability, and reliable resistance in demanding conditions.</p>
                     </div>
                 </div>
                 <div class="col-lg-5">

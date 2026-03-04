@@ -34,8 +34,27 @@
 </head>
 
 <body>
+    <header class="floating-header">
+        <div class="floating-header-inner">
+            <div class="floating-nav-top">
+                <nav class="floating-nav-links">
+                    <a href="#" class="nav-link-item" data-target="detail-build">Build Smarter</a>
+                    <a href="#" class="nav-link-item" data-target="detail-sustain">Sustainability</a>
+                    <a href="#" class="nav-link-item" data-target="detail-about">About</a>
+                </nav>
+                <a href="#" class="btn-contact">Contact</a>
+            </div>
+            <div class="floating-nav-details">
+                <p id="detail-build" class="nav-detail-text">By pre-constructing our homes<br>offsite, we save valuable resources</p>
+                <p id="detail-sustain" class="nav-detail-text">Our sustainable approach minimizes<br>environmental impact and waste</p>
+                <p id="detail-about" class="nav-detail-text">Learn more about our team and<br>our vision for the future of housing</p>
+            </div>
+        </div>
+    </header>
     <div id="smooth-wrapper">
         <div id="smooth-content">
-            <header>
-                
-            </header>
+            <div class="site-logo">
+                <a href="index.php">
+                    <img src="img/home/phe_logo.svg" alt="PHE Logo">
+                </a>
+            </div>
