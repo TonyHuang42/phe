@@ -8,17 +8,20 @@ include 'inc/header.php';
 <main>
     <!-- Hero Section -->
     <section class="hero hero-banner">
+        <svg class="svg-defs">
+            <defs>
+                <clipPath id="venetian-blinds" clipPathUnits="objectBoundingBox"></clipPath>
+            </defs>
+        </svg>
         <!-- <div class="hero-bg-video-wrap">
             <video class="hero-bg-video" autoplay muted loop playsinline>
                 <source src="https://www.kingshaus.co/_nuxt/video/5ef09e.mp4" type="video/mp4">
             </video>
         </div> -->
         <div class="container">
-            <div class="text-white">
-                <h1 class="hero-headline">COST-EFFECTIVE.<br>TIME-EFFICIENT.<br>ECO-FRIENDLY.</h1>
-                <p class="hero-tagline">Innovative building systems designed to address global housing challenges.</p>
-                <!-- <a href="#" class="text-white"><i class="fa-solid fa-arrow-down fa-xl"></i></a> -->
-            </div>
+            <h1 class="hero-headline" style="visibility: hidden;">COST-EFFECTIVE.<br>TIME-EFFICIENT.<br>ECO-FRIENDLY.</h1>
+            <p class="hero-tagline">Innovative building systems designed to address global housing challenges.</p>
+            <!-- <a href="#" class="text-white"><i class="fa-solid fa-arrow-down fa-xl"></i></a> -->
         </div>
     </section>
 
@@ -28,7 +31,12 @@ include 'inc/header.php';
             <div class="container">
                 <div class="row align-items-center gx-lg-5">
                     <div class="col-lg-7">
-                        <img src="https://placehold.co/600x400/eee/999?text=Isometric+Building+Graphic" alt="Isometric Building" class="img-fluid">
+                        <div class="animation-container">
+                            <img src="img/home/phe_svg_panel_1.svg" class="box box-1" alt="Image 1">
+                            <img src="img/home/phe_svg_panel_2.svg" class="box box-2" alt="Image 2">
+                            <img src="img/home/phe_svg_window.svg" class="box box-3" alt="Image 3">
+                            <img src="img/home/phe_svg_panel_3.svg" class="box box-4" alt="Image 4">
+                        </div>
                     </div>
                     <div class="col-lg-4">
                         <h2 class="mb-4">Innovative Modular Construction Solutions.</h2>
@@ -43,7 +51,8 @@ include 'inc/header.php';
         </section>
 
         <!-- Stats Banner -->
-        <section class="stats-banner long-section">
+        <section class="stats-banner long-section position-relative">
+            <h2 class="stats-banner-title">Our Impact</h2>
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-4">

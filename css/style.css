@@ -82,6 +82,10 @@ a {
     padding-bottom: calc(var(--padding) * 0.5);
 }
 
+.top-padding-sm {
+    padding-top: calc(var(--padding) * 0.5);
+}
+
 /* Logo */
 .site-logo {
     position: absolute;
@@ -230,6 +234,15 @@ a {
     color: white;
 }
 
+.stats-banner-title {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+}
+
 .stats-number {
     font-size: 150px;
     font-weight: 300;
@@ -246,10 +259,18 @@ a {
 .hero-banner {
     position: relative;
     z-index: 0;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     min-height: 100vh;
     background: url("../img/home/banner_home.jpg") center/cover no-repeat;
+    clip-path: url(#venetian-blinds);
+    -webkit-clip-path: url(#venetian-blinds);
+}
+
+.svg-defs {
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
 .content-wrapper {
@@ -258,7 +279,7 @@ a {
     background-color: #fff;
 }
 
-.hero-bg-video-wrap {
+/* .hero-bg-video-wrap {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -270,7 +291,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 /* .hero-bg-overlay {
     position: absolute;
@@ -280,18 +301,23 @@ a {
 } */
 
 .hero-banner .container {
-    position: relative;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 .hero-headline {
     font-size: 120px;
-    font-weight: 700;
+    font-weight: 500;
+    color: white;
 }
 
 .hero-tagline {
     font-weight: 600;
     text-transform: uppercase;
+    color: white;
 }
 
 /* Split feature blocks */
@@ -471,7 +497,8 @@ a {
     border-color: #282828;
 }
 
-.footer-legal a, .footer-legal span {
+.footer-legal a,
+.footer-legal span {
     font-size: 13px;
     color: #7b7a77 !important;
 }
@@ -485,4 +512,45 @@ a {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+}
+
+/* Animation Container for Index */
+.animation-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    object-fit: cover; */
+}
+
+.box-1 {
+    transform: translate(-4%, -0.6%);
+}
+
+.box-2 {
+    transform: translate(-2.4%, 1%);
+}
+
+.box-3 {
+    width: 45%;
+    transform: translate(0, 0);
+}
+
+.box-4 {
+    transform: translate(2.4%, 6%);
 }
