@@ -515,14 +515,14 @@ a {
 }
 
 /* Animation Container for Index */
-.animation-container {
+.modular-animation-wrapper {
     position: relative;
     width: 100%;
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .box {

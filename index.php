@@ -29,9 +29,9 @@ include 'inc/header.php';
         <!-- Better, Faster Way Section -->
         <section class="section-padding long-section">
             <div class="container">
-                <div class="row align-items-center gx-lg-5">
+                <div class="row align-items-center gx-lg-5 modular-row">
                     <div class="col-lg-7">
-                        <div class="animation-container">
+                        <div class="modular-animation-wrapper" style="position: relative; z-index: 2;">
                             <img src="img/home/phe_svg_panel_1.svg" class="box box-1" alt="Image 1">
                             <img src="img/home/phe_svg_panel_2.svg" class="box box-2" alt="Image 2">
                             <img src="img/home/phe_svg_window.svg" class="box box-3" alt="Image 3">
@@ -39,11 +39,13 @@ include 'inc/header.php';
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <h2 class="mb-4">Innovative Modular Construction Solutions.</h2>
-                        <p class="mb-4">PHE designs and manufactures high-performance composite construction materials and modular building systems that improve efficiency, durability, and scalability in modern housing.</p>
-                        <div class="d-flex gap-4">
-                            <a href="#" class="link-underline">Explore Our Products</a>
-                            <a href="#" class="link-underline">More About Us</a>
+                        <div class="modular-content-wrapper" style="position: relative; z-index: 1;">
+                            <h2 class="mb-4">Innovative Modular Construction Solutions.</h2>
+                            <p class="mb-4">PHE designs and manufactures high-performance composite construction materials and modular building systems that improve efficiency, durability, and scalability in modern housing.</p>
+                            <div class="d-flex gap-4">
+                                <a href="#" class="link-underline">Explore Our Products</a>
+                                <a href="#" class="link-underline">More About Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,7 +54,7 @@ include 'inc/header.php';
 
         <!-- Stats Banner -->
         <section class="stats-banner long-section position-relative">
-            <h2 class="stats-banner-title">Our Impact</h2>
+            <!-- <h2 class="stats-banner-title">Our Impact</h2> -->
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-4">
