@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const numberOfBlinds = 8;
     const blindHeight = 1 / numberOfBlinds;
+    // Tiny overlap to prevent Safari sub-pixel gaps (white lines between blinds)
+    const overlap = 0.002;
+    const blindY = (i) => Math.max(0, i * blindHeight - overlap / 2);
+    const blindHeightOverlap = blindHeight + overlap;
 
     // Step 1: Dynamically generate the SVG <rect> blind elements
     for (let i = 0; i < numberOfBlinds; i++) {
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animate blinds open, then trigger SplitText animation
     gsap.to(".blind", {
         duration: (i) => 0.4 + i * 0.05,
-        attr: { y: (i) => i * blindHeight, height: blindHeight },
+        attr: { y: (i) => blindY(i), height: blindHeightOverlap },
         stagger: { each: 0.1, from: "end" },
         ease: "power1.in",
         onComplete: () => {
@@ -92,6 +96,22 @@ const buildingAppSwiper = new Swiper(".building-applications-swiper", {
         nextEl: ".swiper-next",
         prevEl: ".swiper-prev",
     },
+    on: {
+        slideChange: function () {
+            const activeSlide = this.slides[this.activeIndex];
+            const newBg = activeSlide.getAttribute("data-bg");
+            const bgImage = document.getElementById("building-app-bg");
+            
+            if (bgImage && newBg) {
+                // Fade out, change image, fade in
+                bgImage.style.opacity = 0.5;
+                setTimeout(() => {
+                    bgImage.src = newBg;
+                    bgImage.style.opacity = 1;
+                }, 150);
+            }
+        }
+    }
 });
 
 // Floating Header Navigation Hover Logic
@@ -184,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".modular-animation-wrapper",
-                start: "top 80%",
+                start: "top 70%",
                 end: "top 20%",
                 scrub: 1,
             },

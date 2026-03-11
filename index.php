@@ -120,14 +120,15 @@ include 'inc/header.php';
 
         <!-- Building Applications -->
         <section class="position-relative building-applications long-section section-padding">
-            <div class="container mt-auto">
+            <img id="building-app-bg" src="img/home/banner_img_2.jpg" alt="Building Applications Background" class="building-app-bg-img">
+            <div class="container mt-auto position-relative" style="z-index: 1;">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="app-card shadow-sm">
                             <div class="swiper building-applications-swiper">
                                 <div class="swiper-wrapper">
                                     <!-- Slide 1 -->
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide" data-bg="img/home/banner_img_2.jpg">
                                         <div class="row">
                                             <div class="col-lg-5">
                                                 <h2 class="app-card-title">Kit Home</h2>
@@ -146,7 +147,7 @@ include 'inc/header.php';
                                         </div>
                                     </div>
                                     <!-- Slide 2 Placeholder -->
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide" data-bg="img/home/banner_img_2_2.jpg">
                                         <div class="row">
                                             <div class="col-lg-5">
                                                 <h2 class="app-card-title">Modular Building</h2>
@@ -194,7 +195,7 @@ include 'inc/header.php';
                         <div class="card card-project">
                             <img src="img/home/img_product_1.jpg" class="card-img-top" alt="H-Series">
                             <div class="card-body">
-                                <h3>Project-1</h3>
+                                <h3>Goonellabah Duplex</h3>
                                 <p>Our flagship line built with an engineered steel frame, weather resistant steel siding and large floor to ceiling windows.</p>
                                 <a href="#" class="link-project">LEARN MORE <i class="fas fa-arrow-right"></i></a>
                             </div>
@@ -234,7 +235,7 @@ include 'inc/header.php';
                 </div>
                 <div class="row">
                     <div class="col-lg-3 offset-lg-6">
-                        <p class="small mb-4">Through innovative construction systems and global project experience, PHE is committed to advancing housing solutions that combine structural integrity with human-centered design.</p>
+                        <p class="mb-4">Through innovative construction systems and global project experience, PHE is committed to advancing housing solutions that combine structural integrity with human-centered design.</p>
                         <a href="#" class="link-underline">ABOUT US</a>
                     </div>
                 </div>

@@ -1,13 +1,11 @@
-                <footer class="site-footer section-padding">
+                <footer class="site-footer top-padding bottom-padding-sm">
                     <div class="container position-relative z-1">
-                        <div class="row mb-5">
-                            <div class="col-12">
-                                <h2 class="experience-heading">BUILD<br>SMARTER</h2>
-                            </div>
+                        <div class="row">
+                            <h2 class="experience-heading">BUILD SMARTER</h2>
                         </div>
 
-                        <div class="row align-items-end">
-                            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                        <div class="row">
+                            <div class="col-lg-3">
                                 <a href="index.php" class="d-inline-block">
                                     <!-- Placeholder for Kingshaus logo or use PHE logo -->
                                     <img src="img/home/phe_logo.svg" alt="PHE Logo" style="height: 40px;" class="img-fluid">

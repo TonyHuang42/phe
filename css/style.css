@@ -95,7 +95,7 @@ a {
 }
 
 .site-logo img {
-    height: 45px;
+    height: 60px;
     width: auto;
 }
 
@@ -144,7 +144,7 @@ a {
 }
 
 .btn-contact {
-    background-color: #384e41;
+    background-color: #9d1f20;
     color: #ffffff;
     padding: 8px 24px;
     border-radius: 5px;
@@ -155,7 +155,7 @@ a {
 }
 
 .btn-contact:hover {
-    background-color: #2a3a31;
+    background-color: #7a1819;
     color: #ffffff;
 }
 
@@ -244,13 +244,13 @@ a {
 }
 
 .stats-number {
-    font-size: 150px;
+    font-size: 120px;
     font-weight: 300;
     line-height: 1.2;
 }
 
 .stats-label {
-    font-size: 40px;
+    font-size: 32px;
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -311,6 +311,7 @@ a {
 .hero-headline {
     font-size: 120px;
     font-weight: 500;
+    line-height: 1;
     color: white;
 }
 
@@ -405,7 +406,18 @@ a {
 
 /* Building applications section */
 .building-applications {
-    background: url("../img/home/banner_img_2.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.building-app-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Building applications overlay card */
@@ -428,7 +440,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #345d43;
+    background-color: #9d1f20;
     color: white;
     border: none;
     border-radius: 6px;
@@ -436,12 +448,12 @@ a {
 }
 
 .app-card-nav .btn-nav-swiper:hover {
-    background-color: #1e2c24;
+    background-color: #7a1819;
     color: white;
 }
 
 .app-card-nav .btn-nav-swiper.swiper-button-disabled {
-    background-color: #8fa096;
+    background-color: #c4a5a6;
     cursor: not-allowed;
 }
 
