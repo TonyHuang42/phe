@@ -1,8 +1,8 @@
                 <footer class="site-footer top-padding bottom-padding-sm">
                     <div class="container position-relative z-1">
-                        <div class="row">
+                        <!-- <div class="row">
                             <h2 class="experience-heading">BUILD SMARTER</h2>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <div class="col-lg-3">

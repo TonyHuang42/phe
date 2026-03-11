@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <header class="floating-header">
+    <header class="floating-header bs-right-padding">
         <div class="floating-header-inner">
             <div class="floating-nav-top">
                 <nav class="floating-nav-links">
@@ -53,7 +53,7 @@
     </header>
     <div id="smooth-wrapper">
         <div id="smooth-content">
-            <div class="site-logo">
+            <div class="site-logo bs-left-padding">
                 <a href="index.php">
                     <img src="img/home/phe_logo_white.svg" alt="PHE Logo">
                 </a>

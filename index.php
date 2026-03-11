@@ -19,9 +19,9 @@ include 'inc/header.php';
             </video>
         </div> -->
         <div class="container">
-            <h1 class="hero-headline" style="visibility: hidden;">COST-EFFECTIVE.<br>TIME-EFFICIENT.<br>ECO-FRIENDLY.</h1>
-            <p class="hero-tagline">Innovative building systems designed to address global housing challenges.</p>
-            <!-- <a href="#" class="text-white"><i class="fa-solid fa-arrow-down fa-xl"></i></a> -->
+            <h1 class="hero-headline" style="visibility: hidden;">Smarter Building.<br> Greener Future.</h1>
+            <p class="hero-tagline my-5">Innovative building systems designed to address global housing challenges.</p>
+            <a href="#" class="text-white"><i class="fa-solid fa-arrow-down fa-xl"></i></a>
         </div>
     </section>
 
@@ -38,10 +38,10 @@ include 'inc/header.php';
                             <img src="img/home/phe_svg_panel_3.svg" class="box box-4" alt="Image 4">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         <div class="modular-content-wrapper" style="position: relative; z-index: 1;">
-                            <h2 class="mb-4">Innovative Modular Construction Solutions.</h2>
-                            <p class="mb-4">PHE designs and manufactures high-performance composite construction materials and modular building systems that improve efficiency, durability, and scalability in modern housing.</p>
+                            <h2 class="mb-5">Innovative Modular Construction Solutions.</h2>
+                            <p class="mb-4 pe-5">PHE designs and manufactures high-performance composite construction materials and modular building systems that improve efficiency, durability, and scalability in modern housing.</p>
                             <div class="d-flex gap-4">
                                 <a href="#" class="link-underline">Explore Our Products</a>
                                 <a href="#" class="link-underline">More About Us</a>
@@ -57,7 +57,7 @@ include 'inc/header.php';
             <!-- <h2 class="stats-banner-title">Our Impact</h2> -->
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="stats-number">15</div>
                         <div class="stats-label">Years</div>
                     </div>
@@ -68,6 +68,9 @@ include 'inc/header.php';
                     <div class="col-lg-4">
                         <div class="stats-number">200+</div>
                         <div class="stats-label">Projects</div>
+                    </div> -->
+                    <div class="col-lg-9 mx-auto">
+                        <div class="stats-number">Building on 15 years experience</div>
                     </div>
                 </div>
             </div>
@@ -77,7 +80,7 @@ include 'inc/header.php';
         <section class="section-padding short-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 px-lg-5">
+                    <div class="col-lg-5 offset-lg-1">
                         <h2 class="mb-0">Engineered for<br> Cost Effectiveness.</h2>
                     </div>
 
@@ -184,7 +187,7 @@ include 'inc/header.php';
         </section>
 
         <!-- Project Highlights -->
-        <section class="section-padding">
+        <!-- <section class="section-padding">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-end mb-5">
                     <h2 class="mb-0">Project Highlights</h2>
@@ -223,10 +226,52 @@ include 'inc/header.php';
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <!-- Renewable Resource Section -->
+        <section class="renewable-resource-section section-padding-lg">
+            <div class="container">
+                <div class="text-end">
+                    <h1 class="renewable-resource-title">RENEWABLE<br> RESOURCE</h1>
+                    <p class="renewable-resource-subtitle">Our Swedish pinewood is a renewable resource and fully certified<br> by the Forest Stewardship Council.</p>
+                </div>
+                <div class="row g-0">
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_1.jpg" class="renewable-resource-img" alt="Strong construction">
+                            <span class="renewable-resource-label">STRONG</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/banner_img_2.jpg" class="renewable-resource-img" alt="Versatile design">
+                            <span class="renewable-resource-label">VERSATILE</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_2.jpg" class="renewable-resource-img" alt="Safe building">
+                            <span class="renewable-resource-label">SAFE</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_product_1.jpg" class="renewable-resource-img" alt="Energy efficient">
+                            <span class="renewable-resource-label">ENERGY-EFFICIENT</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_product_2.jpg" class="renewable-resource-img" alt="Sustainable materials">
+                            <span class="renewable-resource-label">SUSTAINABLE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Experience Section -->
-        <section class="bottom-padding">
+        <section class="section-padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">

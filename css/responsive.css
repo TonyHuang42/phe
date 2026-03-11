@@ -48,8 +48,66 @@
     }
 }
 
+@media (min-width: 576px) {
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 540px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 540px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+}
+
+@media (min-width: 768px) {
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 720px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 720px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+}
+
+@media (min-width: 992px) {
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 960px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 960px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+}
+
+@media (min-width: 1200px) {
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 1140px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 1140px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+}
+
+@media (min-width: 1400px) {
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 1320px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 1320px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+}
+
 @media (min-width: 1600px) {
     .container {
         max-width: 1500px;
+    }
+
+    .bs-left-padding {
+        padding-left: calc((100vw - min(100%, 1500px)) / 2 + var(--bs-gutter-x, 0.75rem));
+    }
+
+    .bs-right-padding {
+        padding-right: calc((100vw - min(100%, 1500px)) / 2 + var(--bs-gutter-x, 0.75rem));
     }
 }
