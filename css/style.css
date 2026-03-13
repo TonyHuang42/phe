@@ -237,9 +237,46 @@ a {
 }
 
 /* Stats banner */
+.stats-banner-outer {
+    overflow: hidden;
+}
+
+.stats-banner-slogan-backing {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.stats-number--backing {
+    color: #000;
+}
+
 .stats-banner {
-    background: url("../img/home/banner_img_1.jpg") center/cover no-repeat;
+    position: relative;
+    z-index: 1;
     color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.stats-banner-bg {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 0;
+    background: url("../img/home/banner_img_1.jpg") center/cover no-repeat;
+    will-change: transform;
+}
+
+.stats-banner > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .stats-banner-title {
@@ -563,6 +600,13 @@ a {
     object-fit: cover; */
 }
 
+.modular-animation-wrapper,
+.modular-content-wrapper,
+.box {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
 .box-1 {
     transform: translate(-4%, -0.6%);
 }
@@ -587,14 +631,14 @@ a {
 }
 
 .renewable-resource-title {
-    padding-right: 100px;
+    /* padding-right: 100px; */
     padding-bottom: 30px;
 }
 
 .renewable-resource-subtitle {
     color: #ffffff99;
-    padding-right: 200px;
-    padding-bottom: 70px;
+    /* padding-right: 200px; */
+    padding-bottom: 50px;
 }
 
 .renewable-resource-card {

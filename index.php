@@ -53,27 +53,26 @@ include 'inc/header.php';
         </section>
 
         <!-- Stats Banner -->
-        <section class="stats-banner long-section position-relative">
-            <!-- <h2 class="stats-banner-title">Our Impact</h2> -->
-            <div class="container">
-                <div class="row text-center">
-                    <!-- <div class="col-lg-4">
-                        <div class="stats-number">15</div>
-                        <div class="stats-label">Years</div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="stats-number">22</div>
-                        <div class="stats-label">Countries</div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="stats-number">200+</div>
-                        <div class="stats-label">Projects</div>
-                    </div> -->
-                    <div class="col-lg-9 mx-auto">
-                        <div class="stats-number">Building on 15 years experience</div>
+        <section class="stats-banner-outer long-section position-relative">
+            <div class="stats-banner-slogan-backing" aria-hidden="true">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-9 mx-auto">
+                            <div class="stats-number stats-number--backing">Building on 15 years experience</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <section class="stats-banner long-section position-relative">
+                <div class="stats-banner-bg" aria-hidden="true"></div>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-9 mx-auto">
+                            <div class="stats-number">Building on 15 years experience</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!-- Responsibility Section -->
@@ -117,6 +116,48 @@ include 'inc/header.php';
                 </div>
                 <div class="col-lg-5">
                     <img src="img/home/img_2.jpg" alt="Building" class="split-feature-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Renewable Resource Section -->
+        <section class="renewable-resource-section section-padding-lg">
+            <div class="container">
+                <div class="text-start">
+                    <h1 class="renewable-resource-title">RENEWABLE RESOURCE</h1>
+                    <p class="renewable-resource-subtitle">Our Swedish pinewood is a renewable resource and fully certified by the Forest Stewardship Council.</p>
+                </div>
+                <div class="row g-0">
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_1.jpg" class="renewable-resource-img" alt="Strong construction">
+                            <span class="renewable-resource-label">STRONG</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/banner_img_2.jpg" class="renewable-resource-img" alt="Versatile design">
+                            <span class="renewable-resource-label">VERSATILE</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_2.jpg" class="renewable-resource-img" alt="Safe building">
+                            <span class="renewable-resource-label">SAFE</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_product_1.jpg" class="renewable-resource-img" alt="Energy efficient">
+                            <span class="renewable-resource-label">ENERGY-EFFICIENT</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="renewable-resource-card position-relative">
+                            <img src="img/home/img_product_2.jpg" class="renewable-resource-img" alt="Sustainable materials">
+                            <span class="renewable-resource-label">SUSTAINABLE</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -227,48 +268,6 @@ include 'inc/header.php';
                 </div>
             </div>
         </section> -->
-
-        <!-- Renewable Resource Section -->
-        <section class="renewable-resource-section section-padding-lg">
-            <div class="container">
-                <div class="text-end">
-                    <h1 class="renewable-resource-title">RENEWABLE<br> RESOURCE</h1>
-                    <p class="renewable-resource-subtitle">Our Swedish pinewood is a renewable resource and fully certified<br> by the Forest Stewardship Council.</p>
-                </div>
-                <div class="row g-0">
-                    <div class="col">
-                        <div class="renewable-resource-card position-relative">
-                            <img src="img/home/img_1.jpg" class="renewable-resource-img" alt="Strong construction">
-                            <span class="renewable-resource-label">STRONG</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="renewable-resource-card position-relative">
-                            <img src="img/home/banner_img_2.jpg" class="renewable-resource-img" alt="Versatile design">
-                            <span class="renewable-resource-label">VERSATILE</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="renewable-resource-card position-relative">
-                            <img src="img/home/img_2.jpg" class="renewable-resource-img" alt="Safe building">
-                            <span class="renewable-resource-label">SAFE</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="renewable-resource-card position-relative">
-                            <img src="img/home/img_product_1.jpg" class="renewable-resource-img" alt="Energy efficient">
-                            <span class="renewable-resource-label">ENERGY-EFFICIENT</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="renewable-resource-card position-relative">
-                            <img src="img/home/img_product_2.jpg" class="renewable-resource-img" alt="Sustainable materials">
-                            <span class="renewable-resource-label">SUSTAINABLE</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Experience Section -->
         <section class="section-padding-lg">
