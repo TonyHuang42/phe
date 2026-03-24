@@ -7,27 +7,27 @@ body {
 }
 
 h1 {
-    font-size: clamp(3rem, 6vw, 4rem);
+    font-size: clamp(64px, 10vw, 128px);
 }
 
 h2 {
-    font-size: clamp(2.75rem, calc(5vw + 1rem), 5.25rem);
+    font-size: clamp(44px, calc(5vw + 1rem), 84px);
 }
 
 h3 {
-    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-size: clamp(36px, 5vw, 56px);
 }
 
 h4 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(24px, 4vw, 42px);
 }
 
 h5 {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-size: clamp(20px, 3vw, 32px);
 }
 
 h6 {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-size: clamp(16px, 2vw, 20px);
 }
 
 a {
@@ -75,14 +75,9 @@ a {
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
-    text-decoration: none;
     vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
     color: #fff;
     background-color: #000;
-    border: 1px solid #000;
-    border-radius: 0;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
@@ -97,7 +92,6 @@ a {
 }
 
 .navbar-nav .nav-link {
-    font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 300;
 }
@@ -114,7 +108,6 @@ a {
 }
 
 .navbar-nav .dropdown-item {
-    font-size: 0.85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -159,6 +152,12 @@ a {
     padding-right: 1rem;
     max-width: 800px;
     width: 100%;
+}
+
+.hero-section-title {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 24px;
 }
 
 .home-slogan-section {
@@ -221,12 +220,12 @@ a {
 
 /* Models preview section */
 .models-preview-section {
-    background-color: #ffffff;
+    background-color: #282828;
 }
 
-.model-preview-card {
+/* .model-preview-card {
     color: #232323;
-}
+} */
 
 .model-preview-image-wrap {
     position: relative;
@@ -248,28 +247,134 @@ a {
     transform: scale(1.03);
 }
 
-.model-preview-title {
-    position: absolute;
-    left: 1rem;
-    bottom: 0.75rem;
-    margin: 0;
-    color: #ffffff;
-}
-
 .model-preview-content {
-    padding-top: 1rem;
-}
-
-.meta-divider {
-    display: inline-block;
-    margin: 0 12px;
-}
-
-.text-grey {
-    color: #848588;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 32px 32px;
+    color: #ffffff;
 }
 
 .why-choose-us-content {
     padding-left: 80px;
     padding-right: 64px;
+}
+
+.why-choose-us-cta {
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Site footer */
+.site-footer-nav {
+    background-color: #414740;
+    color: #fff;
+}
+
+.site-footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer-list li {
+    margin-bottom: 0.5rem;
+}
+
+.site-footer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.site-footer-nav a {
+    color: #fff;
+    /* font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease; */
+}
+
+.site-footer-nav a:hover {
+    color: #fff;
+    opacity: 0.75;
+}
+
+.site-footer-hero {
+    position: relative;
+    min-height: clamp(280px, 42vw, 440px);
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        url("https://cdn.prod.website-files.com/633ef3c0bd3be81b55ba5334/64c94cc2ea564e32c7434296_Footer-water-background-p-500.jpg") center/cover no-repeat;
+}
+
+.site-footer-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 24, 48, 0.25) 0%,
+        rgba(0, 18, 40, 0.45) 100%
+    );
+    pointer-events: none;
+}
+
+.site-footer-hero-inner {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 1.5rem 2rem;
+}
+
+.site-footer-hero-logo {
+    width: min(320px, 72vw);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.35));
+}
+
+.site-footer-legal {
+    position: relative;
+    z-index: 1;
+    padding-top: 0.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.site-footer-legal-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+}
+
+.site-footer-legal-copy {
+    color: #fff;
+    font-size: 0.8125rem;
+    letter-spacing: 0.03em;
+}
+
+.site-footer-legal-copy a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    transition: opacity 0.2s ease;
+}
+
+.site-footer-legal-copy a:hover {
+    color: #fff;
+    opacity: 0.85;
+}
+
+.site-footer-legal-sep {
+    display: inline-block;
+    margin: 0 0.35rem;
+    opacity: 0.7;
 }

@@ -17,7 +17,7 @@ include 'inc/header.php';
 
         <!-- Centered Logo -->
         <div class="hero-section-content">
-            <svg width="100%" viewBox="0 0 1343 118" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
+            <!-- <svg width="100%" viewBox="0 0 1343 118" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
                 <g clip-path="url(#clip0_hero)">
                     <path d="M97.6519 0.197754V54.2756H8.65801V0.197754H0V117.033H8.65801V62.2881H97.6519V117.033H106.312V0.197754H97.6519Z" fill="currentColor"></path>
                     <path d="M285.539 117.232H168.6V0H285.539V117.232ZM177.166 108.645H276.973V8.58742H177.166V108.645Z" fill="currentColor"></path>
@@ -35,7 +35,8 @@ include 'inc/header.php';
                         <rect width="1343" height="117.232" fill="currentColor"></rect>
                     </clipPath>
                 </defs>
-            </svg>
+            </svg> -->
+            <h1 class="hero-section-title">LUXWOOD</h1>
         </div>
     </section>
 
@@ -69,18 +70,28 @@ include 'inc/header.php';
 
     <section class="models-preview-section section-padding">
         <div class="container">
-            <h3>FEATURED PROJECTS</h3>
-            <h4 class="mb-4">Built to Perform. Proven in Real-World Applications.</h4>
+            <h3 class="text-white">FEATURED PROJECTS</h3>
+            <!-- <h4 class="mb-4">Built to Perform. Proven in Real-World Applications.</h4> -->
             <div class="row g-4">
                 <div class="col-lg-4">
                     <a href="#" class="model-preview-card d-block h-100">
                         <div class="model-preview-image-wrap">
                             <img src="https://cdn.prod.website-files.com/671aadeddc290a4351bb133e/67eb0e3836426eb37413133f_67a6902c51c39b0b30a77d57_Honomobo_PassageIsland-192-Edit.jpeg" alt="HO2 model" class="model-preview-image img-fluid">
-                            <h3 class="model-preview-title">Tuscany-Style Residential Home</h3>
-                        </div>
-                        <div class="model-preview-content">
-                            <p>A 4-storey residential villa retrofitted using PHE Luxwood windows and panel systems, seamlessly integrating modern performance into a traditional architectural design.</p>
-                            <p class="text-grey">540 m²<span class="meta-divider">|</span>CHINA</p>
+                            <div class="model-preview-content">
+                                <h4>Tuscany-Style Residential Home</h4>
+                                <p>A 4-storey residential villa retrofitted using PHE Luxwood windows and panel systems, seamlessly integrating modern performance into a traditional architectural design.</p>
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-0">LEARN MORE</h6>
+                                    <div class="button-arrow">
+                                        <svg width="49" height="18" viewBox="0 0 49 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_4058_10159)">
+                                                <path d="M48.1488 8.59345L47.6435 9.13095L40.0835 17.131L38.8301 16.056L45.8848 8.59355L38.8301 1.13115L40.0835 0.0561523L47.6435 8.05615L48.1488 8.59345Z" fill="currentColor"></path>
+                                                <rect y="7.84375" width="39.4883" height="1.5" fill="currentColor"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -89,11 +100,21 @@ include 'inc/header.php';
                     <a href="#" class="model-preview-card d-block h-100">
                         <div class="model-preview-image-wrap">
                             <img src="https://cdn.prod.website-files.com/671aadeddc290a4351bb133e/68813d2404e75068bf535387_67b610bbd73590bc6af5f8d7_black%20exterior%20ho3%20shopped%202%20(1).jpg" alt="HO3 model" class="model-preview-image img-fluid">
-                            <h3 class="model-preview-title">Single-Unit Modular Kit Home</h3>
-                        </div>
-                        <div class="model-preview-content">
-                            <p>A compact, fully functional one-bedroom modular home constructed using Luxwood panels, demonstrating rapid assembly and efficient space planning for modern living.</p>
-                            <p class="text-grey">46 m²<span class="meta-divider">|</span>AUSTRALIA</p>
+                            <div class="model-preview-content">
+                                <h4>Single-Unit Modular Kit Home</h4>
+                                <p>A compact, fully functional one-bedroom modular home constructed using Luxwood panels, demonstrating rapid assembly and efficient space planning for modern living.</p>
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-0">LEARN MORE</h6>
+                                    <div class="button-arrow">
+                                        <svg width="49" height="18" viewBox="0 0 49 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_4058_10159)">
+                                                <path d="M48.1488 8.59345L47.6435 9.13095L40.0835 17.131L38.8301 16.056L45.8848 8.59355L38.8301 1.13115L40.0835 0.0561523L47.6435 8.05615L48.1488 8.59345Z" fill="currentColor"></path>
+                                                <rect y="7.84375" width="39.4883" height="1.5" fill="currentColor"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -102,11 +123,21 @@ include 'inc/header.php';
                     <a href="#" class="model-preview-card d-block h-100">
                         <div class="model-preview-image-wrap">
                             <img src="https://cdn.prod.website-files.com/671aadeddc290a4351bb133e/68f169d0057bdc04c5b7f756_Untitled%20design%20(9).png" alt="HO4 model" class="model-preview-image img-fluid">
-                            <h3 class="model-preview-title">Modular Residential Community Housing</h3>
-                        </div>
-                        <div class="model-preview-content">
-                            <p>A scalable housing solution utilizing Luxwood’s panel system, enabling consistent quality, reduced construction timelines, and efficient deployment across multiple residential units.</p>
-                            <p class="text-grey">MULTIPLE UNITS<span class="meta-divider">|</span>ASIA</p>
+                            <div class="model-preview-content">
+                                <h4>Modular Residential Community Housing</h4>
+                                <p>A scalable housing solution utilizing Luxwood’s panel system, enabling consistent quality, reduced construction timelines, and efficient deployment across multiple residential units.</p>
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-0">LEARN MORE</h6>
+                                    <div class="button-arrow">
+                                        <svg width="49" height="18" viewBox="0 0 49 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_4058_10159)">
+                                                <path d="M48.1488 8.59345L47.6435 9.13095L40.0835 17.131L38.8301 16.056L45.8848 8.59355L38.8301 1.13115L40.0835 0.0561523L47.6435 8.05615L48.1488 8.59345Z" fill="currentColor"></path>
+                                                <rect y="7.84375" width="39.4883" height="1.5" fill="currentColor"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -124,6 +155,23 @@ include 'inc/header.php';
                     <div class="why-choose-us-content">
                         <h2>Rapid Construction</h2>
                         <p>Our modular panel system enables structural assembly within 24–72 hours, significantly reducing construction timelines and allowing projects to reach completion faster with minimal on-site labour.</p>
+                        <a href="#" class="why-choose-us-cta">see how it works</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us-section">
+        <div class="container-fluid px-0">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://cdn.prod.website-files.com/633ef3c0bd3be81b55ba5334/63c2b0b08ffd311e0b52cf17_Dvele-prefab-homes-37.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <div class="why-choose-us-content">
+                        <h2>Durability & Performance</h2>
+                        <p>Engineered to withstand harsh environmental conditions, Luxwood panels are fire-resistant, waterproof, pest-resistant, and provide strong thermal and acoustic insulation.</p>
                     </div>
                 </div>
             </div>
