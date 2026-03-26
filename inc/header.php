@@ -32,7 +32,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-4">   
             <div class="container-fluid px-4 px-lg-5">

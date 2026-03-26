@@ -31,10 +31,8 @@
                 <div class="container">
                     <div class="site-footer-legal-inner">
                         <p class="site-footer-legal-copy mb-0">
-                            <span>© <?php echo date('Y'); ?> PHE. All rights reserved.</span>
-                            <span class="site-footer-legal-sep" aria-hidden="true">·</span>
+                            <span>© <?php echo date('Y'); ?> PHE. All rights reserved</span>
                             <a href="privacy.php">Privacy Policy</a>
-                            <span class="site-footer-legal-sep" aria-hidden="true">·</span>
                             <a href="terms.php">Terms of Use</a>
                         </p>
                     </div>
