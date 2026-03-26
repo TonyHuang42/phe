@@ -15,8 +15,9 @@ include 'inc/header.php';
         <!-- Overlay (optional, if needed for text readability) -->
         <!-- <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25" style="z-index: 2;"></div> -->
 
-        <div class="hero-section-title-wrap">
-            <h1 class="hero-section-title">PHE LUXWOOD</h1>
+        <div class="hero-section-wrap">
+            <h1 class="hero-section-title text-shadow">PHE LUXWOOD</h1>
+            <h5 class="text-white text-center text-shadow">Advanced Modular Building Systems</h5>
         </div>
     </section>
 
@@ -43,15 +44,16 @@ include 'inc/header.php';
     <section class="models-preview-section section-padding">
         <div class="container">
             <h3 class="text-white">FEATURED PROJECTS</h3>
-            <!-- <h4 class="mb-4">Built to Perform. Proven in Real-World Applications.</h4> -->
+            <h6 class="text-white mb-4">Real Applications. Built with Precision.</h6>
             <div class="row g-4">
                 <div class="col-lg-4">
                     <a href="#" class="model-preview-card d-block h-100">
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_1.jpg" alt="HO2 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Tuscany-Style Residential Home</h4>
-                                <p>A 4-storey residential villa retrofitted using PHE Luxwood windows and panel systems, seamlessly integrating modern performance into a traditional architectural design.</p>
+                                <h4>Modern Residential Home</h4>
+                                <h6>Australia</h6>
+                                <p>A contemporary single-family residence constructed using PHE Luxwood panels, demonstrating clean design, efficient construction, and long-term durability.</p>
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0">LEARN MORE</h6>
                                     <div class="button-arrow">
@@ -73,8 +75,9 @@ include 'inc/header.php';
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_2.jpg" alt="HO3 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Single-Unit Modular Kit Home</h4>
-                                <p>A compact, fully functional one-bedroom modular home constructed using Luxwood panels, demonstrating rapid assembly and efficient space planning for modern living.</p>
+                                <h4>Compact Modular Kit Home</h4>
+                                <h6>Australia</h6>
+                                <p>A fully functional modular unit designed for efficient living, showcasing rapid assembly and optimized interior space using Luxwood’s panel system.</p>
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0">LEARN MORE</h6>
                                     <div class="button-arrow">
@@ -96,8 +99,9 @@ include 'inc/header.php';
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_3.jpg" alt="HO4 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Modular Residential Community Housing</h4>
-                                <p>A scalable housing solution utilizing Luxwood’s panel system, enabling consistent quality, reduced construction timelines, and efficient deployment across multiple residential units.</p>
+                                <h4>Multi-Unit Modular Housing</h4>
+                                <h6>Cold Climate Region</h6>
+                                <p>A cluster of modular housing units designed for harsh weather conditions, highlighting Luxwood’s thermal performance and adaptability across environments.</p>
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0">LEARN MORE</h6>
                                     <div class="button-arrow">
@@ -126,8 +130,8 @@ include 'inc/header.php';
                 <div class="col-lg-6 h-100 why-choose-us-content-col">
                     <div class="why-choose-us-content-wrapper h-100 d-flex align-items-center">
                         <div class="why-choose-us-content">
-                            <h2>Cost Efficiency</h2>
-                            <p>By eliminating traditional framing and reducing labour requirements, Luxwood systems lower overall construction costs while maintaining high structural performance and long-term durability.</p>
+                            <h2>Faster, Smarter Construction</h2>
+                            <p>Our modular panel system streamlines the entire building process — reducing construction timelines to as little as 24–72 hours while minimizing labour, complexity, and on-site waste.</p>
                             <a href="#" class="why-choose-us-cta">see how it works <i class="fa-solid fa-arrow-right-long why-choose-us-arrow"></i></a>
                         </div>
                     </div>
@@ -143,8 +147,8 @@ include 'inc/header.php';
                 <div class="col-lg-6 h-100 why-choose-us-content-col">
                     <div class="why-choose-us-content-wrapper h-100 d-flex align-items-center">
                         <div class="why-choose-us-content">
-                            <h2>Durability & Performance</h2>
-                            <p>Engineered to withstand harsh environmental conditions, Luxwood panels are fire-resistant, waterproof, pest-resistant, and provide strong thermal and acoustic insulation.</p>
+                            <h2>Sustainable by Design</h2>
+                            <p>Manufactured using recycled composite materials, Luxwood systems reduce environmental impact while delivering energy-efficient, low-maintenance buildings designed for long-term performance.</p>
                             <a href="#" class="why-choose-us-cta">see how it works <i class="fa-solid fa-arrow-right-long why-choose-us-arrow"></i></a>
                         </div>
                     </div>

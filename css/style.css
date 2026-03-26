@@ -61,6 +61,10 @@ a {
     padding-bottom: calc(var(--padding) * 0.5);
 }
 
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .site-header {
     position: absolute;
     width: 100%;
@@ -147,7 +151,7 @@ a {
     will-change: transform;
 }
 
-.hero-section-title-wrap {
+.hero-section-wrap {
     z-index: 3;
     position: absolute;
     top: 28%;

@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
     // Fade in hero title
-    const heroTitle = document.querySelector(".hero-section-title");
+    const heroTitle = document.querySelector(".hero-section-wrap");
     if (heroTitle) {
         gsap.fromTo(
             heroTitle,
