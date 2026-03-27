@@ -51,7 +51,7 @@ include 'inc/header.php';
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_1.jpg" alt="HO2 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Modern Residential Home</h4>
+                                <h4>Modern <br class="d-none d-lg-block"> Residential Home</h4>
                                 <h6>Australia</h6>
                                 <p>A contemporary single-family residence constructed using PHE Luxwood panels, demonstrating clean design, efficient construction, and long-term durability.</p>
                                 <div class="d-flex justify-content-between">
@@ -75,7 +75,7 @@ include 'inc/header.php';
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_2.jpg" alt="HO3 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Compact Modular Kit Home</h4>
+                                <h4>Compact <br class="d-none d-lg-block"> Modular Kit Home</h4>
                                 <h6>Australia</h6>
                                 <p>A fully functional modular unit designed for efficient living, showcasing rapid assembly and optimized interior space using Luxwood’s panel system.</p>
                                 <div class="d-flex justify-content-between">
@@ -99,7 +99,7 @@ include 'inc/header.php';
                         <div class="model-preview-image-wrap">
                             <img src="img/home/img_project_3.jpg" alt="HO4 model" class="model-preview-image img-fluid">
                             <div class="model-preview-content">
-                                <h4>Multi-Unit Modular Housing</h4>
+                                <h4>Multi-Unit <br class="d-none d-lg-block"> Modular Housing</h4>
                                 <h6>Cold Climate Region</h6>
                                 <p>A cluster of modular housing units designed for harsh weather conditions, highlighting Luxwood’s thermal performance and adaptability across environments.</p>
                                 <div class="d-flex justify-content-between">
