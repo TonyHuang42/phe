@@ -156,9 +156,10 @@ window.addEventListener("load", () => {
     ScrollTrigger.refresh();
 });
 
-// Full page reload after resize (debounced) — resets pinned ScrollTrigger / slogan-stats sequence
+// Full page reload after resize (debounced) — home only; resets pinned ScrollTrigger / slogan-stats sequence
 let resizeReloadTimer;
 window.addEventListener("resize", () => {
+    if (!document.querySelector(".home-page")) return;
     clearTimeout(resizeReloadTimer);
     resizeReloadTimer = setTimeout(() => {
         window.location.reload();

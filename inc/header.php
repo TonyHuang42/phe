@@ -34,7 +34,7 @@
 
 <body class="overflow-x-hidden">
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-4">   
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-4">
             <div class="container-fluid px-4 px-lg-5">
                 <a class="navbar-brand" href="index.php">
                     <img src="img/home/phe_logo_white.svg" alt="Logo" class="logo">
@@ -48,7 +48,7 @@
                 <!-- Navbar Content -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center gap-4 text-uppercase fw-semibold">
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Models
                             </a>
@@ -56,13 +56,25 @@
                                 <li><a class="dropdown-item" href="#">H-Series</a></li>
                                 <li><a class="dropdown-item" href="#">Accessory Dwelling Units</a></li>
                             </ul>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="projects.php">Projects</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Projects</a>
+                            <a class="nav-link text-white" href="#">Building System</a>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Building Material</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Assembly
                             </a>
@@ -81,7 +93,7 @@
                                 <li><a class="dropdown-item" href="#">About Honomobo</a></li>
                                 <li><a class="dropdown-item" href="#">Our Team</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

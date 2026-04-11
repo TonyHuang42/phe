@@ -5,7 +5,7 @@ $meta_description = "PHE is a leading provider of prefabricated homes. We offer 
 include 'inc/header.php';
 ?>
 
-<main>
+<main class="home-page">
     <section class="hero-section">
         <!-- Background Image -->
         <div class="hero-section-bg">
