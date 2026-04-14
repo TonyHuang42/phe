@@ -1,5 +1,6 @@
 :root {
     --padding: 100px;
+    --h6-font-size: clamp(16px, 2vw, 20px);
 }
 
 body {
@@ -28,7 +29,7 @@ h5 {
 }
 
 h6 {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: var(--h6-font-size);
 }
 
 a {
@@ -483,8 +484,7 @@ a {
 
 .projects-filter-group {
     border-top: 1px solid #d9d9d9;
-    padding-top: 1rem;
-    padding-bottom: 1.25rem;
+    padding-top: 24px;
 }
 
 .projects-filter-group:last-child {
@@ -492,32 +492,16 @@ a {
 }
 
 .projects-filter-heading {
+    font-size: var(--h6-font-size);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 0.75rem;
-    padding: 0 0 0.75rem;
+    padding: 0 0 20px;
     margin: 0;
     border: none;
     background: none;
-    font: inherit;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-    color: #000;
-    text-align: left;
-    cursor: pointer;
-    transition: color 0.15s ease;
-}
-
-.projects-filter-heading:hover {
-    color: #333;
-}
-
-.projects-filter-heading:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 2px;
+    /* transition: color 0.15s ease; */
 }
 
 .projects-filter-chevron {
@@ -532,13 +516,13 @@ a {
 }
 
 .projects-filter-list li + li {
-    margin-top: 0.65rem;
+    margin-top: 16px;
 }
 
 .projects-filter-check {
     display: flex;
-    align-items: flex-start;
-    gap: 0.65rem;
+    align-items: center;
+    gap: 16px;
     padding-left: 0;
     margin-bottom: 0;
     min-height: 0;
@@ -546,18 +530,18 @@ a {
 
 .projects-filter-check .form-check-input {
     float: none;
-    margin: 0.2em 0 0;
+    margin: 0;
     flex-shrink: 0;
-    width: 1rem;
-    height: 1rem;
+    width: 24px;
+    height: 24px;
     border: 1px solid #c4c4c4;
     border-radius: 1px;
     background-color: #fff;
 }
 
 .projects-filter-check .form-check-input:focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
-    border-color: #999;
+    box-shadow: none;
+    border-color: none;
 }
 
 .projects-filter-check .form-check-input:checked {
@@ -568,15 +552,19 @@ a {
 .projects-filter-check .form-check-label {
     flex: 1;
     padding-left: 0;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.35;
-    color: #000;
     cursor: pointer;
+}
+
+.projects-filter-list>li:last-child {
+    padding-bottom: 24px;
 }
 
 .projects-section-main {
     flex: 1;
     min-width: 0;
-    min-height: 40vh;
+    min-height: 80vh;
 }
+
+/* .collapsing {
+    transition: all 0.3s ease;
+} */

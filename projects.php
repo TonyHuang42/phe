@@ -18,11 +18,11 @@ include 'inc/header.php';
                 <aside class="projects-filter" aria-label="Project filters">
                     <form class="projects-filter-form" action="projects.php" method="get">
                         <div class="projects-filter-group">
-                            <button class="projects-filter-heading" type="button" data-bs-toggle="collapse" data-bs-target="#projects-filter-field" aria-expanded="true" aria-controls="projects-filter-field">
+                            <button class="projects-filter-heading collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projects-filter-field" aria-expanded="false" aria-controls="projects-filter-field">
                                 <span>Country</span>
                                 <i class="fa-solid fa-chevron-up projects-filter-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="collapse show" id="projects-filter-field">
+                            <div class="collapse" id="projects-filter-field">
                                 <ul class="projects-filter-list list-unstyled mb-0">
                                     <li>
                                         <div class="form-check projects-filter-check">
@@ -47,11 +47,11 @@ include 'inc/header.php';
                         </div>
 
                         <div class="projects-filter-group">
-                            <button class="projects-filter-heading" type="button" data-bs-toggle="collapse" data-bs-target="#projects-filter-area" aria-expanded="true" aria-controls="projects-filter-area">
+                            <button class="projects-filter-heading collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projects-filter-area" aria-expanded="false" aria-controls="projects-filter-area">
                                 <span>Types</span>
                                 <i class="fa-solid fa-chevron-up projects-filter-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="collapse show" id="projects-filter-area">
+                            <div class="collapse" id="projects-filter-area">
                                 <ul class="projects-filter-list list-unstyled mb-0">
                                     <li>
                                         <div class="form-check projects-filter-check">
