@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Kit Home Blinds Animation
     const kitHomeSection = document.querySelector(".kit-home");
     const kitHomeSlides = document.querySelectorAll(".kit-home-slide");
+    const kitHomeNavItems = document.querySelectorAll(".kit-home-nav-item");
 
     if (kitHomeSection && kitHomeSlides.length > 1) {
         // Set initial states. We use zIndex: "auto" on the slides so they don't create a stacking context,
@@ -182,9 +183,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 invalidateOnRefresh: true,
                 onUpdate: self => {
                     kitHomeSection.style.setProperty('--section-progress', (self.progress * 100) + '%');
+
+                    if (kitHomeNavItems.length) {
+                        const activeIdx = Math.round(self.progress * (kitHomeSlides.length - 1));
+                        kitHomeNavItems.forEach((item, idx) => {
+                            item.classList.toggle("is-active", idx === activeIdx);
+                        });
+                    }
                 }
             }
         });
+
+        // Click a nav item to jump to the matching slide
+        if (kitHomeNavItems.length) {
+            kitHomeNavItems.forEach((item, idx) => {
+                const link = item.querySelector("a");
+                if (!link) return;
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const st = tlKitHome.scrollTrigger;
+                    if (!st) return;
+                    const ratio = kitHomeSlides.length > 1 ? idx / (kitHomeSlides.length - 1) : 0;
+                    const target = st.start + ratio * (st.end - st.start);
+                    window.scrollTo({
+                        top: target,
+                        behavior: "smooth",
+                    });
+                });
+            });
+        }
 
         for (let i = 0; i < kitHomeSlides.length - 1; i++) {
             const nextSlide = kitHomeSlides[i + 1];
