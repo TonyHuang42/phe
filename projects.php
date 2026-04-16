@@ -15,7 +15,7 @@ include 'inc/header.php';
     <section class="projects-section section-padding">
         <div class="container-fluid px-4 px-lg-5">
             <div class="projects-section-inner">
-                <aside class="projects-filter" aria-label="Project filters">
+                <div class="col-lg-3" aria-label="Project filters">
                     <form class="projects-filter-form" action="projects.php" method="get">
                         <div class="projects-filter-group">
                             <button class="projects-filter-heading collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projects-filter-field" aria-expanded="false" aria-controls="projects-filter-field">
@@ -75,9 +75,9 @@ include 'inc/header.php';
                             </div>
                         </div>
                     </form>
-                </aside>
+                </div>
 
-                <div class="projects-section-main">
+                <div class="col-lg-9">
                     <!-- Project grid or list -->
                 </div>
             </div>

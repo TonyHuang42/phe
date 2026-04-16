@@ -63,7 +63,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Building System</a>
+                            <a class="nav-link text-white" href="building-system.php">Building System</a>
                         </li>
 
                         <li class="nav-item">

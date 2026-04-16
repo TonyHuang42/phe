@@ -149,6 +149,131 @@ document.addEventListener("DOMContentLoaded", () => {
             .to(slide1ContentCol, { xPercent: -100, opacity: 0, ease: "none" }, 0)
             .to(slide2ContentCol, { xPercent: 0, ease: "none" }, 0);
     }
+
+    // Kit Home Blinds Animation
+    const kitHomeSection = document.querySelector(".kit-home");
+    const kitHomeSlides = document.querySelectorAll(".kit-home-slide");
+
+    if (kitHomeSection && kitHomeSlides.length > 1) {
+        // Set initial states. We use zIndex: "auto" on the slides so they don't create a stacking context,
+        // allowing us to interleave the z-indexes of the left and right images globally.
+        gsap.set(kitHomeSlides, { opacity: 0, visibility: "hidden", zIndex: "auto" });
+        gsap.set(kitHomeSlides[0], { opacity: 1, visibility: "visible", zIndex: "auto" });
+
+        // Assign global z-indexes to the internal elements so left images always stay above right images across all slides
+        kitHomeSlides.forEach((slide, index) => {
+            const rightImg = slide.querySelector(".kit-home-img-right");
+            const leftImg = slide.querySelector(".kit-home-img-left");
+            const content = slide.querySelector(".kit-home-content");
+
+            if (rightImg) gsap.set(rightImg, { zIndex: index + 1 });
+            if (leftImg) gsap.set(leftImg, { zIndex: index + 50 });
+            if (content) gsap.set(content, { zIndex: index + 100 });
+        });
+
+        const tlKitHome = gsap.timeline({
+            scrollTrigger: {
+                trigger: kitHomeSection,
+                start: "top top",
+                end: "+=" + (kitHomeSlides.length - 1) * 100 + "%",
+                scrub: 1,
+                pin: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                onUpdate: self => {
+                    kitHomeSection.style.setProperty('--section-progress', (self.progress * 100) + '%');
+                }
+            }
+        });
+
+        for (let i = 0; i < kitHomeSlides.length - 1; i++) {
+            const nextSlide = kitHomeSlides[i + 1];
+            const startTime = i * 2;
+
+            // Setup next slide for blinds effect
+            gsap.set(nextSlide, { 
+                opacity: 1, 
+                visibility: "visible", 
+                zIndex: "auto"
+            });
+
+            const nextImgRight = nextSlide.querySelector(".kit-home-img-right");
+            const nextImgLeft = nextSlide.querySelector(".kit-home-img-left");
+
+            const currentSlide = kitHomeSlides[i];
+            const currentLines = currentSlide.querySelectorAll(".line-content");
+            const nextLines = nextSlide.querySelectorAll(".line-content");
+
+            // Initial state for next slide text
+            gsap.set(nextLines, { yPercent: 100 });
+
+            // Setup left image animation (slide up from bottom)
+            if (nextImgLeft) {
+                gsap.set(nextImgLeft, { clipPath: "inset(100% 0% 0% 0%)" });
+                tlKitHome.to(nextImgLeft, {
+                    clipPath: "inset(0% 0% 0% 0%)",
+                    duration: 1,
+                    ease: "none"
+                }, startTime);
+            }
+
+            // Setup right image animation (30 blinds, bottom first)
+            if (nextImgRight) {
+                const numBlinds = 30;
+                const blinds = Array.from({ length: numBlinds }, () => ({ value: 0 }));
+                
+                const updateBlindsMask = () => {
+                    let maskImages = [];
+                    let maskSizes = [];
+                    let maskPositions = [];
+                    
+                    const blindHeight = (100 / numBlinds) + 0.5; // Add 0.5% to overlap and prevent gaps
+                    
+                    for (let j = 0; j < numBlinds; j++) {
+                        maskImages.push(`linear-gradient(to top, black ${blinds[j].value}%, transparent ${blinds[j].value}%)`);
+                        maskSizes.push(`100% ${blindHeight}%`);
+                        maskPositions.push(`0 ${j * 100 / (numBlinds - 1)}%`);
+                    }
+                    
+                    nextImgRight.style.maskImage = maskImages.join(', ');
+                    nextImgRight.style.webkitMaskImage = maskImages.join(', ');
+                    nextImgRight.style.maskSize = maskSizes.join(', ');
+                    nextImgRight.style.webkitMaskSize = maskSizes.join(', ');
+                    nextImgRight.style.maskPosition = maskPositions.join(', ');
+                    nextImgRight.style.webkitMaskPosition = maskPositions.join(', ');
+                    nextImgRight.style.maskRepeat = 'no-repeat';
+                    nextImgRight.style.webkitMaskRepeat = 'no-repeat';
+                };
+
+                updateBlindsMask(); // Set initial state
+
+                tlKitHome.to(blinds, {
+                    value: 100,
+                    duration: 0.5,
+                    stagger: {
+                        amount: 0.5,
+                        from: "end"
+                    },
+                    ease: "none",
+                    onUpdate: updateBlindsMask
+                }, startTime);
+            }
+
+            // Animate text
+            tlKitHome.to(currentLines, {
+                yPercent: -100,
+                duration: 0.4,
+                stagger: 0.05,
+                ease: "power2.in"
+            }, startTime)
+            .to(nextLines, {
+                yPercent: 0,
+                duration: 0.4,
+                stagger: 0.05,
+                ease: "power2.out"
+            }, startTime + 0.6);
+        }
+    }
 });
 
 // Recalculate ScrollTrigger after all images and resources have fully loaded
@@ -159,7 +284,7 @@ window.addEventListener("load", () => {
 // Full page reload after resize (debounced) — home only; resets pinned ScrollTrigger / slogan-stats sequence
 let resizeReloadTimer;
 window.addEventListener("resize", () => {
-    if (!document.querySelector(".home-page")) return;
+    if (!document.querySelector(".home-page") && !document.querySelector(".kit-home-page")) return;
     clearTimeout(resizeReloadTimer);
     resizeReloadTimer = setTimeout(() => {
         window.location.reload();
