@@ -565,6 +565,27 @@ a {
     min-height: 80vh;
 }
 
+/* Projects page — fund section */
+.fund-eyebrow {
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.fund-link {
+    display: inline-block;
+    color: inherit;
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid currentColor;
+}
+
+.fund-link:hover {
+    color: inherit;
+    opacity: 0.7;
+}
+
 /* .collapsing {
     transition: all 0.3s ease;
 } */
@@ -646,6 +667,14 @@ a {
     z-index: 1;
 }
 
+.kit-home--multi-slide .kit-home-slide {
+    pointer-events: none;
+}
+
+.kit-home--multi-slide .kit-home-slide.kit-home-slide--active {
+    pointer-events: auto;
+}
+
 .kit-home-slide-1 {
     opacity: 1;
     visibility: visible;
@@ -660,6 +689,9 @@ a {
 .kit-home-text {
     padding-left: 30px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .kit-home-text::before {

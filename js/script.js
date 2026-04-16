@@ -156,6 +156,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const kitHomeNavItems = document.querySelectorAll(".kit-home-nav-item");
 
     if (kitHomeSection && kitHomeSlides.length > 1) {
+        kitHomeSection.classList.add("kit-home--multi-slide");
+
+        // Equalize .kit-home-text heights across all slides so the progress bar
+        // (whose height is a percentage of its parent) has a consistent length
+        // regardless of whether a title wraps to two lines on some slides.
+        const kitHomeTextEls = kitHomeSection.querySelectorAll(".kit-home-slide .kit-home-text");
+        const equalizeKitHomeTextHeights = () => {
+            kitHomeTextEls.forEach(el => { el.style.minHeight = ""; });
+            let maxHeight = 0;
+            kitHomeTextEls.forEach(el => {
+                maxHeight = Math.max(maxHeight, el.offsetHeight);
+            });
+            if (maxHeight > 0) {
+                kitHomeTextEls.forEach(el => { el.style.minHeight = maxHeight + "px"; });
+            }
+        };
+        equalizeKitHomeTextHeights();
+        ScrollTrigger.addEventListener("refreshInit", equalizeKitHomeTextHeights);
+
         // Set initial states. We use zIndex: "auto" on the slides so they don't create a stacking context,
         // allowing us to interleave the z-indexes of the left and right images globally.
         gsap.set(kitHomeSlides, { opacity: 0, visibility: "hidden", zIndex: "auto" });
@@ -172,6 +191,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (content) gsap.set(content, { zIndex: index + 100 });
         });
 
+        const syncKitHomeActiveSlide = progress => {
+            const activeIdx = Math.round(progress * (kitHomeSlides.length - 1));
+            kitHomeSlides.forEach((slide, idx) => {
+                slide.classList.toggle("kit-home-slide--active", idx === activeIdx);
+            });
+            if (kitHomeNavItems.length) {
+                kitHomeNavItems.forEach((item, idx) => {
+                    item.classList.toggle("is-active", idx === activeIdx);
+                });
+            }
+        };
+
         const tlKitHome = gsap.timeline({
             scrollTrigger: {
                 trigger: kitHomeSection,
@@ -183,16 +214,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 invalidateOnRefresh: true,
                 onUpdate: self => {
                     kitHomeSection.style.setProperty('--section-progress', (self.progress * 100) + '%');
-
-                    if (kitHomeNavItems.length) {
-                        const activeIdx = Math.round(self.progress * (kitHomeSlides.length - 1));
-                        kitHomeNavItems.forEach((item, idx) => {
-                            item.classList.toggle("is-active", idx === activeIdx);
-                        });
-                    }
+                    syncKitHomeActiveSlide(self.progress);
                 }
             }
         });
+
+        if (tlKitHome.scrollTrigger) {
+            syncKitHomeActiveSlide(tlKitHome.scrollTrigger.progress);
+        }
 
         // Click a nav item to jump to the matching slide
         if (kitHomeNavItems.length) {

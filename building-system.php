@@ -32,6 +32,21 @@ include 'inc/header.php';
                                 <span class="kit-home-nav-label">Pacific</span>
                             </a>
                         </li>
+                        <li class="kit-home-nav-item">
+                            <a href="#" data-slide="3">
+                                <span class="kit-home-nav-label">Sydney House</span>
+                            </a>
+                        </li>
+                        <li class="kit-home-nav-item">
+                            <a href="#" data-slide="4">
+                                <span class="kit-home-nav-label">Ballara Home</span>
+                            </a>
+                        </li>
+                        <li class="kit-home-nav-item">
+                            <a href="#" data-slide="5">
+                                <span class="kit-home-nav-label">Grandville House</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="col-lg-10 kit-home-container">
@@ -40,21 +55,15 @@ include 'inc/header.php';
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
-                                    <div class="row g-4 kit-home-text-row">
+                                    <div class="row kit-home-text-row">
                                         <h3 class="split-text">
                                             <div class="line-wrapper">
                                                 <div class="line-content">Coomera</div>
                                             </div>
-                                            <!-- <div class="line-wrapper">
-                                                <div class="line-content">INSPIRED</div>
-                                            </div>
-                                            <div class="line-wrapper">
-                                                <div class="line-content">SPACES</div>
-                                            </div> -->
                                         </h3>
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
-                                                <p>From artful communal lounges to thoughtfully curated design details, every environment celebrates a rich sense of place.</p>
+                                                <p>A modern modular home designed for efficient family living, offering a balanced layout with practical functionality and contemporary appeal.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -76,21 +85,15 @@ include 'inc/header.php';
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
-                                    <div class="row g-4 kit-home-text-row">
+                                    <div class="row kit-home-text-row">
                                         <h3 class="split-text">
                                             <div class="line-wrapper">
                                                 <div class="line-content">Drift Home</div>
                                             </div>
-                                            <!-- <div class="line-wrapper">
-                                                <div class="line-content">CENTERED</div>
-                                            </div>
-                                            <div class="line-wrapper">
-                                                <div class="line-content">AMENITIES</div>
-                                            </div> -->
                                         </h3>
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
-                                                <p>From private fitness studios to guided meditation sessions, our amenities are designed to enhance your well-being and foster a sense of harmony.</p>
+                                                <p>A relaxed, open-plan modular design that emphasizes natural light, comfort, and seamless indoor-outdoor living.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -112,21 +115,15 @@ include 'inc/header.php';
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
-                                    <div class="row g-4 kit-home-text-row">
+                                    <div class="row kit-home-text-row">
                                         <h3 class="split-text">
                                             <div class="line-wrapper">
                                                 <div class="line-content">Pacific</div>
                                             </div>
-                                            <!-- <div class="line-wrapper">
-                                                <div class="line-content">INFUSED</div>
-                                            </div>
-                                            <div class="line-wrapper">
-                                                <div class="line-content">LIVING</div>
-                                            </div> -->
                                         </h3>
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
-                                                <p>Experience the tranquility of nature from the comfort of your home, with expansive windows and seamless indoor-outdoor transitions.</p>
+                                                <p>A versatile modular home featuring a well-structured layout suited for both urban and regional environments.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -138,6 +135,96 @@ include 'inc/header.php';
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
                                     <img src="img/home/img_project_2.jpg" alt="Nature Infused Living Right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="kit-home-slide kit-home-slide-4">
+                        <div class="row g-0 kit-home-slide-row h-100 align-items-center">
+                            <div class="col-lg-4 kit-home-content">
+                                <div class="kit-home-text">
+                                    <div class="row kit-home-text-row">
+                                        <h3 class="split-text">
+                                            <div class="line-wrapper">
+                                                <div class="line-content">Sydney House</div>
+                                            </div>
+                                        </h3>
+                                        <div class="line-wrapper p-wrapper">
+                                            <div class="line-content">
+                                                <p>A contemporary modular residence designed for modern lifestyles, combining efficient space planning with clean architectural lines.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 offset-lg-1 kit-home-images">
+                                <div class="kit-home-img kit-home-img-left">
+                                    <img src="img/home/img_1.jpg" alt="Sydney House Left">
+                                </div>
+                                <div class="kit-home-img kit-home-img-right">
+                                    <img src="img/home/img_2.jpg" alt="Sydney House Right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="kit-home-slide kit-home-slide-5">
+                        <div class="row g-0 kit-home-slide-row h-100 align-items-center">
+                            <div class="col-lg-4 kit-home-content">
+                                <div class="kit-home-text">
+                                    <div class="row kit-home-text-row">
+                                        <h3 class="split-text">
+                                            <div class="line-wrapper">
+                                                <div class="line-content">Ballara Home</div>
+                                            </div>
+                                        </h3>
+                                        <div class="line-wrapper p-wrapper">
+                                            <div class="line-content">
+                                                <p>A compact and cost-effective modular home optimized for practicality, comfort, and efficient use of space.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 offset-lg-1 kit-home-images">
+                                <div class="kit-home-img kit-home-img-left">
+                                    <img src="img/home/banner_img_1.jpg" alt="Ballara Home Left">
+                                </div>
+                                <div class="kit-home-img kit-home-img-right">
+                                    <img src="img/home/bg_footer.jpg" alt="Ballara Home Right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="kit-home-slide kit-home-slide-6">
+                        <div class="row g-0 kit-home-slide-row h-100 align-items-center">
+                            <div class="col-lg-4 kit-home-content">
+                                <div class="kit-home-text">
+                                    <div class="row kit-home-text-row">
+                                        <h3 class="split-text">
+                                            <div class="line-wrapper">
+                                                <div class="line-content">Grandville House</div>
+                                            </div>
+                                        </h3>
+                                        <div class="line-wrapper p-wrapper">
+                                            <div class="line-content">
+                                                <p>A spacious modular home designed for larger households, offering enhanced living areas and flexible layout configurations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 offset-lg-1 kit-home-images">
+                                <div class="kit-home-img kit-home-img-left">
+                                    <img src="img/home/img_project_1.jpg" alt="Grandville House Left">
+                                </div>
+                                <div class="kit-home-img kit-home-img-right">
+                                    <img src="img/home/img_project_2.jpg" alt="Grandville House Right">
                                 </div>
                             </div>
                         </div>
