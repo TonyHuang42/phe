@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -26,6 +26,7 @@ h4 {
 
 h5 {
     font-size: clamp(20px, 3vw, 32px);
+    font-weight: 400;
 }
 
 h6 {
@@ -76,7 +77,7 @@ a {
 .site-header-cta {
     display: inline-block;
     padding: 0.5rem 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: center;
@@ -99,7 +100,7 @@ a {
 
 .navbar-nav .nav-link {
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .navbar-toggler:focus {
@@ -125,12 +126,15 @@ a {
     color: #fff;
 }
 
-.hero-section {
+.home-hero-section {
     position: relative;
     height: 100vh;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    overflow: hidden;
+}
+
+.hero-section {
+    position: relative;
+    height: 60vh;
     overflow: hidden;
 }
 
@@ -480,6 +484,8 @@ a {
 
 .projects-filter-form {
     margin: 0;
+    position: sticky;
+    top: 2rem;
 }
 
 .projects-filter-group {
@@ -565,31 +571,6 @@ a {
     min-height: 80vh;
 }
 
-/* Projects page — fund section */
-.fund-eyebrow {
-    letter-spacing: 0.1em;
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-
-.fund-link {
-    display: inline-block;
-    color: inherit;
-    letter-spacing: 0.1em;
-    margin-top: 1.5rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid currentColor;
-}
-
-.fund-link:hover {
-    color: inherit;
-    opacity: 0.7;
-}
-
-/* .collapsing {
-    transition: all 0.3s ease;
-} */
-
 /* Kit Home Section */
 .kit-home {
     position: relative;
@@ -638,16 +619,19 @@ a {
 .kit-home-nav-label {
     display: inline-block;
     font-size: var(--h6-font-size);
+    font-weight: 300;
     line-height: 1.2;
-    transition: font-size 0.35s ease;
+    transition: font-size 0.3s ease, font-weight 0.3s ease;
 }
 
 .kit-home-nav-item.is-active a {
     color: #111315;
+    font-weight: 400;
 }
 
 .kit-home-nav-item.is-active .kit-home-nav-label {
     font-size: var(--h6-font-size);
+    font-weight: 400;
 }
 
 .kit-home-container {

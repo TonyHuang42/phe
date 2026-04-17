@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Zoom hero background on scroll
-    const heroSection = document.querySelector(".hero-section");
+    const heroSection = document.querySelector(".hero-section, .home-hero-section");
     const heroBgImg = document.querySelector(".hero-section-bg-img");
     if (heroSection && heroBgImg) {
         gsap.fromTo(
@@ -339,10 +339,20 @@ window.addEventListener("load", () => {
 
 // Full page reload after resize (debounced) — home only; resets pinned ScrollTrigger / slogan-stats sequence
 let resizeReloadTimer;
+
+// Helper function to detect touch devices
+const isTouchDevice = () => {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+};
+
 window.addEventListener("resize", () => {
-    if (!document.querySelector(".home-page") && !document.querySelector(".kit-home-page")) return;
-    clearTimeout(resizeReloadTimer);
-    resizeReloadTimer = setTimeout(() => {
-        window.location.reload();
-    }, 250);
+  if (!document.querySelector(".home-page") && !document.querySelector(".kit-home-page")) return;
+
+  // If it's a touch device (mobile/tablet), do nothing
+  if (isTouchDevice()) return;
+
+  clearTimeout(resizeReloadTimer);
+  resizeReloadTimer = setTimeout(() => {
+    window.location.reload();
+  }, 250);
 });

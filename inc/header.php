@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -34,7 +34,7 @@
 
 <body class="overflow-x-hidden">
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-4">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-transparent py-4">
             <div class="container-fluid px-4 px-lg-5">
                 <a class="navbar-brand" href="index.php">
                     <img src="img/home/phe_logo_white.svg" alt="Logo" class="logo">

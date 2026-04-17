@@ -15,7 +15,7 @@ include 'inc/header.php';
     <section class="kit-home">
         <div class="container-fluid px-0">
             <div class="row g-0 kit-home-row">
-                <nav class="col-lg-2 kit-home-nav" aria-label="Section navigation">
+                <nav class="col-lg-3 kit-home-nav" aria-label="Section navigation">
                     <ul class="kit-home-nav-list">
                         <li class="kit-home-nav-item is-active">
                             <a href="#" data-slide="0">
@@ -49,7 +49,7 @@ include 'inc/header.php';
                         </li>
                     </ul>
                 </nav>
-                <div class="col-lg-10 kit-home-container">
+                <div class="col-lg-9 kit-home-container">
                     <!-- Slide 1 -->
                     <div class="kit-home-slide kit-home-slide-1">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">

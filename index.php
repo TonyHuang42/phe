@@ -6,7 +6,7 @@ include 'inc/header.php';
 ?>
 
 <main class="home-page">
-    <section class="hero-section">
+    <section class="home-hero-section">
         <!-- Background Image -->
         <div class="hero-section-bg">
             <img src="img/home/banner_home.jpg" alt="PHE Hero" class="hero-section-bg-img">
