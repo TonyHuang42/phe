@@ -1,5 +1,5 @@
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 document.addEventListener("DOMContentLoaded", () => {
     // Fade in hero title
@@ -19,6 +19,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 delay: 0.15,
             },
         );
+    }
+
+    // Building System Hero Animation
+    const buildingSystemHeroWrap = document.querySelector(".building-system-hero-section-wrap");
+    if (buildingSystemHeroWrap) {
+        const heroH2 = buildingSystemHeroWrap.querySelector("h2");
+        const heroH6 = buildingSystemHeroWrap.querySelector("h6");
+        
+        if (heroH2 && heroH6) {
+            // Split the h2 into characters and words to prevent awkward line breaks mid-word
+            const splitH2 = new SplitText(heroH2, { type: "words, chars" });
+            
+            // Set initial states (yPercent = % of each element's own height on Y)
+            gsap.set(splitH2.chars, { yPercent: 100, opacity: 0 });
+            gsap.set(heroH6, { yPercent: 100, opacity: 0 });
+            
+            const tl = gsap.timeline({ delay: 0.2 });
+            
+            // Animate characters up
+            tl.to(splitH2.chars, {
+                yPercent: 0,
+                opacity: 1,
+                duration: 1,
+                stagger: 0.05,
+                ease: "power3.out"
+            })
+            // Then animate h6 up
+            .to(heroH6, {
+                yPercent: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out"
+            }, "-=0.4");
+        }
     }
 
     // Zoom hero background on scroll

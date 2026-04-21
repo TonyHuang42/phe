@@ -6,9 +6,22 @@ include 'inc/header.php';
 ?>
 
 <main class="kit-home-page">
-    <section class="hero-section">
+    <section class="home-hero-section">
         <div class="hero-section-bg">
-            <img src="img/home/banner_home.jpg" alt="PHE Hero" class="hero-section-bg-img">
+            <img src="img/building-system/videoframe_5000.png" alt="PHE Hero" class="hero-section-bg-img">
+        </div>
+
+        <div class="building-system-hero-section-wrap">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-9">
+                        <h2 class="mb-0">PHE LUXWOOD BUILDING SYSTEM</h2>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6>Engineered modular systems designed to accelerate construction, reduce costs, and deliver reliable performance. </h6>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,6 +163,10 @@ include 'inc/header.php';
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
                                                 <p>A versatile modular home featuring a well-structured layout suited for both urban and regional environments.</p>
+
+                                                <button class="mt-3" type="button" data-bs-toggle="modal" data-bs-target="#pacificModal">
+                                                    View Floor Plan
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -180,6 +197,10 @@ include 'inc/header.php';
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
                                                 <p>A contemporary modular residence designed for modern lifestyles, combining efficient space planning with clean architectural lines.</p>
+
+                                                <button class="mt-3" type="button" data-bs-toggle="modal" data-bs-target="#sydneyHouseModal">
+                                                    View Floor Plan
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -240,6 +261,10 @@ include 'inc/header.php';
                                         <div class="line-wrapper p-wrapper">
                                             <div class="line-content">
                                                 <p>A spacious modular home designed for larger households, offering enhanced living areas and flexible layout configurations.</p>
+
+                                                <button class="mt-3" type="button" data-bs-toggle="modal" data-bs-target="#grandviewHouseModal">
+                                                    View Floor Plan
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -259,6 +284,49 @@ include 'inc/header.php';
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pacificModal" tabindex="-1" aria-labelledby="pacificModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="pacificModalLabel">Pacific House</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://balancedarchitecture.com/wp-content/uploads/2021/11/EXISTING-FIRST-FLOOR-PRES-scaled-e1635965923983.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sydneyHouseModal" tabindex="-1" aria-labelledby="sydneyHouseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="sydneyHouseModalLabel">Sydney House</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://balancedarchitecture.com/wp-content/uploads/2021/11/EXISTING-FIRST-FLOOR-PRES-scaled-e1635965923983.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="grandviewHouseModal" tabindex="-1" aria-labelledby="grandviewHouseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="grandviewHouseModalLabel">Grandview House</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://balancedarchitecture.com/wp-content/uploads/2021/11/EXISTING-FIRST-FLOOR-PRES-scaled-e1635965923983.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php include 'inc/footer.php'; ?>

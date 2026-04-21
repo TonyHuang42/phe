@@ -38,6 +38,14 @@ a {
     text-decoration: none;
 }
 
+button {
+    all: unset;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #dccbb3;
+    border-bottom: 1px solid #dccbb3;
+}
+
 .section-padding {
     padding-top: var(--padding);
     padding-bottom: var(--padding);
@@ -601,6 +609,17 @@ a {
 }
 
 /* Building System page */
+.building-system-hero-section-wrap {
+    color: #fff;
+    z-index: 3;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    pointer-events: none;
+}
+
 .long-section {
     min-height: 900px;
     display: flex;
@@ -649,7 +668,7 @@ a {
 /* Kit Home Section */
 .kit-home {
     position: relative;
-    background-color: #111315;
+    background-color: #282828;
     color: #fff;
     overflow: hidden;
 }
