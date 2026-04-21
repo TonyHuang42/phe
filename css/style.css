@@ -526,7 +526,7 @@ a {
     transform: rotate(180deg);
 }
 
-.projects-filter-list li + li {
+.projects-filter-list li+li {
     margin-top: 16px;
 }
 
@@ -598,6 +598,52 @@ a {
 
 .projects-content-overlap-row {
     margin-top: -200px;
+}
+
+/* Building System page */
+.long-section {
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+}
+
+.modular-animation-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+.modular-animation-wrapper,
+.modular-content-wrapper,
+.box {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+.box-1 {
+    transform: translate(-4%, -0.6%);
+}
+
+.box-2 {
+    transform: translate(-2.4%, 1%);
+}
+
+.box-3 {
+    width: 45%;
+    transform: translate(0, 0);
+}
+
+.box-4 {
+    transform: translate(2.4%, 6%);
 }
 
 /* Kit Home Section */

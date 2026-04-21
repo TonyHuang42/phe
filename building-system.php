@@ -12,6 +12,32 @@ include 'inc/header.php';
         </div>
     </section>
 
+    <section class="section-padding long-section">
+        <div class="container">
+            <div class="row align-items-center gx-lg-5 modular-row">
+                <div class="col-lg-7">
+                    <div class="modular-animation-wrapper" style="position: relative; z-index: 2;">
+                        <img src="img/building-system/phe_svg_panel_1.svg" class="box box-1" alt="Image 1">
+                        <img src="img/building-system/phe_svg_panel_2.svg" class="box box-2" alt="Image 2">
+                        <img src="img/building-system/phe_svg_window.svg" class="box box-3" alt="Image 3">
+                        <img src="img/building-system/phe_svg_panel_3.svg" class="box box-4" alt="Image 4">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="modular-content-wrapper" style="position: relative; z-index: 1;">
+                        <h2 class="mb-5">A Smarter Way to Build</h2>
+                        <p>PHE Luxwood is an engineered modular building system that combines advanced composite materials with streamlined construction methods.</p>
+                        <p>Designed for efficiency, durability, and scalability, our system enables faster project delivery while maintaining consistent build quality across a wide range of applications.</p>
+                        <!-- <div class="d-flex gap-4">
+                            <a href="#" class="link-underline">Explore Our Products</a>
+                            <a href="#" class="link-underline">More About Us</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="kit-home">
         <div class="container-fluid px-0">
             <div class="row g-0 kit-home-row">
@@ -44,7 +70,7 @@ include 'inc/header.php';
                         </li>
                         <li class="kit-home-nav-item">
                             <a href="#" data-slide="5">
-                                <span class="kit-home-nav-label">Grandville House</span>
+                                <span class="kit-home-nav-label">Grandview House</span>
                             </a>
                         </li>
                     </ul>
@@ -71,10 +97,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/img_1.jpg" alt="Coomera Left">
+                                    <img src="img/building-system/coomera_1.jpg" alt="Coomera Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/img_2.jpg" alt="Coomera Right">
+                                    <img src="img/building-system/coomera.jpg" alt="Coomera Right">
                                 </div>
                             </div>
                         </div>
@@ -101,10 +127,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/banner_img_1.jpg" alt="Wellness Centered Amenities Left">
+                                    <img src="img/building-system/drift_home_1.jpg" alt="Drift Home Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/bg_footer.jpg" alt="Wellness Centered Amenities Right">
+                                    <img src="img/building-system/drift_home.jpg" alt="Drift Home Right">
                                 </div>
                             </div>
                         </div>
@@ -131,10 +157,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/img_project_1.jpg" alt="Nature Infused Living Left">
+                                    <img src="img/building-system/pacific_1.jpg" alt="Pacific Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/img_project_2.jpg" alt="Nature Infused Living Right">
+                                    <img src="img/building-system/pacific.jpg" alt="Pacific Right">
                                 </div>
                             </div>
                         </div>
@@ -161,10 +187,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/img_1.jpg" alt="Sydney House Left">
+                                    <img src="img/building-system/sydney_1.jpg" alt="Sydney House Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/img_2.jpg" alt="Sydney House Right">
+                                    <img src="img/building-system/sydney.jpg" alt="Sydney House Right">
                                 </div>
                             </div>
                         </div>
@@ -191,10 +217,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/banner_img_1.jpg" alt="Ballara Home Left">
+                                    <img src="img/building-system/ballara_1.jpg" alt="Ballara Home Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/bg_footer.jpg" alt="Ballara Home Right">
+                                    <img src="img/building-system/ballara.jpg" alt="Ballara Home Right">
                                 </div>
                             </div>
                         </div>
@@ -208,7 +234,7 @@ include 'inc/header.php';
                                     <div class="row kit-home-text-row">
                                         <h3 class="split-text">
                                             <div class="line-wrapper">
-                                                <div class="line-content">Grandville House</div>
+                                                <div class="line-content">Grandview House</div>
                                             </div>
                                         </h3>
                                         <div class="line-wrapper p-wrapper">
@@ -221,10 +247,10 @@ include 'inc/header.php';
                             </div>
                             <div class="col-lg-7 offset-lg-1 kit-home-images">
                                 <div class="kit-home-img kit-home-img-left">
-                                    <img src="img/home/img_project_1.jpg" alt="Grandville House Left">
+                                    <img src="img/building-system/grand_1.jpg" alt="Grandview House Left">
                                 </div>
                                 <div class="kit-home-img kit-home-img-right">
-                                    <img src="img/home/img_project_2.jpg" alt="Grandville House Right">
+                                    <img src="img/building-system/grand.jpg" alt="Grandview House Right">
                                 </div>
                             </div>
                         </div>

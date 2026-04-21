@@ -150,6 +150,73 @@ document.addEventListener("DOMContentLoaded", () => {
             .to(slide2ContentCol, { xPercent: 0, ease: "none" }, 0);
     }
 
+    // Modular Animation
+    if (document.querySelector(".modular-row")) {
+        const sepTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".modular-row",
+                start: "top 50%",
+                end: "top 20%",
+                scrub: 1,
+            },
+        });
+
+        sepTl.fromTo(".modular-animation-wrapper",
+            {
+                x: () => {
+                    const el = document.querySelector(".modular-animation-wrapper");
+                    const currentX = gsap.getProperty(el, "x");
+                    gsap.set(el, { x: 0 });
+                    const rect = el.getBoundingClientRect();
+                    const center = rect.left + rect.width / 2;
+                    const offset = (window.innerWidth / 2) - center;
+                    gsap.set(el, { x: currentX });
+                    return offset;
+                }
+            },
+            { x: 0, ease: "none" },
+            0
+        )
+        .fromTo(".modular-content-wrapper",
+            {
+                x: () => {
+                    const el = document.querySelector(".modular-content-wrapper");
+                    const currentX = gsap.getProperty(el, "x");
+                    gsap.set(el, { x: 0 });
+                    const rect = el.getBoundingClientRect();
+                    const center = rect.left + rect.width / 2;
+                    const offset = (window.innerWidth / 2) - center;
+                    gsap.set(el, { x: currentX });
+                    return offset;
+                },
+                opacity: 0
+            },
+            { x: 0, opacity: 1, ease: "none" },
+            0
+        );
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".modular-animation-wrapper",
+                start: "top 70%",
+                end: "top 20%",
+                scrub: 1,
+            },
+        });
+
+        tl.to(".box-1", { x: -200, y: -100 }, "phase1")
+            .to(".box-2", { x: -100, y: -50 }, "phase1")
+            .to(".box-3", { x: 0, y: 0 }, "phase1")
+            .to(".box-4", { x: 100, y: 50 }, "phase1");
+
+        tl.to(".box-1", { x: -150, y: -50 }, "phase2")
+            .to(".box-2", { x: -100, y: -25 }, "phase2")
+            .to(".box-3", { x: -50, y: 0 }, "phase2")
+            .to(".box-4", { x: 0, y: 25 }, "phase2");
+
+        window.addEventListener("load", () => ScrollTrigger.refresh());
+    }
+
     // Kit Home Blinds Animation
     const kitHomeSection = document.querySelector(".kit-home");
     const kitHomeSlides = document.querySelectorAll(".kit-home-slide");
