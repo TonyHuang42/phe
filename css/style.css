@@ -14,6 +14,7 @@ h1 {
 h2 {
     font-size: clamp(44px, calc(5vw + 1rem), 84px);
     line-height: 1;
+    font-weight: 400;
 }
 
 h3 {
@@ -62,6 +63,10 @@ a {
 
 .bottom-padding-sm {
     padding-bottom: calc(var(--padding) * 0.5);
+}
+
+.bottom-padding-lg {
+    padding-bottom: calc(var(--padding) * 1.5);
 }
 
 .text-shadow {
@@ -485,7 +490,7 @@ a {
 .projects-filter-form {
     margin: 0;
     position: sticky;
-    top: 2rem;
+    top: 3rem;
 }
 
 .projects-filter-group {
@@ -569,6 +574,30 @@ a {
     flex: 1;
     min-width: 0;
     min-height: 80vh;
+}
+
+.projects-more-details-link {
+    text-transform: uppercase;
+    /* text-decoration: none; */
+    color: #dccbb3;
+    /* font-weight: 700; */
+    border-bottom: 1px solid #dccbb3;
+    padding-bottom: 0.25rem;
+}
+
+.projects-feature-media-col {
+    height: 600px;
+}
+
+.projects-feature-media-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.projects-content-overlap-row {
+    margin-top: -200px;
 }
 
 /* Kit Home Section */
@@ -659,11 +688,11 @@ a {
     pointer-events: auto;
 }
 
-.kit-home-slide-1 {
+/* .kit-home-slide-1 {
     opacity: 1;
     visibility: visible;
     z-index: 2;
-}
+} */
 
 .kit-home-content {
     position: relative;

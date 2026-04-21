@@ -51,7 +51,7 @@ include 'inc/header.php';
                 </nav>
                 <div class="col-lg-9 kit-home-container">
                     <!-- Slide 1 -->
-                    <div class="kit-home-slide kit-home-slide-1">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
@@ -81,7 +81,7 @@ include 'inc/header.php';
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="kit-home-slide kit-home-slide-2">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
@@ -111,7 +111,7 @@ include 'inc/header.php';
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="kit-home-slide kit-home-slide-3">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
@@ -141,7 +141,7 @@ include 'inc/header.php';
                     </div>
 
                     <!-- Slide 4 -->
-                    <div class="kit-home-slide kit-home-slide-4">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
@@ -171,7 +171,7 @@ include 'inc/header.php';
                     </div>
 
                     <!-- Slide 5 -->
-                    <div class="kit-home-slide kit-home-slide-5">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
@@ -201,7 +201,7 @@ include 'inc/header.php';
                     </div>
 
                     <!-- Slide 6 -->
-                    <div class="kit-home-slide kit-home-slide-6">
+                    <div class="kit-home-slide">
                         <div class="row g-0 kit-home-slide-row h-100 align-items-center">
                             <div class="col-lg-4 kit-home-content">
                                 <div class="kit-home-text">
