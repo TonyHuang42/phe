@@ -8,7 +8,7 @@ include 'inc/header.php';
 <main class="kit-home-page">
     <section class="home-hero-section">
         <div class="hero-section-bg">
-            <img src="img/building-system/videoframe_5000.png" alt="PHE Hero" class="hero-section-bg-img">
+            <img src="img/building-system/banner_main.jpg" alt="PHE Hero" class="hero-section-bg-img">
         </div>
 
         <div class="building-system-hero-section-wrap">
@@ -46,6 +46,88 @@ include 'inc/header.php';
                             <a href="#" class="link-underline">More About Us</a>
                         </div> -->
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="modular-kit-homes-title section-padding">Modular Kit Homes</h2>
+    </section>
+
+    <section class="values-section section-padding">
+        <div class="values-section-bg">
+            <img src="img/building-system/videoframe_5000.png" alt="" class="values-section-bg-img">
+            <div class="values-section-overlay"></div>
+        </div>
+
+        <div class="container values-section-inner">
+            <div class="row values-row values-row-top">
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">PRE-DESIGNED<br>STRUCTURES</h6>
+                            <p class="value-card-desc mb-0">A range of layouts designed for functionality and adaptability across different living needs.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(1)</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">RAPID<br>INSTALLATION</h6>
+                            <p class="value-card-desc mb-0">Structural assembly can be completed within 24 hours by trained installers.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(2)</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 offset-lg-3 values-col values-intro">
+                    <p>PHE Kit Homes are complete modular housing solutions designed for efficient construction and modern living.</p>
+                    <p class="mb-0">Built using pre-engineered Luxwood components, each structure is optimized for strength, safety, and long-term performance.</p>
+                </div>
+            </div>
+
+            <div class="row values-row values-row-bottom">
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">COST-EFFECTIVE<br>SOLUTION</h6>
+                            <p class="value-card-desc mb-0">Reduced labour requirements and streamlined construction significantly lower project costs.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(3)</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">ENVIRONMENTALLY<br>RESPONSIBLE</h6>
+                            <p class="value-card-desc mb-0">Manufactured using sustainable composite materials with reduced construction waste.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(4)</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">DESIGNED FOR SAFETY &amp;<br>STRENGTH</h6>
+                            <p class="value-card-desc mb-0">Engineered to meet structural requirements, including fire resistance and seismic performance.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(5)</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 values-col">
+                    <article class="value-card">
+                        <div class="value-card-inner">
+                            <h6 class="value-card-title">RELOCATABLE<br>SYSTEM</h6>
+                            <p class="value-card-desc mb-0">Structures can be dismantled and relocated when required, offering long-term flexibility.</p>
+                        </div>
+                        <p class="value-card-num mb-0">(6)</p>
+                    </article>
                 </div>
             </div>
         </div>

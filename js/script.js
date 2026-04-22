@@ -251,6 +251,24 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("load", () => ScrollTrigger.refresh());
     }
 
+    // Modular Kit Homes title — scrub each character color to #000 one by one
+    const modularKitHomesTitle = document.querySelector(".modular-kit-homes-title");
+    if (modularKitHomesTitle) {
+        const splitTitle = new SplitText(modularKitHomesTitle, { type: "chars" });
+
+        gsap.to(splitTitle.chars, {
+            color: "#000",
+            ease: "none",
+            stagger: { each: 1, ease: "none" },
+            scrollTrigger: {
+                trigger: modularKitHomesTitle,
+                start: "top 80%",
+                end: "bottom center",
+                scrub: true,
+            },
+        });
+    }
+
     // Kit Home Blinds Animation
     const kitHomeSection = document.querySelector(".kit-home");
     const kitHomeSlides = document.querySelectorAll(".kit-home-slide");

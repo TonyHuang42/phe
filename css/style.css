@@ -666,6 +666,126 @@ button {
     transform: translate(2.4%, 6%);
 }
 
+/* Values / Philosophy Section */
+.values-section {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+.values-section-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.values-section-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.values-section-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.values-section-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.values-row-top {
+    margin-bottom: 2.5rem;
+}
+
+.values-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.values-intro {
+    justify-content: start;
+    gap: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.value-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.value-card-inner {
+    position: relative;
+    flex: 1;
+    padding: 3rem 1.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 340px;
+    isolation: isolate;
+}
+
+.value-card-inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #e7e1dc33;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    /* clip-path: ;
+    -webkit-clip-path: ; */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.value-card-title {
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.value-card-desc {
+    max-width: 220px;
+}
+
+.value-card-num {
+    margin-top: 0.75rem;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+}
+
+@media (max-width: 991.98px) {
+    .values-row-top,
+    .values-row-bottom {
+        row-gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .values-col.offset-lg-3 {
+        margin-left: 0;
+    }
+
+    .value-card-inner {
+        min-height: 260px;
+        padding: 2rem 1.25rem;
+    }
+}
+
+.modular-kit-homes-title {
+    text-align: center;
+    color: #ddd;
+}
+
 /* Kit Home Section */
 .kit-home {
     position: relative;
