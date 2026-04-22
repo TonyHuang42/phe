@@ -702,6 +702,10 @@ button {
     margin-bottom: 2.5rem;
 }
 
+.values-row {
+    overflow: hidden;
+}
+
 .values-col {
     display: flex;
     flex-direction: column;

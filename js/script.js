@@ -251,6 +251,27 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("load", () => ScrollTrigger.refresh());
     }
 
+    // Values rows — columns slide up from 100% below their original position, one by one
+    const valuesRows = document.querySelectorAll(".values-row");
+    valuesRows.forEach((row) => {
+        const cols = row.querySelectorAll(".values-col");
+        if (!cols.length) return;
+
+        gsap.set(cols, { yPercent: 100 });
+
+        gsap.to(cols, {
+            yPercent: 0,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: row,
+                start: "top 80%",
+                once: true,
+            },
+        });
+    });
+
     // Modular Kit Homes title — scrub each character color to #000 one by one
     const modularKitHomesTitle = document.querySelector(".modular-kit-homes-title");
     if (modularKitHomesTitle) {
@@ -263,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollTrigger: {
                 trigger: modularKitHomesTitle,
                 start: "top 80%",
-                end: "bottom center",
+                end: "center center",
                 scrub: true,
             },
         });
