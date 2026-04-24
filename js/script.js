@@ -470,6 +470,78 @@ document.addEventListener("DOMContentLoaded", () => {
             }, startTime + 0.6);
         }
     }
+
+    // Fade in modular features descriptions independently of the pinned section
+    const modularDescs = document.querySelectorAll(".modular-features-desc");
+    if (modularDescs.length > 0) {
+        gsap.set(modularDescs, { y: 30, opacity: 0 });
+
+        const descObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to(entry.target, {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out"
+                    });
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: "0px 0px -10% 0px"
+        });
+
+        modularDescs.forEach(desc => descObserver.observe(desc));
+    }
+
+    // Process Section Animation
+    const processSection = document.querySelector(".modular-features-section");
+    if (processSection) {
+        let mm = gsap.matchMedia();
+        
+        mm.add("(min-width: 992px)", () => {
+            const col1 = document.querySelector(".modular-features-col-1");
+            const col2 = document.querySelector(".modular-features-col-2");
+            const col3 = document.querySelector(".modular-features-col-3");
+            const col4 = document.querySelector(".modular-features-col-4");
+
+            // Initial states
+            gsap.set([col1, col2, col3, col4], { yPercent: 100 });
+
+            const tlProcess = gsap.timeline({
+                scrollTrigger: {
+                    trigger: processSection,
+                    start: "top top",
+                    end: "+=100%",
+                    scrub: true,
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            // Animate columns up
+            tlProcess.to(col1, { yPercent: 30, ease: "none", duration: 0.7 }, 0)
+                     .to(col2, { yPercent: 30, ease: "none", duration: 0.55 }, 0.15)
+                     .to(col3, { yPercent: 30, ease: "none", duration: 0.4 }, 0.3)
+                     .to(col4, { yPercent: 30, ease: "none", duration: 0.25 }, 0.45)
+                     // Move all columns to 0% completely to cover the background image
+                     .to([col1, col2, col3, col4], { yPercent: 0, ease: "none", duration: 0.3 }, 0.7);
+            
+            return () => { // cleanup
+                gsap.killTweensOf([col1, col2, col3, col4]);
+                // reset styles
+                gsap.set([col1, col2, col3, col4], { clearProps: "all" });
+            };
+        });
+        
+        mm.add("(max-width: 991px)", () => {
+            const cols = document.querySelectorAll(".modular-features-col");
+            
+            gsap.set(cols, { clearProps: "all" });
+        });
+    }
 });
 
 // Recalculate ScrollTrigger after all images and resources have fully loaded

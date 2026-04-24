@@ -23,6 +23,7 @@ h3 {
 
 h4 {
     font-size: clamp(24px, 4vw, 42px);
+    font-weight: 400;
 }
 
 h5 {
@@ -32,6 +33,7 @@ h5 {
 
 h6 {
     font-size: var(--h6-font-size);
+    font-weight: 400;
 }
 
 a {
@@ -609,7 +611,119 @@ button {
     margin-top: -200px;
 }
 
-/* Building System page */
+/* Process Section */
+.modular-features-section {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.modular-features-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.modular-features-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modular-features-content-container {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.modular-features-row {
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.modular-features-col {
+    position: relative;
+    height: 100vh;
+    background-color: #4a4d46;
+    will-change: transform;
+    /* Fixes sub-pixel rendering gaps between columns */
+    box-shadow: 1px 0 0 0 #4a4d46, -1px 0 0 0 #4a4d46;
+}
+
+.modular-features-card {
+    padding: 10vh 10% 2rem;
+    color: #fff;
+    /* height: 100%; */
+}
+
+.modular-features-num {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.modular-features-card-line {
+    width: 100%;
+    height: 1px;
+    background-color: #253021;
+    margin-bottom: 1rem;
+}
+
+.modular-features-title {
+    margin-bottom: 1.5rem;
+}
+
+/* .modular-features-desc {
+    opacity: 0.9;
+    line-height: 1.6;
+} */
+
+.modular-features-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.modular-features-footer-title {
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+}
+
+@media (max-width: 991.98px) {
+    .modular-features-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    .modular-features-content-container {
+        position: relative;
+        height: auto;
+        pointer-events: auto;
+    }
+    .modular-features-col {
+        height: auto;
+        padding: 3rem 0;
+    }
+    .modular-features-card {
+        padding: 0 10%;
+    }
+    .modular-features-footer {
+        position: relative;
+        height: 40vh;
+        background-color: #4a4d46;
+    }
+}
+
 .building-system-hero-section-wrap {
     color: #fff;
     z-index: 3;
@@ -690,7 +804,7 @@ button {
 .values-section-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .values-section-inner {

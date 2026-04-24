@@ -57,7 +57,7 @@ include 'inc/header.php';
 
     <section class="values-section section-padding">
         <div class="values-section-bg">
-            <img src="img/building-system/videoframe_5000.png" alt="" class="values-section-bg-img">
+            <img src="img/building-system/banner_bg_kithome.png" alt="" class="values-section-bg-img">
             <div class="values-section-overlay"></div>
         </div>
 
@@ -409,6 +409,53 @@ include 'inc/header.php';
             </div>
         </div>
     </div>
+
+    <section class="modular-features-section">
+        <div class="modular-features-bg">
+            <img src="img/building-system/banner_bg_kithome.png" alt="Kitchen Background" class="modular-features-bg-img">
+        </div>
+        <div class="modular-features-content-container">
+            <div class="container-fluid px-0 h-100">
+                <div class="row g-0 h-100 modular-features-row">
+                    <div class="col-lg-3 modular-features-col modular-features-col-1">
+                        <div class="modular-features-card">
+                            <div class="modular-features-card-line"></div>
+                            <h6 class="modular-features-num">01</h6>
+                            <h5 class="modular-features-title">Transportable Design</h5>
+                            <p class="modular-features-desc">Units can be delivered via standard truck transportation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 modular-features-col modular-features-col-2">
+                        <div class="modular-features-card">
+                            <div class="modular-features-card-line"></div>
+                            <h6 class="modular-features-num">02</h6>
+                            <h5 class="modular-features-title">Tailor-Made Solutions</h5>
+                            <p class="modular-features-desc">Custom design, engineering, and installation to meet project-specific needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 modular-features-col modular-features-col-3">
+                        <div class="modular-features-card">
+                            <div class="modular-features-card-line"></div>
+                            <h6 class="modular-features-num">03</h6>
+                            <h5 class="modular-features-title">Rapid Deployment</h5>
+                            <p class="modular-features-desc">Ideal for time-sensitive and remote construction environments.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 modular-features-col modular-features-col-4">
+                        <div class="modular-features-card">
+                            <div class="modular-features-card-line"></div>
+                            <h6 class="modular-features-num">04</h6>
+                            <h5 class="modular-features-title">End-to-End Delivery</h5>
+                            <p class="modular-features-desc">From design and manufacturing to on-site installation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="modular-features-footer">
+                    <h2 class="modular-features-footer-title">It's effortless</h2>
+                </div> -->
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php include 'inc/footer.php'; ?>
