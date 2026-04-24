@@ -367,7 +367,7 @@ include 'inc/header.php';
         </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Kit Home Floor Plans Modals -->
     <div class="modal fade" id="pacificModal" tabindex="-1" aria-labelledby="pacificModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -410,51 +410,61 @@ include 'inc/header.php';
         </div>
     </div>
 
-    <section class="modular-features-section">
-        <div class="modular-features-bg">
-            <img src="img/building-system/banner_bg_kithome.png" alt="Kitchen Background" class="modular-features-bg-img">
+    <!-- Modular Features Section -->
+    <section class="modular-section-intro">
+        <div class="container d-flex-center align-items-center section-padding h-100">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p>Portable & Modular Building Solutions</p>
+                    <h4>PHE modular buildings are designed for flexibility and deployment in remote or hard-toaccess locations. </h4>
+                    <h4>From concept to installation, our team delivers fully integrated solutions tailored to each project’s requirements.</h4>
+                </div>
+            </div>
         </div>
-        <div class="modular-features-content-container">
-            <div class="container-fluid px-0 h-100">
-                <div class="row g-0 h-100 modular-features-row">
-                    <div class="col-lg-3 modular-features-col modular-features-col-1">
-                        <div class="modular-features-card">
-                            <div class="modular-features-card-line"></div>
-                            <h6 class="modular-features-num">01</h6>
-                            <h5 class="modular-features-title">Transportable Design</h5>
-                            <p class="modular-features-desc">Units can be delivered via standard truck transportation.</p>
+    </section>
+
+    <section class="modular-features-section">
+            <div class="modular-features-bg">
+                <img src="img/building-system/banner_bg_kithome.png" alt="Kitchen Background" class="modular-features-bg-img">
+            </div>
+            <div class="modular-features-content-container">
+                <div class="container-fluid px-0 h-100">
+                    <div class="row g-0 h-100 modular-features-row">
+                        <div class="col-lg-3 modular-features-col modular-features-col-1">
+                            <div class="modular-features-card">
+                                <div class="modular-features-card-line"></div>
+                                <h6 class="modular-features-num">01</h6>
+                                <h5 class="modular-features-title">Transportable Design</h5>
+                                <p class="modular-features-desc">Units can be delivered via standard truck transportation.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 modular-features-col modular-features-col-2">
-                        <div class="modular-features-card">
-                            <div class="modular-features-card-line"></div>
-                            <h6 class="modular-features-num">02</h6>
-                            <h5 class="modular-features-title">Tailor-Made Solutions</h5>
-                            <p class="modular-features-desc">Custom design, engineering, and installation to meet project-specific needs.</p>
+                        <div class="col-lg-3 modular-features-col modular-features-col-2">
+                            <div class="modular-features-card">
+                                <div class="modular-features-card-line"></div>
+                                <h6 class="modular-features-num">02</h6>
+                                <h5 class="modular-features-title">Tailor-Made Solutions</h5>
+                                <p class="modular-features-desc">Custom design, engineering, and installation to meet project-specific needs.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 modular-features-col modular-features-col-3">
-                        <div class="modular-features-card">
-                            <div class="modular-features-card-line"></div>
-                            <h6 class="modular-features-num">03</h6>
-                            <h5 class="modular-features-title">Rapid Deployment</h5>
-                            <p class="modular-features-desc">Ideal for time-sensitive and remote construction environments.</p>
+                        <div class="col-lg-3 modular-features-col modular-features-col-3">
+                            <div class="modular-features-card">
+                                <div class="modular-features-card-line"></div>
+                                <h6 class="modular-features-num">03</h6>
+                                <h5 class="modular-features-title">Rapid Deployment</h5>
+                                <p class="modular-features-desc">Ideal for time-sensitive and remote construction environments.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 modular-features-col modular-features-col-4">
-                        <div class="modular-features-card">
-                            <div class="modular-features-card-line"></div>
-                            <h6 class="modular-features-num">04</h6>
-                            <h5 class="modular-features-title">End-to-End Delivery</h5>
-                            <p class="modular-features-desc">From design and manufacturing to on-site installation.</p>
+                        <div class="col-lg-3 modular-features-col modular-features-col-4">
+                            <div class="modular-features-card">
+                                <div class="modular-features-card-line"></div>
+                                <h6 class="modular-features-num">04</h6>
+                                <h5 class="modular-features-title">End-to-End Delivery</h5>
+                                <p class="modular-features-desc">From design and manufacturing to on-site installation.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="modular-features-footer">
-                    <h2 class="modular-features-footer-title">It's effortless</h2>
-                </div> -->
             </div>
-        </div>
     </section>
 </main>
 

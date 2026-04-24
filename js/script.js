@@ -471,6 +471,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Modular Section Intro Animation
+    const modularIntro = document.querySelector(".modular-section-intro");
+    if (modularIntro) {
+        gsap.to(modularIntro, {
+            backgroundColor: "#414740",
+            scrollTrigger: {
+                trigger: modularIntro,
+                start: "top 60%",
+                end: "top 30%",
+                scrub: true
+            }
+        });
+
+        ScrollTrigger.create({
+            trigger: modularIntro,
+            start: "top top",
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true
+        });
+    }
+
     // Fade in modular features descriptions independently of the pinned section
     const modularDescs = document.querySelectorAll(".modular-features-desc");
     if (modularDescs.length > 0) {
@@ -513,7 +535,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollTrigger: {
                     trigger: processSection,
                     start: "top top",
-                    end: "+=100%",
+                    end: "+=150%",
                     scrub: true,
                     pin: true,
                     anticipatePin: 1,
