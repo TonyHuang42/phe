@@ -273,20 +273,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Modular Kit Homes title — scrub each character color to #000 one by one
-    const modularKitHomesTitle = document.querySelector(".modular-kit-homes-title");
-    if (modularKitHomesTitle) {
-        const splitTitle = new SplitText(modularKitHomesTitle, { type: "chars" });
+    // const modularKitHomesTitle = document.querySelector(".modular-kit-homes-title");
+    // if (modularKitHomesTitle) {
+    //     const splitTitle = new SplitText(modularKitHomesTitle, { type: "chars" });
 
-        gsap.to(splitTitle.chars, {
-            color: "#000",
-            ease: "none",
-            stagger: { each: 1, ease: "none" },
-            scrollTrigger: {
-                trigger: modularKitHomesTitle,
-                start: "top 80%",
-                end: "center center",
-                scrub: true,
-            },
+    //     gsap.to(splitTitle.chars, {
+    //         color: "#000",
+    //         ease: "none",
+    //         stagger: { each: 1, ease: "none" },
+    //         scrollTrigger: {
+    //             trigger: modularKitHomesTitle,
+    //             start: "top 80%",
+    //             end: "center center",
+    //             scrub: true,
+    //         },
+    //     });
+    // }
+    const kitHomesIntro = document.querySelector(".kit-homes-intro");
+    if (kitHomesIntro) {
+        gsap.to(kitHomesIntro, {
+        backgroundColor: "#414740",
+        scrollTrigger: {
+            trigger: kitHomesIntro,
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true,
+        },
         });
     }
 
@@ -580,7 +592,7 @@ const isTouchDevice = () => {
 };
 
 window.addEventListener("resize", () => {
-  if (!document.querySelector(".home-page") && !document.querySelector(".kit-home-page")) return;
+  if (!document.querySelector(".home-page")) return;
 
   // If it's a touch device (mobile/tablet), do nothing
   if (isTouchDevice()) return;
