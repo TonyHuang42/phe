@@ -1091,6 +1091,13 @@ button {
     }
 }
 
+.modular-applications-section {
+    position: relative;
+    z-index: 3;
+    margin-top: -40vh;
+    background-color: #fff;
+}
+
 .modular-applications-wrapper {
     padding-top: 2rem;
     padding-bottom: 5rem;

@@ -21,6 +21,37 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
+    // Reusable fade-up animation (AOS alternative)
+    const fadeUpElements = document.querySelectorAll('[data-gsap="fade-up"], [data-aos="fade-up"]');
+    
+    setTimeout(() => {
+        fadeUpElements.forEach((el) => {
+            // Get custom settings from data attributes if they exist (AOS uses ms, so we divide by 1000 for GSAP seconds)
+            const delay = el.getAttribute('data-aos-delay') ? parseFloat(el.getAttribute('data-aos-delay')) / 1000 : 0;
+            const duration = el.getAttribute('data-aos-duration') ? parseFloat(el.getAttribute('data-aos-duration')) / 1000 : 1;
+            
+            // Set initial state
+            gsap.set(el, { 
+                y: 40, 
+                opacity: 0 
+            });
+
+            // Create the animation
+            gsap.to(el, {
+                y: 0,
+                opacity: 1,
+                duration: duration,
+                delay: delay,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+        });
+    }, 100);
+
     // Building System Hero Animation
     const buildingSystemHeroWrap = document.querySelector(".building-system-hero-section-wrap");
     if (buildingSystemHeroWrap) {
