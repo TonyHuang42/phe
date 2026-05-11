@@ -428,7 +428,6 @@ include 'inc/header.php';
                 <div class="col-lg-8">
                     <p>Portable & Modular Building Solutions</p>
                     <h4 class="mb-4">PHE modular buildings are designed for flexibility and deployment in remote or hard-toaccess locations. </h4>
-                    <h4>From concept to installation, our team delivers fully integrated solutions tailored to each project’s requirements.</h4>
                 </div>
             </div>
         </div>
@@ -480,7 +479,7 @@ include 'inc/header.php';
 
     <!-- Modular Applications -->
     <section class="section-padding modular-applications-section">
-        <h3 class="text-center mb-5">Applications</h3>
+        <h3 class="text-center mb-5">Our Moduls</h3>
         <div class="container">
             <div class="modular-applications-wrapper">
                 <div class="row gx-3 gx-lg-5">
@@ -491,9 +490,9 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>4.8m x 3.2m Cabin</h4>
                             <p>This compact cabin features a flexible one-bedroom layout with an integrated office and a full bathroom, offering a comfortable and efficient living space. Finished with modern interiors and quality materials throughout, it is ideal for short-term stays. Also available in a larger 6m x 3m configuration, providing additional bedroom space for an enhanced living environment.</p>
-                            <p>Ideal for: Short-term workforce accommodation, tourist stays</p>
+                            <p>Ideal for: Short-term workforce accommodation, Tourist stays</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
@@ -507,9 +506,9 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>6m x 3m Site Office</h4>
                             <p>This open-span site office is designed for versatility, suitable for use as a mobile office or short-term accommodation solution. Delivered fully fitted with air conditioning, lighting, and electrical services, it ensures a comfortable and functional workspace. Also available in a larger 12m x 3m configuration, offering expanded capacity for larger-scale operations such as office spaces or portable kitchen units.</p>
-                            <p>Ideal for: Construction, infrastructure, and remote projects</p>
+                            <p>Ideal for: Construction, Infrastructure, and Remote projects</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
@@ -523,9 +522,9 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>11m x 3.7m Granny Flat</h4>
                             <p>Designed for short- to long-term accommodation, this granny flat offers a well-defined layout with a separate living and kitchen area, bedroom, and bathroom—meeting all the essentials for comfortable, independent living. Built with modern finishes and a focus on privacy, it is fully fitted and ready for immediate use. Quick installation minimizes site disruption, while flexible floorplans can be tailored to suit client needs.</p>
-                            <p>Ideal for: Residential use, family accommodation, long-term modular living</p>
+                            <p>Ideal for: Residential use, Family accommodation, Long-term modular living</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
@@ -539,9 +538,9 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>12m x 3m Modular Building</h4>
                             <p>This modular building system is designed for scalability and flexibility, allowing for extended configurations to create larger spaces as required. Its adaptable design supports a wide range of applications, with the ability to connect multiple units for increased capacity.</p>
-                            <p>Ideal for: Portable classrooms, kitchens, and dining facilities</p>
+                            <p>Ideal for: Portable classrooms, Kitchens, and Dining facilities</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
@@ -555,9 +554,9 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>Canteens</h4>
                             <p>These modular canteen buildings are designed to support a range of food service environments across education, sports, and recreational facilities. Configurable to suit site requirements, they can include external service hatches, deck areas, and accessible layouts to enhance functionality and user flow. Built with durable materials and practical design in mind, they provide an efficient and adaptable solution for high-traffic settings.</p>
-                            <p>Ideal for: Schools, sports facilities, and community recreation spaces</p>
+                            <p>Ideal for: Schools, Sports facilities, and Community recreation spaces</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
@@ -571,14 +570,60 @@ include 'inc/header.php';
                         <div data-aos="fade-up">
                             <h4>Ablution Blocks</h4>
                             <p>These modular ablution blocks provide reliable and hygienic toilet and shower facilities, designed for durability and ease of maintenance. Available in custom layouts for male, female, and unisex configurations, each unit is delivered fully fitted with plumbing, fixtures, and interior finishes. Built to perform in high-use and remote environments, they offer a practical, ready-to-use sanitation solution.</p>
-                            <p>Ideal for: Schools, sporting clubs, campgrounds, and remote work sites</p>
+                            <p>Ideal for: Schools, Sporting clubs, Campgrounds, and Remote work sites</p>
                         </div>
-                        <a href="#" class="" data-aos="fade-up">View Images <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+                        <button data-aos="fade-up" class="view-gallery-btn">View Images</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-modal-overlay"></div>
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-close">&times;</button>
+            
+            <div id="main-carousel" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+1" alt="Gallery Image 1">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+2" alt="Gallery Image 2">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+3" alt="Gallery Image 3">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+4" alt="Gallery Image 4">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="thumbnail-carousel" class="splide mt-3">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+1" alt="Thumbnail 1">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+2" alt="Thumbnail 2">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+3" alt="Thumbnail 3">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://placehold.co/1200x800?text=Module+Image+4" alt="Thumbnail 4">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php include 'inc/footer.php'; ?>

@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 80%",
+                    start: "top 85%",
                     toggleActions: "play none none reverse",
                 }
             });
@@ -323,11 +323,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const kitHomesIntro = document.querySelector(".kit-homes-intro");
     if (kitHomesIntro) {
         gsap.to(kitHomesIntro, {
-        backgroundColor: "#414740",
+        backgroundColor: "#591c1c",
         scrollTrigger: {
             trigger: kitHomesIntro,
             start: "top 60%",
-            end: "top 30%",
+            end: "top 20%",
             scrub: true,
         },
         });
@@ -518,11 +518,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const modularIntro = document.querySelector(".modular-section-intro");
     if (modularIntro) {
         gsap.to(modularIntro, {
-            backgroundColor: "#414740",
+            backgroundColor: "#591c1c",
             scrollTrigger: {
                 trigger: modularIntro,
                 start: "top 60%",
-                end: "top 30%",
+                end: "top 20%",
                 scrub: true
             }
         });
@@ -632,4 +632,74 @@ window.addEventListener("resize", () => {
   resizeReloadTimer = setTimeout(() => {
     window.location.reload();
   }, 250);
+});
+
+// Splide Gallery Modal
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryModal = document.getElementById("gallery-modal");
+    const viewButtons = document.querySelectorAll(".view-gallery-btn");
+    const closeButton = document.querySelector(".gallery-modal-close");
+    const overlay = document.querySelector(".gallery-modal-overlay");
+
+    if (!galleryModal || viewButtons.length === 0) return;
+
+    // Initialize Main Splide
+    const mainSplide = new Splide("#main-carousel", {
+        type: "fade",
+        rewind: true,
+        pagination: false,
+        arrows: true,
+    });
+
+    // Initialize Thumbnail Splide
+    const thumbnailSplide = new Splide("#thumbnail-carousel", {
+        fixedWidth: 100,
+        fixedHeight: 60,
+        gap: 10,
+        rewind: true,
+        isNavigation: true,
+        pagination: false,
+        arrows: false,
+        breakpoints: {
+            600: {
+                fixedWidth: 60,
+                fixedHeight: 44,
+            },
+        },
+    });
+
+    // Sync carousels
+    mainSplide.sync(thumbnailSplide);
+    mainSplide.mount();
+    thumbnailSplide.mount();
+
+    // Open modal
+    viewButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            galleryModal.classList.add("active");
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+            
+            // Refresh splide to ensure correct layout
+            setTimeout(() => {
+                mainSplide.refresh();
+                thumbnailSplide.refresh();
+            }, 50);
+        });
+    });
+
+    // Close modal
+    const closeModal = () => {
+        galleryModal.classList.remove("active");
+        document.body.style.overflow = ""; // Restore scrolling
+    };
+
+    closeButton.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && galleryModal.classList.contains("active")) {
+            closeModal();
+        }
+    });
 });
