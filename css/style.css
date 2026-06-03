@@ -1181,3 +1181,569 @@ button {
     object-fit: cover;
     /* border-radius: 4px; */
 }
+
+/* Global Impact Section */
+.global-impact-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+.global-impact-section .section-padding {
+    padding: 80px 0;
+}
+
+.global-impact-content {
+    padding-right: 40px;
+}
+
+.global-impact-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: #1a2e25;
+}
+
+.global-impact-body {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.global-impact-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.stat-card {
+    background: #fff;
+    border-left: 4px solid #1a2e25;
+    padding: 32px 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-size: clamp(32px, 6vw, 48px);
+    font-weight: 600;
+    color: #1a2e25;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: clamp(14px, 1.8vw, 18px);
+    color: #666;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .global-impact-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .global-impact-title {
+        font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .global-impact-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .stat-card {
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .global-impact-section {
+        padding: 50px 0;
+    }
+
+    .global-impact-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 24px 20px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+}
+
+/* Project Value Section */
+.project-value-section {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.project-value-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: #1a2e25;
+}
+
+.project-value-body {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Closing Section */
+.closing-section {
+    background: linear-gradient(135deg, #1a2e25 0%, #2d4a3f 100%);
+    padding: 100px 0;
+    color: #fff;
+}
+
+.closing-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: #fff;
+}
+
+.closing-body {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #f5f5f5;
+    padding: 120px 0;
+}
+
+.cta-title {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 400;
+    margin-bottom: 48px;
+    color: #1a2e25;
+    line-height: 1.2;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: clamp(14px, 1.8vw, 18px);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.cta-button-primary {
+    background-color: #1a2e25;
+    color: #fff;
+    border-color: #1a2e25;
+}
+
+.cta-button-primary:hover {
+    background-color: #2d4a3f;
+    border-color: #2d4a3f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 46, 37, 0.3);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: #1a2e25;
+    border-color: #1a2e25;
+}
+
+.cta-button-secondary:hover {
+    background-color: #1a2e25;
+    color: #fff;
+    border-color: #1a2e25;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 46, 37, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-value-section {
+        padding: 60px 0;
+    }
+
+    .closing-section {
+        padding: 60px 0;
+    }
+
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .cta-buttons {
+        gap: 16px;
+    }
+
+    .cta-button {
+        padding: 12px 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-value-title,
+    .closing-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .cta-title {
+        font-size: 32px;
+        margin-bottom: 36px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
+
+/* ======================== MATERIALS PAGE STYLES ======================== */
+
+/* Materials Overview Section */
+.materials-overview-section {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.materials-overview-section h3 {
+    color: #dccbb3;
+    margin-bottom: 1.5rem;
+}
+
+.materials-overview-section .lead {
+    color: #ccc;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.6;
+}
+
+/* Material Cards */
+.material-card {
+    background-color: #282828;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.material-card:hover {
+    border-color: #dccbb3;
+    box-shadow: 0 15px 40px rgba(220, 203, 179, 0.15);
+    transform: translateY(-5px);
+}
+
+.material-card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.material-card:hover .material-card-image img {
+    transform: scale(1.05);
+}
+
+.material-card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-card h4 {
+    color: #dccbb3;
+    margin-bottom: 1rem;
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+.material-card p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Material Properties Tags */
+.material-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.property-tag {
+    display: inline-block;
+    background-color: rgba(220, 203, 179, 0.1);
+    border: 1px solid #dccbb3;
+    color: #dccbb3;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover .property-tag {
+    background-color: #dccbb3;
+    color: #1a1a1a;
+}
+
+/* Accessories Section */
+.materials-accessories-section {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.materials-accessories-section h3 {
+    color: #dccbb3;
+    margin-bottom: 2rem;
+}
+
+.materials-accessories-section h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.accessories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accessories-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.accessories-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #dccbb3;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.accessories-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.accessories-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Properties Section */
+.materials-properties-section {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.materials-properties-section h3 {
+    color: #dccbb3;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.property-box {
+    background-color: #282828;
+    padding: 2.5rem 2rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.property-box:hover {
+    border-color: #dccbb3;
+    box-shadow: 0 10px 30px rgba(220, 203, 179, 0.1);
+}
+
+.property-icon {
+    font-size: 3rem;
+    color: #dccbb3;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 203, 179, 0.05);
+    border-radius: 50%;
+}
+
+.property-box h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.property-box p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA Section */
+.materials-cta-section {
+    background: linear-gradient(135deg, #282828 0%, #1a1a1a 100%);
+    color: #fff;
+    border-top: 1px solid #3a3a3a;
+}
+
+.materials-cta-section h3 {
+    color: #dccbb3;
+    margin-bottom: 1rem;
+}
+
+.materials-cta-section .lead {
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #dccbb3;
+    color: #1a1a1a;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(220, 203, 179, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .materials-overview-section {
+        padding: 60px 0;
+    }
+
+    .material-card-image {
+        height: 250px;
+    }
+
+    .material-card-content {
+        padding: 1.5rem;
+    }
+
+    .materials-accessories-section {
+        padding: 60px 0;
+    }
+
+    .accessories-list li {
+        font-size: 14px;
+    }
+
+    .property-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .materials-properties-section h3 {
+        margin-bottom: 2rem;
+    }
+
+    .materials-cta-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .material-card {
+        text-align: center;
+    }
+
+    .material-card h4 {
+        font-size: 20px;
+    }
+
+    .material-card p {
+        font-size: 13px;
+    }
+
+    .material-properties {
+        justify-content: center;
+    }
+
+    .accessories-image {
+        padding: 1rem 0;
+    }
+
+    .property-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .materials-cta-section h3 {
+        font-size: 28px;
+    }
+}
