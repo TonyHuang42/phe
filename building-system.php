@@ -479,7 +479,7 @@ include 'inc/header.php';
 
     <!-- Modular Applications -->
     <section class="section-padding modular-applications-section">
-        <h3 class="text-center mb-5">Our Moduls</h3>
+        <h3 class="text-center mb-5">Our Modules</h3>
         <div class="container">
             <div class="modular-applications-wrapper">
                 <div class="row gx-3 gx-lg-5">
