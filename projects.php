@@ -42,6 +42,7 @@ include 'inc/header.php';
             </div>
         </section>
     </div>
+
     <section class="projects-section">
         <div class="container-fluid">
             <div class="projects-section-inner row">
@@ -527,6 +528,36 @@ include 'inc/header.php';
                                     <img src="https://tref.digitaldesignnyc.co/wp-content/uploads/2023/12/slide2.jpeg" alt="Brittania Bay Residence" class="img-fluid w-100">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Section -->
+    <section class="global-impact-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="global-impact-content">
+                        <h2 class="global-impact-title" data-aos="fade-up" data-aos-duration="1000">A Proven Global Track Record</h2>
+                        <p class="global-impact-body" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">PHE Luxwood systems have been applied across diverse climates and construction environments, consistently delivering performance, efficiency, and reliability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="global-impact-stats">
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years of Experience</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">Countries Served</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Completed Projects</div>
                         </div>
                     </div>
                 </div>
