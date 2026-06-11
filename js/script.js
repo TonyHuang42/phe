@@ -607,6 +607,447 @@ document.addEventListener("DOMContentLoaded", () => {
             gsap.set(cols, { clearProps: "all" });
         });
     }
+
+    // About
+    /* ========== ABOUT PAGE ========== */
+
+    const aboutPage = document.querySelector(".about-page");
+
+    if (aboutPage) {
+
+        /*
+        ==========================================
+        HERO IMAGE PARALLAX
+        ==========================================
+        */
+
+        const heroBg = document.querySelector(".about-hero-bg img");
+
+        if (heroBg) {
+
+            gsap.fromTo(
+                heroBg,
+                {
+                    scale: 1
+                },
+                {
+                    scale: 1.15,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".about-hero-section",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                }
+            );
+
+        }
+
+        /*
+        ==========================================
+        RESPONSIBLE LIVING
+        ==========================================
+        */
+
+        const certs = gsap.utils.toArray(".certification-item");
+
+        if (certs.length) {
+
+            gsap.set(certs, {
+                opacity: 0,
+                y: 80
+            });
+
+            gsap.to(certs, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".certifications-grid",
+                    start: "top 80%"
+                }
+            });
+
+        }
+
+        /*
+        ==========================================
+        QUOTE SECTION
+        ==========================================
+        */
+
+        const quoteSection = document.querySelector(".about-quote-section");
+
+        if (quoteSection) {
+
+            const tlQuote = gsap.timeline({
+                scrollTrigger: {
+                    trigger: quoteSection,
+                    start: "top 75%"
+                }
+            });
+
+            tlQuote
+
+                .from(".quote-bg-mark", {
+                    scale: 0.3,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out"
+                })
+
+                .from(".about-quote", {
+                    y: 80,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.8")
+
+                .from(".quote-author", {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.8
+                }, "-=0.4");
+
+        }
+
+        /*
+        ==========================================
+        LEADERSHIP TITLE
+        ==========================================
+        */
+
+        const familyTitle =
+            document.querySelector(".family-title");
+
+        if (familyTitle) {
+
+            const splitTitle = new SplitText(
+                familyTitle,
+                {
+                    type: "chars"
+                }
+            );
+
+            gsap.set(splitTitle.chars, {
+                yPercent: 100,
+                opacity: 0
+            });
+
+            gsap.to(splitTitle.chars, {
+
+                yPercent: 0,
+                opacity: 1,
+
+                stagger: 0.03,
+
+                duration: 1,
+
+                ease: "power3.out",
+
+                scrollTrigger: {
+                    trigger: familyTitle,
+                    start: "top 80%"
+                }
+
+            });
+
+        }
+
+        /*
+        ==========================================
+        FAMILY TABS
+        ==========================================
+        */
+
+        const tabs =
+            document.querySelectorAll(".family-tab");
+
+        const panels =
+            document.querySelectorAll(".family-panel");
+
+        if (tabs.length) {
+
+            tabs.forEach(tab => {
+
+                tab.addEventListener("click", () => {
+
+                    const target =
+                        tab.dataset.target;
+
+                    const currentPanel =
+                        document.querySelector(".family-panel.active");
+
+                    const nextPanel =
+                        document.getElementById(target);
+
+                    if (
+                        currentPanel === nextPanel
+                    ) {
+                        return;
+                    }
+
+                    tabs.forEach(t =>
+                        t.classList.remove("active")
+                    );
+
+                    tab.classList.add("active");
+
+                    gsap.to(
+                        currentPanel.children,
+                        {
+                            opacity: 0,
+                            y: 30,
+                            duration: 0.3,
+                            stagger: 0.04,
+
+                            onComplete: () => {
+
+                                currentPanel.classList.remove("active");
+
+                                nextPanel.classList.add("active");
+
+                                gsap.fromTo(
+                                    nextPanel.children,
+
+                                    {
+                                        opacity: 0,
+                                        y: 30
+                                    },
+
+                                    {
+                                        opacity: 1,
+                                        y: 0,
+                                        duration: 0.6,
+                                        stagger: 0.05,
+                                        ease: "power3.out"
+                                    }
+                                );
+
+                            }
+                        }
+                    );
+
+                });
+
+            });
+
+        }
+
+        /*
+        ==========================================
+        TEAM CARDS REVEAL
+        KingsHaus Style
+        ==========================================
+        */
+
+        const teamCards =
+            gsap.utils.toArray(".team-card");
+
+        if (teamCards.length) {
+
+            gsap.set(teamCards, {
+                opacity: 0,
+                y: 80
+            });
+
+            gsap.to(teamCards, {
+
+                opacity: 1,
+                y: 0,
+
+                duration: 1.2,
+
+                stagger: 0.12,
+
+                ease: "power3.out",
+
+                scrollTrigger: {
+                    trigger: ".team-grid",
+                    start: "top 80%"
+                }
+
+            });
+
+        }
+
+        /*
+        ==========================================
+        TEAM IMAGE REVEAL
+        ==========================================
+        */
+
+        teamCards.forEach(card => {
+
+            const image =
+                card.querySelector("img");
+
+            if (!image) return;
+
+            gsap.fromTo(
+                image,
+
+                {
+                    scale: 1.2
+                },
+
+                {
+                    scale: 1,
+
+                    duration: 1.4,
+
+                    ease: "power3.out",
+
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                }
+            );
+
+        });
+
+        /*
+        ==========================================
+        TEAM HOVER EXPAND
+        Honomobo / KingsHaus
+        ==========================================
+        */
+
+        teamCards.forEach(card => {
+
+            if (
+                card.classList.contains(
+                    "featured"
+                )
+            ) {
+                return;
+            }
+
+            const content =
+                card.querySelector(
+                    ".team-card-content"
+                );
+
+            if (!content) return;
+
+            card.addEventListener(
+                "mouseenter",
+                () => {
+
+                    gsap.to(content, {
+                        minHeight: 150,
+                        duration: 0.45,
+                        ease: "power3.out"
+                    });
+
+                }
+            );
+
+            card.addEventListener(
+                "mouseleave",
+                () => {
+
+                    gsap.to(content, {
+                        minHeight: 100,
+                        duration: 0.45,
+                        ease: "power3.out"
+                    });
+
+                }
+            );
+
+        });
+
+        /*
+        ==========================================
+        IMAGE PARALLAX
+        ==========================================
+        */
+
+        teamCards.forEach(card => {
+
+            const image =
+                card.querySelector("img");
+
+            if (!image) return;
+
+            gsap.to(image, {
+
+                yPercent: -10,
+
+                ease: "none",
+
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+
+            });
+
+        });
+
+        /*
+        ==========================================
+        FOOTER BANNER
+        ==========================================
+        */
+
+        const footerBanner =
+            document.querySelector(
+                ".about-footer-banner"
+            );
+
+        if (footerBanner) {
+
+            gsap.from(
+                ".about-footer-logo",
+                {
+
+                    y: 80,
+                    opacity: 0,
+
+                    duration: 1.2,
+
+                    ease: "power3.out",
+
+                    scrollTrigger: {
+                        trigger: footerBanner,
+                        start: "top 75%"
+                    }
+
+                }
+            );
+
+            gsap.fromTo(
+                ".about-footer-image img",
+
+                {
+                    scale: 1.15
+                },
+
+                {
+                    scale: 1,
+
+                    ease: "none",
+
+                    scrollTrigger: {
+                        trigger: footerBanner,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                }
+            );
+
+        }
+
+    }
 });
 
 // Recalculate ScrollTrigger after all images and resources have fully loaded
