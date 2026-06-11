@@ -18,7 +18,7 @@ include 'inc/header.php';
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-9">
-                        <h2 class="mb-0">PHE LUXWOOD BUILDING SYSTEM</h2>
+                        <h2 class="mb-0">PHE LUXWOOD ABOUT</h2>
                     </div>
                     <div class="col-lg-3">
                         <h6>Engineered modular systems designed to accelerate construction, reduce costs, and deliver reliable performance. </h6>
