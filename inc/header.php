@@ -112,7 +112,7 @@
                         </li> -->
 
                         <li class="nav-item ms-lg-3">
-                            <a class="site-header-cta" href="#">Contact Us</a>
+                            <a class="site-header-cta" href="contact.php">Contact Us</a>
                         </li>
                     </ul>
                 </div>

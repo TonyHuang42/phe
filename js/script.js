@@ -607,6 +607,29 @@ document.addEventListener("DOMContentLoaded", () => {
             gsap.set(cols, { clearProps: "all" });
         });
     }
+    
+    // Country tab switcher — updates map + info card
+        document.querySelectorAll('.ctab').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.ctab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update map iframe src (moves marker to new location)
+                document.getElementById('contactMap').src =
+                    'https://maps.google.com/maps?q=' + btn.dataset.q +
+                    '&t=&z=' + btn.dataset.z + '&ie=UTF8&iwloc=&output=embed';
+
+                // Update info card
+                document.getElementById('micName').textContent = btn.dataset.name;
+                var ph = btn.dataset.phone;
+                document.getElementById('micPhone').textContent = ph;
+                document.getElementById('micPhone').href = 'tel:' + ph.replace(/\s/g, '');
+                var em = btn.dataset.email;
+                document.getElementById('micEmail').textContent = em;
+                document.getElementById('micEmail').href = 'mailto:' + em;
+                document.getElementById('micAddr').innerHTML = btn.dataset.addr;
+            });
+        });
 });
 
 // Recalculate ScrollTrigger after all images and resources have fully loaded
