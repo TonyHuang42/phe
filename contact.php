@@ -27,37 +27,43 @@ include 'inc/header.php';
     </section>
 
     <!-- SECTION 1: Map with overlay tabs + info card -->
-    <section class="contact-map-section">
+    <!-- <section class="contact-map-section">
+        <div id="contactMap">
 
         <iframe class="contact-gmap" id="contactMap"
             src="https://maps.google.com/maps?q=dubai+design+district+uae&t=&z=14&ie=UTF8&iwloc=&output=embed"
             loading="lazy"></iframe>
 
+       
         <div class="country-tabs">
+
             <button class="ctab active"
-                data-q="dubai+design+district+uae" data-z="14"
+                data-country="dubai"
                 data-name="Dubai"
                 data-phone="+971 00 000 0000"
                 data-email="info@luxwood.com"
                 data-addr="Dubai Design District<br>Dubai, UAE">
                 Dubai
             </button>
+
             <button class="ctab"
-                data-q="stockholm+sweden" data-z="12"
+                data-country="stockholm"
                 data-name="Stockholm"
                 data-phone="+46 00 000 0000"
                 data-email="stockholm@luxwood.com"
                 data-addr="Stockholm<br>Sweden">
                 Stockholm
             </button>
+
             <button class="ctab"
-                data-q="london+united+kingdom" data-z="12"
+                data-country="london"
                 data-name="London"
                 data-phone="+44 20 0000 0000"
                 data-email="london@luxwood.com"
                 data-addr="London<br>United Kingdom">
                 London
             </button>
+
         </div>
 
         <div class="map-info-card">
@@ -77,14 +83,81 @@ include 'inc/header.php';
             <button class="mic-cta">Contact us</button>
         </div>
 
-    </section>
-    
+    </section> -->
+    <section class="contact-map-section">
+
+            <!-- Google Map -->
+            <div id="contactMap" class="contact-gmap"></div>
+
+            <!-- Country Tabs -->
+            <div class="country-tabs">
+
+                <button class="ctab active"
+                    data-country="dubai"
+                    data-name="Dubai"
+                    data-phone="+971 00 000 0000"
+                    data-email="info@luxwood.com"
+                    data-addr="Dubai Design District<br>Dubai, UAE">
+                    Dubai
+                </button>
+
+                <button class="ctab"
+                    data-country="stockholm"
+                    data-name="Stockholm"
+                    data-phone="+46 00 000 0000"
+                    data-email="stockholm@luxwood.com"
+                    data-addr="Stockholm<br>Sweden">
+                    Stockholm
+                </button>
+
+                <button class="ctab"
+                    data-country="london"
+                    data-name="London"
+                    data-phone="+44 20 0000 0000"
+                    data-email="london@luxwood.com"
+                    data-addr="London<br>United Kingdom">
+                    London
+                </button>
+
+            </div>
+
+            <!-- Info Card -->
+            <div class="map-info-card">
+
+                <h5 id="micName">Dubai</h5>
+
+                <div class="mic-row">
+                    <strong>Phone:</strong>
+                    <a id="micPhone" href="tel:+971000000000">
+                        +971 00 000 0000
+                    </a>
+                </div>
+
+                <div class="mic-row">
+                    <strong>Email:</strong>
+                    <a id="micEmail" href="mailto:info@luxwood.com">
+                        info@luxwood.com
+                    </a>
+                </div>
+
+                <div class="mic-row">
+                    <strong>Address:</strong>
+                    <span id="micAddr">
+                        Dubai Design District<br>
+                        Dubai, UAE
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
     <!-- SECTION 2: Showrooms Heading + City Filter -->
     <section class="showrooms-section">
+    <div class="container">
+        <h1 class="showrooms-title mt-5">Showrooms</h1>
 
-        <h1 class="showrooms-title">Showrooms</h1>
-
-        <div class="city-filter" id="cityFilter">
+        <div class="city-filter" id="cityFilter mb-5">
             <button class="city-trigger" id="cityTrigger">
                 City <span class="city-dash">—</span>
             </button>
@@ -98,7 +171,7 @@ include 'inc/header.php';
                     data-addr="Dubai Design District<br>Building 7, Suite 201<br>Dubai, UAE"
                     data-hours="Mon – Fri: 9am – 5.30pm"
                     data-map="https://maps.google.com/maps?q=dubai+design+district&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    data-photo="images/showroom-dubai.jpg">
+                    data-photo="img/contact/show_room1.webp">
                     Dubai
                 </button>
                 <button class="city-pill" data-city="Stockholm"
@@ -107,7 +180,7 @@ include 'inc/header.php';
                     data-addr="Stockholm<br>Sweden"
                     data-hours="Mon – Fri: 9am – 5pm"
                     data-map="https://maps.google.com/maps?q=stockholm+sweden&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    data-photo="images/showroom-stockholm.jpg">
+                    data-photo="img/contact/show_room2.webp">
                     Stockholm
                 </button>
                 <button class="city-pill" data-city="London"
@@ -116,63 +189,251 @@ include 'inc/header.php';
                     data-addr="London<br>United Kingdom"
                     data-hours="Mon – Fri: 9am – 6pm"
                     data-map="https://maps.google.com/maps?q=london+uk&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    data-photo="images/showroom-london.jpg">
+                    data-photo="img/contact/show_room3.webp">
                     London
                 </button>
             </div>
         </div>
+    </div>
 
     </section>
 
     <!-- SECTION 3: City Detail + Photo/Map Toggle -->
-    <section class="city-detail-section">
+    <!-- <section class="city-detail-section">
+        
+            <div class="city-info-side">
+                <h3 class="city-detail-name" id="detailCityName">Dubai</h3>
+                <div class="detail-row">
+                    <div class="detail-icon">P</div>
+                    <div class="detail-text">
+                        <a href="tel:+971000000000" id="detailPhone">+971 00 000 0000</a>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">E</div>
+                    <div class="detail-text">
+                        <a href="mailto:info@luxwood.com" id="detailEmail">info@luxwood.com</a>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">A</div>
+                    <div class="detail-text" id="detailAddr">
+                        Dubai Design District<br>Building 7, Suite 201<br>Dubai, UAE
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">H</div>
+                    <div class="detail-text" id="detailHours">Mon – Fri: 9am – 5.30pm</div>
+                </div>
+                <button class="read-more-btn">Read more</button>
+            </div>
 
-        <div class="city-info-side">
-            <h3 class="city-detail-name" id="detailCityName">Dubai</h3>
-            <div class="detail-row">
-                <div class="detail-icon">P</div>
-                <div class="detail-text">
-                    <a href="tel:+971000000000" id="detailPhone">+971 00 000 0000</a>
+            <div class="city-visual-side">
+                <div class="photo-map-toggle">
+                    <button class="ptab active" id="photoTab" onclick="switchView('photo')">Photo</button>
+                    <button class="ptab" id="mapTab" onclick="switchView('map')">Map</button>
+                </div>
+                <div class="visual-photo" id="visualPhoto">
+                    <img src="img/contact/show_room1.webp" alt="Dubai showroom" id="showroomPhoto">
+                </div>
+                <div class="visual-map" id="visualMap">
+                    <iframe id="showroomMap"
+                        src="https://maps.google.com/maps?q=dubai+design+district&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="detail-row">
-                <div class="detail-icon">E</div>
-                <div class="detail-text">
-                    <a href="mailto:info@luxwood.com" id="detailEmail">info@luxwood.com</a>
+    
+    </section> -->
+    <section class="city-detail-section-wrapper">
+    <div class="container">
+        <div class="city-detail-section">
+
+            <div class="city-info-side">
+                <h3 class="city-detail-name" id="detailCityName">Dubai</h3>
+                <div class="detail-row">
+                    <div class="detail-icon">P</div>
+                    <div class="detail-text">
+                        <a href="tel:+971000000000" id="detailPhone">+971 00 000 0000</a>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">E</div>
+                    <div class="detail-text">
+                        <a href="mailto:info@luxwood.com" id="detailEmail">info@luxwood.com</a>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">A</div>
+                    <div class="detail-text" id="detailAddr">
+                        Dubai Design District<br>Building 7, Suite 201<br>Dubai, UAE
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">H</div>
+                    <div class="detail-text" id="detailHours">Mon – Fri: 9am – 5.30pm</div>
+                </div>
+                <button class="read-more-btn">Read more</button>
+            </div>
+
+            <div class="city-visual-side">
+                <div class="photo-map-toggle">
+                    <button class="ptab active" id="photoTab" onclick="switchView('photo')">Photo</button>
+                    <button class="ptab" id="mapTab" onclick="switchView('map')">Map</button>
+                </div>
+                <div class="visual-photo" id="visualPhoto">
+                    <img src="img/contact/show_room1.webp" alt="Dubai showroom" id="showroomPhoto">
+                </div>
+                <div class="visual-map" id="visualMap">
+                    <iframe id="showroomMap"
+                        src="https://maps.google.com/maps?q=dubai+design+district&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="detail-row">
-                <div class="detail-icon">A</div>
-                <div class="detail-text" id="detailAddr">
-                    Dubai Design District<br>Building 7, Suite 201<br>Dubai, UAE
-                </div>
-            </div>
-            <div class="detail-row">
-                <div class="detail-icon">H</div>
-                <div class="detail-text" id="detailHours">Mon – Fri: 9am – 5.30pm</div>
-            </div>
-            <button class="read-more-btn">Read more</button>
         </div>
+    </div>
+</section>
 
-        <div class="city-visual-side">
-            <div class="photo-map-toggle">
-                <button class="ptab active" id="photoTab" onclick="switchView('photo')">Photo</button>
-                <button class="ptab" id="mapTab" onclick="switchView('map')">Map</button>
-            </div>
-            <div class="visual-photo" id="visualPhoto">
-                <img src="images/showroom-dubai.jpg" alt="Dubai showroom" id="showroomPhoto">
-            </div>
-            <div class="visual-map" id="visualMap">
-                <iframe id="showroomMap"
-                    src="https://maps.google.com/maps?q=dubai+design+district&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    loading="lazy"></iframe>
-            </div>
-        </div>
-
-    </section>
+<section class="sticky-image-section">
+    <div class="sticky-image-wrap">
+        <img src="img/footer-banner.webp" alt="Luxury Interior">
+    </div>
+</section>
 
 </main>
 
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-fSqRpW24y6bsoNeIWSDAjafI5DeJw04&callback=initMap">
+</script>
+
+
+<script>
+
+let map;
+let marker;
+
+const locations = {
+
+    dubai: {
+        lat: 25.1857,
+        lng: 55.2644,
+        zoom: 15
+    },
+
+    stockholm: {
+        lat: 59.3293,
+        lng: 18.0686,
+        zoom: 13
+    },
+
+    london: {
+        lat: 51.5072,
+        lng: -0.1276,
+        zoom: 13
+    }
+
+};
+
+function initMap() {
+
+    map = new google.maps.Map(
+        document.getElementById('contactMap'),
+        {
+            center: locations.dubai,
+            zoom: 4,
+            mapTypeControl:false,
+            streetViewControl:false,
+            fullscreenControl:false
+        }
+    );
+
+    marker = new google.maps.Marker({
+        position: locations.dubai,
+        map: map,
+        animation: google.maps.Animation.DROP
+    });
+
+    flyToLocation(locations.dubai);
+
+}
+
+function flyToLocation(location){
+
+    // map.setZoom(3);
+
+    setTimeout(function(){
+
+        map.panTo({
+            lat: location.lat,
+            lng: location.lng
+        });
+
+        marker.setPosition({
+            lat: location.lat,
+            lng: location.lng
+        });
+
+        let zoom = 1;
+
+        const zoomAnimation = setInterval(function(){
+
+            zoom++;
+
+            map.setZoom(zoom);
+
+            if(zoom >= location.zoom){
+                clearInterval(zoomAnimation);
+            }
+
+        },120);
+
+    },600);
+
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    document.querySelectorAll('.ctab').forEach(function(btn){
+
+        btn.addEventListener('click', function(){
+
+            document
+                .querySelectorAll('.ctab')
+                .forEach(function(b){
+                    b.classList.remove('active');
+                });
+
+            this.classList.add('active');
+
+            const country = this.dataset.country;
+
+            flyToLocation(locations[country]);
+
+            document.getElementById('micName').textContent =
+                this.dataset.name;
+
+            document.getElementById('micPhone').textContent =
+                this.dataset.phone;
+
+            document.getElementById('micPhone').href =
+                'tel:' + this.dataset.phone.replace(/\s/g,'');
+
+            document.getElementById('micEmail').textContent =
+                this.dataset.email;
+
+            document.getElementById('micEmail').href =
+                'mailto:' + this.dataset.email;
+
+            document.getElementById('micAddr').innerHTML =
+                this.dataset.addr;
+
+        });
+
+    });
+
+});
+
+</script>
 <script>
 // Country tabs (Section 1)
 document.querySelectorAll('.ctab').forEach(function(btn) {

@@ -229,7 +229,7 @@
 
 /* ─── SECTION 2: Showrooms + City Filter ─── */
 .showrooms-section {
-    padding: 80px 60px 40px;
+    padding: 80px 60px 80px;
     background: #f5f3ee;
 }
 
@@ -313,10 +313,14 @@
 }
 
 /* ─── SECTION 3: City Detail + Photo/Map ─── */
-.city-detail-section {
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    min-height: 520px;
+.city-detail-section-wrapper{
+    background:#f5f3ee;
+}
+
+.city-detail-section{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    min-height:520px;
 }
 
 .city-info-side {
@@ -459,4 +463,85 @@
     .showrooms-section { padding: 60px 24px 32px; }
     .city-info-side { padding: 36px 24px; }
     .showrooms-title { letter-spacing: -1.5px; }
+}
+
+
+.contact-map-section{
+    position:relative;
+    height:700px;
+}
+
+.contact-gmap{
+    width:100%;
+    height:100%;
+    /* border-radius:20px; */
+    overflow:hidden;
+}
+
+.country-tabs{
+    position:absolute;
+    top:30px;
+    left:30px;
+    z-index:99;
+    display:flex;
+    gap:10px;
+}
+
+.ctab{
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+}
+
+.ctab.active{
+    background:#000;
+    color:#fff;
+}
+
+/* .map-info-card{
+    position:absolute;
+    right:30px;
+    bottom:30px;
+    background:#fff;
+    padding:25px;
+    z-index:99;
+    width:320px;
+    border-radius:15px;
+} */
+
+.visual-photo{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.visual-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:scale(1.08);
+    transition:transform 1.2s cubic-bezier(.22,.61,.36,1);
+    will-change:transform;
+}
+
+.visual-photo:hover img{
+    transform:scale(1);
+}
+
+.sticky-image-section{
+    height:100vh;
+    position:relative;
+}
+
+.sticky-image-wrap{
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow:hidden;
+}
+
+.sticky-image-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
