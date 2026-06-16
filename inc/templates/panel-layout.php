@@ -1,16 +1,71 @@
+<?php 
+$hotspots = [
+    [
+        'label' => 'END TONGUE AND GROOVE',
+        'title' => 'Easy assembly',
+        'description' => 'With end-jointed panels, it is easy to join and you use as much of the wood as possible. A sustainable choice for our planet and your finances.',
+        'top' => '32%',
+        'left' => '32%',
+        'direction' => 'left'
+    ],
+    [
+        'label' => 'TEXTURE',
+        'title' => 'Brushed',
+        'description' => 'A brushed structure has been treated with rotating brushes that have removed the soft springwood on the surface. The result is a more durable product with a clear wood structure.',
+        'top' => '55%',
+        'left' => '50%',
+        'direction' => 'left'
+    ],
+    [
+        'label' => 'CERTIFICATION',
+        'title' => 'Sustainable forestry',
+        'description' => 'The forests of Norrland that surround us are our main raw material, and respecting the environment comes naturally. Our wood panels and solid wood floors are made from wood from certified sustainable forestry.',
+        'top' => '88%',
+        'left' => '30%',
+        'direction' => 'left'
+    ],
+
+    [
+        'label' => 'Surface treatment',
+        'title' => ' Superglaze',
+        'description' => 'Superglaze is a two-layer treatment. The panel is first treated with a varnish that inhibits knot yellowing and then with a white-pigmented varnish that makes the panel bright and easy to keep clean.',
+        'top' => '35%',
+        'left' => '72%',
+        'direction' => 'right'
+    ],
+    [
+        'label' => 'Profile',
+        'title' => 'Smooth',
+        'description' => 'tongue and groove The smooth tongue and groove creates a modern and stylish smooth wall. The profile has a very small bevel that creates a smooth transition between each board.',
+        'top' => '68%',
+        'left' => '83%',
+        'direction' => 'right'
+    ],
+    [
+        'label' => '8% Moisture ratio',
+        'title' => 'More Stable Products',
+        'description' => 'Dimensionally stable wood product. For dimensionally stable wood panels and wood floors, the wood is dried to 8% moisture content.',
+        'top' => '88%',
+        'left' => '50%',
+        'direction' => 'right'
+    ],
+
+
+];
+?>
 <!-- HERO -->
-<section class="home-hero-section">
-    <div class="hero-section-bg">
+<section class="home-hero-section product-banner-animation">
+    <div class="hero-section-bg product-banner-bg">
         <img src="<?= $product['banner_image']; ?>"
             alt="<?= $product['title']; ?>"
-            class="hero-section-bg-img">
+            class="hero-section-bg-img product-banner-img">
     </div>
 
-    <div class="building-system-hero-section-wrap">
-        <div class="container">
+    <div class="building-system-hero-section-wrap product-banner-content">
+        <div class="ms-5">
             <div class="row align-items-end">
                 <div class="col-lg-9">
-                    <h2 class="mb-0">
+                    <h2 class="mb-5 product-banner-title">
                         <?= $product['title']; ?>
                     </h2>
                 </div>
@@ -18,9 +73,27 @@
         </div>
     </div>
 </section>
+<!-- <section class="home-hero-section product-banner-animation"
+    style="background-image:url('<?= $product['banner_image']; ?>');">
+
+    <div class="hero-reveal"></div>
+
+    <div class="building-system-hero-section-wrap product-banner-content">
+        <div class="ms-5">
+            <div class="row align-items-end">
+                <div class="col-lg-12">
+                    <h2 class="mb-5 product-banner-title">
+                        <?= $product['title']; ?>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> -->
 
 <!-- OVERVIEW -->
-<section class="product-intro py-5">
+<section class="product-intro product-diagram py-5">
     <div class="container">
         <div class="row align-items-center">
 
@@ -84,6 +157,38 @@
             </div>
 
         </div>
+    </div>
+</section>
+
+<section class="product-hotspot-section">
+    <div class="product-hotspot-wrapper">
+
+        <img src="<?= $product['profile_image']; ?>" class="product-main-image">
+
+        <?php foreach($hotspots as $spot): ?>
+            <div class="hotspot hotspot-<?= $spot['direction']; ?>"
+                style="top:<?= $spot['top']; ?>;left:<?= $spot['left']; ?>;">
+
+                <span class="hotspot-dot"></span>
+
+            <div class="hotspot-card">
+                <div class="hotspot-header">
+                    <div class="hotspot-content">
+                        <span class="hotspot-label">
+                            <?= $spot['label']; ?>
+                        </span>
+                        <h4><?= $spot['title']; ?></h4>
+                    </div>
+                    <button class="hotspot-toggle">+</button>
+                </div>
+                <div class="hotspot-body">
+                    <p><?= $spot['description']; ?></p>
+                </div>
+            </div>
+
+            </div>
+        <?php endforeach; ?>
+
     </div>
 </section>
 
@@ -251,7 +356,35 @@
   </div>
 </section>
 <script>
+
+    document.querySelectorAll('.hotspot-toggle').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const current = this.closest('.hotspot');
+            document.querySelectorAll('.hotspot').forEach(item => {
+                if (item !== current) {
+                    item.classList.remove('active');
+                }
+            });
+            current.classList.toggle('active');
+        });
+    });
+
 document.addEventListener('DOMContentLoaded', function() {
+
+ const bannerBg = document.querySelector('.product-banner-bg');
+
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+
+    bannerBg.style.transform =
+        `translate3d(0, ${scrolled * 0.25}px, 0)`;
+
+    requestAnimationFrame(updateParallax);
+}
+
+requestAnimationFrame(updateParallax);  
+
+
 
   // Scroll reveal (fade + slide in from left/right)
   const revealEls = document.querySelectorAll('.scroll-reveal');

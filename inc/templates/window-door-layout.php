@@ -1,16 +1,16 @@
 <!-- HERO -->
-<section class="home-hero-section">
-    <div class="hero-section-bg">
+<section class="home-hero-section product-banner-animation">
+    <div class="hero-section-bg product-banner-bg">
         <img src="<?= $product['banner_image']; ?>"
             alt="<?= $product['title']; ?>"
-            class="hero-section-bg-img">
+            class="hero-section-bg-img product-banner-img">
     </div>
 
-    <div class="building-system-hero-section-wrap">
-        <div class="container">
+    <div class="building-system-hero-section-wrap product-banner-content">
+        <div class="ms-5">
             <div class="row align-items-end">
                 <div class="col-lg-9">
-                    <h2 class="mb-0">
+                    <h2 class="mb-5 product-banner-title">
                         <?= $product['title']; ?>
                     </h2>
                 </div>
