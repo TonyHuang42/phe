@@ -324,6 +324,32 @@ $hotspots = [
   </div>
 </section>
 <script>
+    (function () {
+        const wrapper    = document.querySelector('.diagram-scroll-wrapper');
+        const rightPanel = document.querySelector('.diagram-right');
+        const leftSticky = document.querySelector('.diagram-left-sticky');
+        if (!wrapper || !rightPanel || !leftSticky) return;
+        const NAV_H = 80;
+
+        function onScroll() {
+            const leftH  = leftSticky.offsetHeight;
+            const rightH = rightPanel.offsetHeight;
+            const MAX_OFFSET = (leftH - rightH) - (-72); 
+
+            if (MAX_OFFSET <= 0) return;
+
+            const sectionTop  = wrapper.getBoundingClientRect().top + window.scrollY;
+            const scrolledIn  = window.scrollY - sectionTop + NAV_H;
+            const offset = Math.min(Math.max(scrolledIn, 0), MAX_OFFSET);
+
+            rightPanel.style.transform = `translateY(${offset}px)`;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+
+        onScroll();
+    })();
 
     document.querySelectorAll('.hotspot-toggle').forEach(btn => {
         btn.addEventListener('click', function () {

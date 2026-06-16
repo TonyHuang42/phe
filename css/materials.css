@@ -558,7 +558,7 @@
   justify-content: flex-start;
   /* padding-top centers right image at start:
      (leftHeight - rightHeight) / 2 = (900 - 450) / 2 = 225px */
-  padding-top: 225px;
+  /* padding-top: 225px; */
   /* padding-bottom = same so it ends at bottom */
   padding-bottom: 225px;
   box-sizing: border-box;
@@ -884,3 +884,67 @@
         font-size: 18px;
     }
 }
+
+
+
+/* Panel last sections */
+.product-diagram {
+    position: relative;
+}
+.diagram-scroll-wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    position: relative;
+    min-height: 750px; 
+}
+
+.diagram-left {
+    flex: 1;
+}
+.diagram-left-sticky {
+    position: sticky;
+    top: 80px; /* match NAV_H */
+}
+
+.diagram-image-large {
+    height: 750px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ── Right: short image, JS moves it down on scroll ── */
+.diagram-right {
+    flex: 1;
+    position: sticky;
+    top: 80px;
+    height: fit-content; /* ✅ natural height — don't force a height here */
+    will-change: transform;
+}
+
+
+.diagram-image-medium {
+    height: 375px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Mobile: stack vertically ── */
+@media (max-width: 768px) {
+    .diagram-scroll-wrapper {
+        flex-direction: column;
+        min-height: unset;
+    }
+    .diagram-left-sticky,
+    .diagram-right {
+        position: relative;
+        top: unset;
+    }
+    .diagram-image-large,
+    .diagram-image-medium {
+        height: 300px;
+    }
+}   
