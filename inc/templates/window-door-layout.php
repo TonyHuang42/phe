@@ -9,7 +9,7 @@
     <div class="building-system-hero-section-wrap product-banner-content">
         <div class="ms-5">
             <div class="row align-items-end">
-                <div class="col-lg-9">
+                <div class="">
                     <h2 class="mb-5 product-banner-title">
                         <?= $product['title']; ?>
                     </h2>

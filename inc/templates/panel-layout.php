@@ -64,7 +64,7 @@ $hotspots = [
     <div class="building-system-hero-section-wrap product-banner-content">
         <div class="ms-5">
             <div class="row align-items-end">
-                <div class="col-lg-9">
+                <div class="">
                     <h2 class="mb-5 product-banner-title">
                         <?= $product['title']; ?>
                     </h2>
@@ -73,24 +73,6 @@ $hotspots = [
         </div>
     </div>
 </section>
-<!-- <section class="home-hero-section product-banner-animation"
-    style="background-image:url('<?= $product['banner_image']; ?>');">
-
-    <div class="hero-reveal"></div>
-
-    <div class="building-system-hero-section-wrap product-banner-content">
-        <div class="ms-5">
-            <div class="row align-items-end">
-                <div class="col-lg-12">
-                    <h2 class="mb-5 product-banner-title">
-                        <?= $product['title']; ?>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section> -->
 
 <!-- OVERVIEW -->
 <section class="product-intro product-diagram py-5">
@@ -191,20 +173,6 @@ $hotspots = [
 
     </div>
 </section>
-
-<!-- PROFILE / DIAGRAM -->
-<?php if(!empty($product['profile_image'])): ?>
-<section class="product-diagram py-5">
-    <div class="container text-center">
-
-        <img
-            src="<?= $product['profile_image']; ?>"
-            class="img-fluid"
-            alt="">
-
-    </div>
-</section>
-<?php endif; ?>
 
 <!-- SECONDARY SECTION -->
 <section class="product-intro py-5">
