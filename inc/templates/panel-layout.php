@@ -78,66 +78,48 @@ $hotspots = [
 <section class="product-intro product-diagram py-5">
     <div class="container">
         <div class="row align-items-center">
-
             <div class="col-lg-5">
-
-                <?php if(!empty($product['overview_title'])): ?>
-                    <h3 class="product-title mb-4">
-                        <?= nl2br($product['overview_title']); ?>
-                    </h3>
-                <?php endif; ?>
-
                 <?php if(!empty($product['overview_description'])): ?>
-                    <p class="lead product-description">
-                        <?= nl2br($product['overview_description']); ?>
-                    </p>
+                    <div class="headline-wrap">
+                        <h3 class="product-titles reveal-line">
+                            <?= nl2br($product['overview_description']); ?>
+                        </h3>
+                    </div>
                 <?php endif; ?>
 
                 <?php if(!empty($product['overview_features'])): ?>
                     <div class="key-features mt-5">
-
-                        <h5 class="mb-4">
+                        <h3 class="mb-4 product-titles">
                             Key Features
-                        </h5>
-
+                        </h3>
                         <ul class="feature-list-custom">
-
                             <?php foreach($product['overview_features'] as $feature): ?>
-                                <li><?= $feature; ?></li>
+                                <li class="product-description"><?= $feature; ?></li>
                             <?php endforeach; ?>
-
                         </ul>
-
                     </div>
                 <?php endif; ?>
 
                 <?php if(!empty($product['overview_note_title'])): ?>
                     <div class="key-features mt-5">
-
-                        <h5 class="mb-3">
+                        <h5 class="mb-3 product-titles">
                             <?= $product['overview_note_title']; ?>
                         </h5>
-
                         <?php if(!empty($product['overview_note_description'])): ?>
-                            <p class="lead product-description mb-0">
+                            <p class="product-description mb-0">
                                 <?= nl2br($product['overview_note_description']); ?>
                             </p>
                         <?php endif; ?>
-
                     </div>
                 <?php endif; ?>
 
             </div>
-
             <div class="col-lg-7 d-flex align-items-center justify-content-center">
-
                 <img
                     src="<?= $product['overview_image']; ?>"
                     alt="<?= $product['title']; ?>"
                     class="product-feature-image">
-
             </div>
-
         </div>
     </div>
 </section>
@@ -180,48 +162,40 @@ $hotspots = [
         <div class="row align-items-center">
 
             <div class="col-lg-5">
-
                 <?php if(!empty($product['secondary_title'])): ?>
-                    <h3 class="product-title mb-4">
-                        <?= nl2br($product['secondary_title']); ?>
-                    </h3>
+                    <div class="headline-wrap">
+                        <h3 class="product-titles reveal-line">
+                            <?= nl2br($product['secondary_title']); ?>
+                        </h3>
+                    </div>
                 <?php endif; ?>
 
                 <?php if(!empty($product['secondary_description'])): ?>
-                    <p class="lead product-description">
+                    <p class="product-description">
                         <?= nl2br($product['secondary_description']); ?>
                     </p>
                 <?php endif; ?>
 
                 <?php if(!empty($product['secondary_features'])): ?>
                     <div class="key-features mt-5">
-
-                        <h5 class="mb-4">
+                        <h5 class="mb-4 product-titles">
                             Key Features
                         </h5>
-
                         <ul class="feature-list-custom">
-
                             <?php foreach($product['secondary_features'] as $feature): ?>
-                                <li><?= $feature; ?></li>
+                                <li class="product-description"><?= $feature; ?></li>
                             <?php endforeach; ?>
-
                         </ul>
-
                     </div>
                 <?php endif; ?>
-
             </div>
 
             <div class="col-lg-7 d-flex align-items-center justify-content-center">
-
                 <img
                     src="<?= $product['secondary_image']; ?>"
                     alt=""
                     class="product-feature-image">
-
             </div>
-
         </div>
     </div>
 </section>
@@ -229,70 +203,49 @@ $hotspots = [
 <!-- DOORS & WINDOWS -->
 <section class="product-intro py-5">
     <div class="container">
-
         <div class="row align-items-center">
-
             <div class="col-lg-7 d-flex align-items-center justify-content-center">
-
                 <img
                     src="<?= $product['door_window_image']; ?>"
                     alt=""
                     class="product-feature-image">
-
             </div>
-
             <div class="col-lg-5">
-
-                <?php if(!empty($product['door_window_title'])): ?>
-                    <h3 class="product-title mb-4">
-                        <?= $product['door_window_title']; ?>
-                    </h3>
+                 <?php if(!empty($product['door_window_title'])): ?>
+                    <div class="headline-wrap">
+                        <h3 class="product-titles reveal-line">
+                            <?= nl2br($product['door_window_title']); ?>
+                        </h3>
+                    </div>
                 <?php endif; ?>
 
                 <?php if(!empty($product['door_features'])): ?>
-
                     <div class="key-features mb-4">
-
-                        <h5 class="mb-3">
+                        <h5 class="mb-3 product-sub-titles">
                             <?= $product['door_section_title']; ?>
                         </h5>
-
                         <ul class="feature-list-custom">
-
                             <?php foreach($product['door_features'] as $feature): ?>
-                                <li><?= $feature; ?></li>
+                                <li class="product-description"><?= $feature; ?></li>
                             <?php endforeach; ?>
-
                         </ul>
-
                     </div>
-
                 <?php endif; ?>
 
                 <?php if(!empty($product['window_features'])): ?>
-
                     <div class="key-features">
-
-                        <h5 class="mb-3">
+                        <h5 class="mb-3 product-sub-titles">
                             <?= $product['window_section_title']; ?>
                         </h5>
-
                         <ul class="feature-list-custom">
-
                             <?php foreach($product['window_features'] as $feature): ?>
-                                <li><?= $feature; ?></li>
+                                <li class="product-description"><?= $feature; ?></li>
                             <?php endforeach; ?>
-
                         </ul>
-
                     </div>
-
                 <?php endif; ?>
-
             </div>
-
         </div>
-
     </div>
 </section>
 
@@ -324,6 +277,39 @@ $hotspots = [
   </div>
 </section>
 <script>
+    document.querySelectorAll('.reveal-line').forEach(el => {
+        // Grab only the text content, stripping any stray wrapper tags PHP may add
+        const raw = el.innerHTML
+            .replace(/<div[^>]*>|<\/div>|<span[^>]*>|<\/span>/gi, '')
+            .trim();
+
+        const lines = raw
+            .split(/<br\s*\/?>/i)
+            .map(l => l.trim())
+            .filter(Boolean);
+
+        el.innerHTML = lines.map(line => `
+            <span class="reveal-line-wrap">
+            <span class="reveal-line-inner">${line}</span>
+            </span>
+        `).join('');
+
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target
+                .querySelectorAll('.reveal-line-inner')
+                .forEach((s, i) => {
+                // Extra JS delay as a safety net on top of CSS delay
+                setTimeout(() => s.classList.add('visible'), i * 120);
+                });
+            io.unobserve(entry.target);
+            });
+        }, { threshold: 0.2 });
+
+        io.observe(el);
+        });
+
     (function () {
         const wrapper    = document.querySelector('.diagram-scroll-wrapper');
         const rightPanel = document.querySelector('.diagram-right');

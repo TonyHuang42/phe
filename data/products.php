@@ -11,8 +11,7 @@ $products = [
 
         // Section 1
         'overview_title' => 'Luxwood Panel',
-        'overview_description' => 'The Luxwood Wall Panel is the core structural component of the PHE building system,
-            used for both wall and floor applications across all modular structures. ',
+        'overview_description' => 'The Luxwood Wall Panel is the core structural component of the PHE building system, used for both wall and floor applications across all modular structures. ',
         'overview_image' => 'img/building-material/panel/img_1.jpg',
 
         'overview_features' => [
@@ -23,16 +22,14 @@ $products = [
         ],
 
         'overview_note_title' => 'Why It Matters',
-        'overview_note_description' => 'The panel system eliminates the need for traditional framing, enabling faster
-            construction while maintaining consistent structural performance.',
+        'overview_note_description' => 'The panel system eliminates the need for traditional framing, enabling faster construction while maintaining consistent structural performance.',
 
         // Section 2
         'profile_image' => 'img/building-material/panel/profile.png',
 
         // Section 3
         'secondary_title' => 'Polex Board & Internal Sheets',
-        'secondary_description' => 'Interior and structural support materials designed to complement the Luxwood system,
-            providing additional flexibility in construction and finishing.',
+        'secondary_description' => 'Interior and structural support materials designed to complement the Luxwood system, providing additional flexibility in construction and finishing.',
         'secondary_image' => 'img/building-material/panel/sub_fitted.webp',
 
         'secondary_features' => [
@@ -79,8 +76,7 @@ $products = [
       
         // Section 1
         'overview_title' => 'Roofing System',
-        'overview_description' => 'Designed for durability and performance, the Luxwood roofing system provides reliable
-            protection across diverse environments',
+        'overview_description' => 'Designed for durability and performance, the Luxwood roofing system provides reliable protection across diverse environments',
         'overview_image' => 'img/building-material/roof/img_2.jpg',
 
         'overview_features' => [
@@ -99,8 +95,7 @@ $products = [
 
         // Section 1
         'overview_title' => 'Decking',
-        'overview_description' => 'A durable and low-maintenance outdoor solution designed to replicate the look of
-            natural wood while offering superior performance.',
+        'overview_description' => 'A durable and low-maintenance outdoor solution designed to replicate the look of natural wood while offering superior performance.',
         'overview_image' => 'img/building-material/deck/img_1.jpg',
 
         'overview_features' => [
@@ -136,8 +131,7 @@ $products = [
 
         // Section 1
         'overview_title' => 'Screw Piles',
-        'overview_description' => 'A fast and efficient alternative to traditional concrete foundations, screw piles provide
-            strong structural support with minimal site disruption. ',
+        'overview_description' => 'A fast and efficient alternative to traditional concrete foundations, screw piles provide strong structural support with minimal site disruption. ',
         'overview_image' => 'img/building-material/screw/img_1.png',
 
         'overview_features' => [
@@ -176,7 +170,7 @@ $products = [
 
         'overview_applications_title' => 'Windows',
         'overview_applications' =>  [
-             'Sourced from outside supplier in Plastic or Aluminium',
+            'Sourced from outside supplier in Plastic or Aluminium',
             'Good heat insulation performance',
             'Excellent air proof and waterproof property',
             'Window pane is Argon filled double-glazed to improve heat and sound insulations of entire...',
