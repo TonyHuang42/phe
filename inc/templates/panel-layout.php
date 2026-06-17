@@ -277,37 +277,42 @@ $hotspots = [
   </div>
 </section>
 <script>
-    document.querySelectorAll('.reveal-line').forEach(el => {
-        // Grab only the text content, stripping any stray wrapper tags PHP may add
-        const raw = el.innerHTML
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.product-titles.reveal-line').forEach(el => {
+            const raw = el.innerHTML
             .replace(/<div[^>]*>|<\/div>|<span[^>]*>|<\/span>/gi, '')
             .trim();
 
-        const lines = raw
+            const lines = raw
             .split(/<br\s*\/?>/i)
-            .map(l => l.trim())
+            .map(line => line.trim())
             .filter(Boolean);
 
-        el.innerHTML = lines.map(line => `
+            el.innerHTML = lines.map(line => `
             <span class="reveal-line-wrap">
-            <span class="reveal-line-inner">${line}</span>
+                <span class="reveal-line-inner">${line}</span>
             </span>
-        `).join('');
+            `).join('');
 
-        const io = new IntersectionObserver(entries => {
+            const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target
-                .querySelectorAll('.reveal-line-inner')
-                .forEach((s, i) => {
-                // Extra JS delay as a safety net on top of CSS delay
-                setTimeout(() => s.classList.add('visible'), i * 120);
-                });
-            io.unobserve(entry.target);
-            });
-        }, { threshold: 0.2 });
+                if (!entry.isIntersecting) return;
 
-        io.observe(el);
+                entry.target
+                .querySelectorAll('.reveal-line-inner')
+                .forEach((line, index) => {
+                    const delay = index === 0 ? 0 : 150 + (index * 120);
+                    setTimeout(() => line.classList.add('visible'), delay);
+                });
+                observer.unobserve(entry.target);
+            });
+            }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+            });
+            observer.observe(el);
+        });
+
         });
 
     (function () {
@@ -349,34 +354,27 @@ $hotspots = [
         });
     });
 
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        const bannerBg = document.querySelector('.product-banner-bg');
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            bannerBg.style.transform =
+                `translate3d(0, ${scrolled * 0.25}px, 0)`;
+            requestAnimationFrame(updateParallax);
+        }
+        requestAnimationFrame(updateParallax);  
 
- const bannerBg = document.querySelector('.product-banner-bg');
+        // Scroll reveal (fade + slide in from left/right)
+        const revealEls = document.querySelectorAll('.scroll-reveal');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function(el) { observer.observe(el); });
 
-function updateParallax() {
-    const scrolled = window.pageYOffset;
-
-    bannerBg.style.transform =
-        `translate3d(0, ${scrolled * 0.25}px, 0)`;
-
-    requestAnimationFrame(updateParallax);
-}
-
-requestAnimationFrame(updateParallax);  
-
-
-
-  // Scroll reveal (fade + slide in from left/right)
-  const revealEls = document.querySelectorAll('.scroll-reveal');
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
     });
-  }, { threshold: 0.15 });
-  revealEls.forEach(function(el) { observer.observe(el); });
-
-});
 </script>

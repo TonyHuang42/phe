@@ -136,34 +136,83 @@ if (
 </section>
 <?php endif; ?>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.reveal-line').forEach(el => {
-            const raw = el.innerHTML.trim();
-            const lines = raw
-                .split(/<br\s*\/?>/i)
-                .map(line => line.trim())
-                .filter(Boolean);
-            el.innerHTML = lines.map(line => `
-                <span class="reveal-line-wrap">
-                    <span class="reveal-line-inner">${line}</span>
-                </span>
-            `).join('');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target
-                        .querySelectorAll('.reveal-line-inner')
-                        .forEach((line, index) => {
-                            setTimeout(() => {
-                                line.classList.add('visible');
-                            }, index * 150);
-                        });
-                    observer.unobserve(entry.target);
-                });
-            }, {
-                threshold: 0.2
-            });
-            observer.observe(el);
-        });
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.product-titles.reveal-line').forEach(el => {
+    // Clean out any stray div/span wrappers PHP may have added
+    const raw = el.innerHTML
+      .replace(/<div[^>]*>|<\/div>|<span[^>]*>|<\/span>/gi, '')
+      .trim();
+
+    const lines = raw
+      .split(/<br\s*\/?>/i)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    el.innerHTML = lines.map(line => `
+      <span class="reveal-line-wrap">
+        <span class="reveal-line-inner">${line}</span>
+      </span>
+    `).join('');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target
+          .querySelectorAll('.reveal-line-inner')
+          .forEach((line, index) => {
+            const delay = index === 0 ? 0 : 150 + (index * 120);
+            setTimeout(() => line.classList.add('visible'), delay);
+          });
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
     });
+    observer.observe(el);
+  });
+
+});
 </script>
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.reveal-line').forEach(el => {
+    const raw = el.innerHTML
+      .replace(/<div[^>]*>|<\/div>|<span[^>]*>|<\/span>/gi, '')
+      .trim();
+
+    const lines = raw
+      .split(/<br\s*\/?>/i)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    el.innerHTML = lines.map(line => `
+      <span class="reveal-line-wrap">
+        <span class="reveal-line-inner">${line}</span>
+      </span>
+    `).join('');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target
+          .querySelectorAll('.reveal-line-inner')
+          .forEach((line, index) => {
+            // Exponential stagger — first lines come in fast, later ones slow down
+            const delay = index === 0 ? 0 : 80 + (index * 60);
+            setTimeout(() => line.classList.add('visible'), delay);
+          });
+
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.15,       // trigger slightly earlier
+      rootMargin: '0px 0px -40px 0px'  // fires 40px before it hits viewport bottom
+    });
+
+    observer.observe(el);
+  });
+});
+</script> -->
