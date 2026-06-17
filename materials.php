@@ -11,6 +11,7 @@ include 'inc/header.php';
 <link rel="stylesheet" href="css/materials.css">
 
 <main class="materials-page">
+    
     <!-- Hero Section -->
     <section class="home-hero-section">
         <div class="hero-section-bg">

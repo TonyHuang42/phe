@@ -516,7 +516,6 @@
     width:auto;
     max-width:100%;
     object-fit:contain;
-    /* border-radius:12px; */
     display:block;
 }
 
@@ -603,7 +602,7 @@
 
 .home-hero-section {
     position: relative;
-    height: 200vh; /* or more */
+    /* height: 200vh;  */
 }
 
 .product-banner-bg {
