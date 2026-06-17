@@ -39,7 +39,7 @@ include 'inc/header.php';
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="intro-content">
-                        <h2 class="product-titles slide-right">
+                        <h2 class="product-titles fade-up-content">
                             BUILD FASATER, HIGHER QUALITY AND WITH LESS 
                             WASTE, WHEREVER YOU WANT.                             
                         </h2>
@@ -108,13 +108,13 @@ include 'inc/header.php';
                  
             <div class="col-lg-5 sticky-column">
                     <div class="sticky-content">
-                        <h5 class="slide-right product-titles">
+                        <h5 class="product-titles fade-up-content">
                             We provide a complete portfolio of building system
                             solutions—from foundations and wall panels to decking
                             and roofing—engineered for seamless integration and
                             construction efficiency.
                         </h5>   
-                        <p class="slide-right">
+                        <p class="">
                             We offer a wide spectum of bespoke door solutions 
                             where timeless design meets technical precision.     
                         </p>
@@ -191,7 +191,7 @@ include 'inc/header.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <h3 class="product-titles">Designed to Work Together</h3>
+                    <h3 class="product-titles fade-up-content">Designed to Work Together</h3>
                 </div>
                 <div class="col-lg-7">
                     <p>
