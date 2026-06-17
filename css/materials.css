@@ -516,7 +516,7 @@
     width:auto;
     max-width:100%;
     object-fit:contain;
-    border-radius:12px;
+    /* border-radius:12px; */
     display:block;
 }
 
