@@ -11,7 +11,6 @@ include 'inc/header.php';
 <link rel="stylesheet" href="css/materials.css">
 
 <main class="materials-page">
-    
     <!-- Hero Section -->
     <section class="home-hero-section">
         <div class="hero-section-bg">
@@ -19,7 +18,6 @@ include 'inc/header.php';
                 alt="Building Materials"
                 class="hero-section-bg-img">
         </div>
-
         <div class="building-system-hero-section-wrap">
             <div class="container">
                 <div class="row align-items-end">
@@ -41,7 +39,7 @@ include 'inc/header.php';
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="intro-content">
-                        <h2 class="intro-title slide-right">
+                        <h2 class="product-titles slide-right">
                             BUILD FASATER, HIGHER QUALITY AND WITH LESS 
                             WASTE, WHEREVER YOU WANT.                             
                         </h2>
@@ -110,16 +108,16 @@ include 'inc/header.php';
                  
             <div class="col-lg-5 sticky-column">
                     <div class="sticky-content">
-                        <h5 class="slide-right">
+                        <h5 class="slide-right product-titles">
                             We provide a complete portfolio of building system
                             solutions—from foundations and wall panels to decking
                             and roofing—engineered for seamless integration and
                             construction efficiency.
                         </h5>   
-                        <h5 class="slide-right">
+                        <p class="slide-right">
                             We offer a wide spectum of bespoke door solutions 
                             where timeless design meets technical precision.     
-                        </h5>
+                        </p>
                     </div>
                 </div>
 
@@ -193,7 +191,7 @@ include 'inc/header.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <h3>Designed to Work Together</h3>
+                    <h3 class="product-titles">Designed to Work Together</h3>
                 </div>
                 <div class="col-lg-7">
                     <p>
@@ -213,7 +211,7 @@ include 'inc/header.php';
     <!-- FINAL CTA -->
     <section class="materials-cta">
         <div class="container text-center">
-            <h3>Build with Confidence Using PHE Materials</h3>
+            <h3 class="product-titles">Build with Confidence Using PHE Materials</h3>
             <p class="lead">
                 Discover how our engineered materials can support faster,
                 more efficient, and sustainable construction.
