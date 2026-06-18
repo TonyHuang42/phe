@@ -400,7 +400,8 @@ include 'inc/header.php';
 .read-more-btn {
     display: block;
     width: 75%;
-    padding: 14px;
+    /* padding: 14px; */
+    margin:0px;
     border-radius: 50px;
     border: 1.5px solid #ccc;
     background: transparent;
@@ -413,8 +414,8 @@ include 'inc/header.php';
 }
 
 .read-more-btn:hover {
-    border-color: #1a1a1a;
-    background: #e8e4dc;
+    background: #1a1a1a;
+    color: #fff;
 }
 
 .city-visual-side {
@@ -789,7 +790,12 @@ include 'inc/header.php';
                             200-3071 Number 5 Road,<br>Richmond,<br>British Columbia, Canada
                         </div>
                     </div>
-                    <button class="read-more-btn">Read more</button>
+                    <button class="contact-btn read-more-btn">
+                        <span class="btn-text">
+                            <span>Read more</span>
+                            <span>Read more</span>
+                        </span>
+                    </button>
                 </div>
 
                 <div class="city-visual-side">
@@ -832,9 +838,6 @@ include 'inc/header.php';
                     operations are carbon neutral—because nothing is more beautiful
                     than a future we can all be proud of.
                 </div>
-                <!-- <a href="#" class="future-btn">
-                    Find out how we did it
-                </a> -->
                 <button class="contact-btn future-btn">
                     <span class="btn-text">
                         <span>Find out how we did it</span>
