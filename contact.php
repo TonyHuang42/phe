@@ -559,19 +559,9 @@ include 'inc/header.php';
 
 .future-btn{
     min-width:300px;
-    height:60px;
-    border-radius:999px;
-    background:#fff;
-    color:#222;
-    text-decoration:none;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.future-btn:hover{
-    color:#fff;
+    width: 300px;
+    color:#5d5b5a;
+    background-color: #fff;
 }
 
 @media(max-width:768px){
@@ -842,9 +832,15 @@ include 'inc/header.php';
                     operations are carbon neutral—because nothing is more beautiful
                     than a future we can all be proud of.
                 </div>
-                <a href="#" class="future-btn">
+                <!-- <a href="#" class="future-btn">
                     Find out how we did it
-                </a>
+                </a> -->
+                <button class="contact-btn future-btn">
+                    <span class="btn-text">
+                        <span>Find out how we did it</span>
+                        <span>Find out how we did it</span>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
