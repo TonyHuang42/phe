@@ -437,21 +437,60 @@ include 'inc/header.php';
     backdrop-filter: blur(4px);
 }
 
-.ptab {
-    padding: 8px 22px;
-    border-radius: 50px;
-    font-size: 14px;
-    cursor: pointer;
-    color: rgba(255,255,255,0.6);
-    border: none;
-    background: transparent;
-    transition: all 0.15s;
-    font-weight: 500;
+.ptab{
+    position:relative;
+    overflow:hidden;
+    padding:8px 22px;
+    border-radius:50px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:rgba(255,255,255,.6);
+    transition:all .3s ease;
+    font-weight:500;
 }
 
-.ptab.active {
-    background: #fff;
-    color: #1a1a1a;
+.ptab.active{
+    background:#fff;
+    color:#1a1a1a;
+}
+
+.ptab-text{
+    position:relative;
+    display:block;
+    height:20px;
+    overflow:hidden;
+}
+
+.ptab-text span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:20px;
+    white-space:nowrap;
+    transition:transform .35s ease;
+}
+
+.ptab-text span:first-child{
+    transform:translateY(0);
+}
+
+.ptab-text span:last-child{
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
+}
+
+/* Hover animation */
+.ptab:hover .ptab-text span:first-child,
+.ptab.active .ptab-text span:first-child{
+    transform:translateY(-100%);
+}
+
+.ptab:hover .ptab-text span:last-child,
+.ptab.active .ptab-text span:last-child{
+    transform:translateY(-100%);
 }
 
 .visual-photo,
@@ -800,8 +839,19 @@ include 'inc/header.php';
 
                 <div class="city-visual-side">
                     <div class="photo-map-toggle">
-                        <button class="ptab active" id="photoTab" onclick="switchView('photo')">Photo</button>
-                        <button class="ptab" id="mapTab" onclick="switchView('map')">Map</button>
+                        <button class="ptab active" id="photoTab" onclick="switchView('photo')">
+                            <span class="ptab-text">
+                                <span>Photo</span>
+                                <span>Photo</span>
+                            </span>
+                        </button>
+
+                        <button class="ptab" id="mapTab" onclick="switchView('map')">
+                            <span class="ptab-text">
+                                <span>Map</span>
+                                <span>Map</span>
+                            </span>
+                        </button>
                     </div>
                     <div class="visual-photo" id="visualPhoto">
                         <img src="img/contact/show_room1.webp" alt="Dubai showroom" id="showroomPhoto">
@@ -1172,10 +1222,6 @@ include 'inc/header.php';
     })();
 
 
-</script>
-
-<script>
-    
 </script>
 
 <?php include 'inc/footer.php'; ?>
