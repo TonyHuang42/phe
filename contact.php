@@ -310,25 +310,65 @@ include 'inc/header.php';
     flex-shrink: 0;
 }
 
-.city-pill {
-    display: inline-block;
+.city-pill{
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 20px;
     border-radius: 50px;
     border: 1.5px solid #1a1a1a;
     background: #fff;
     font-size: 14px;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all .3s ease;
     margin: 10px 4px 0 0;
     color: #1a1a1a;
 }
 
 .city-pill.active,
-.city-pill:hover {
-    background: #1a1a1a;
-    color: #fff;
+.city-pill:hover{
+    background:#1a1a1a;
+    color:#fff;
 }
 
+.pill-text{
+    position:relative;
+    display:block;
+    height:20px;
+    overflow:hidden;
+}
+
+.pill-text span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:20px;
+    white-space:nowrap;
+    transition:transform .35s ease;
+}
+
+.pill-text span:first-child{
+    transform:translateY(0);
+}
+
+.pill-text span:last-child{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+}
+
+.city-pill:hover .pill-text span:first-child,
+.city-pill.active .pill-text span:first-child{
+    transform:translateY(-100%);
+}
+
+.city-pill:hover .pill-text span:last-child,
+.city-pill.active .pill-text span:last-child{
+    transform:translateY(-100%);
+}
 
 /* ─── SECTION 3: City Detail + Photo/Map ─── */
 
@@ -742,7 +782,10 @@ include 'inc/header.php';
 
             <div class="city-filter">
                 <button class="city-trigger" id="cityTrigger">
-                    Canada
+                    <span class="pill-text">
+                        <span>Canada</span>
+                        <span>Canada</span>
+                    </span>
                     <span class="city-dash">—</span>
                 </button>
                 <div class="city-dropdown" id="cityDropdown">
@@ -750,7 +793,6 @@ include 'inc/header.php';
                         <span class="city-dot"></span>
                         Select the Country
                     </p>    
-
                     <button class="city-pill active"
                         data-city="Canada"
                         data-lat="49.1709"
@@ -760,7 +802,11 @@ include 'inc/header.php';
                         data-addr="200-3071 Number 5 Road<br>Richmond<br>British Columbia, Canada"
                         data-map="https://maps.google.com/maps?q=Richmond+British+Columbia+Canada&output=embed"
                         data-photo="img/contact/show_room1.webp">
-                        Canada
+                        
+                        <span class="pill-text">
+                            <span>Canada</span>
+                            <span>Canada</span>
+                        </span>
                     </button>
 
                     <button class="city-pill"
@@ -772,7 +818,10 @@ include 'inc/header.php';
                         data-addr="33 Harwood Street<br>Hamilton Central<br>Hamilton, New Zealand"
                         data-map="https://maps.google.com/maps?q=Hamilton+New+Zealand&output=embed"
                         data-photo="img/contact/show_room2.webp">
-                        New Zealand
+                        <span class="pill-text">
+                            <span>New Zealand</span>
+                            <span>New Zealand</span>
+                        </span>
                     </button>
 
                     <button class="city-pill"
@@ -784,7 +833,10 @@ include 'inc/header.php';
                         data-addr="Unit 10 Montague Square<br>Montague Gardens<br>Cape Town, South Africa"
                         data-map="https://maps.google.com/maps?q=Cape+Town+South+Africa&output=embed"
                         data-photo="img/contact/show_room3.webp">
-                        South Africa
+                        <span class="pill-text">
+                            <span>South Africa</span>
+                            <span>South Africa</span>
+                        </span>
                     </button>
 
                     <button class="city-pill"
@@ -796,9 +848,11 @@ include 'inc/header.php';
                         data-addr="7 Huaquan First Road<br>Jimo City<br>Qingdao, China"
                         data-map="https://maps.google.com/maps?q=Qingdao+China&output=embed"
                         data-photo="img/contact/show_room1.webp">
-                        China
+                        <span class="pill-text">
+                            <span>China</span>
+                            <span>China</span>
+                        </span>
                     </button>
-
                 </div>
             </div>
         </div>
@@ -1094,9 +1148,13 @@ include 'inc/header.php';
             this.classList.add('active');
 
             // Update button text
-            cityTrigger.innerHTML =
-                this.dataset.city +
-                '<span class="city-dash">—</span>';
+           cityTrigger.innerHTML = `
+                <span class="pill-text">
+                    <span>${this.dataset.city}</span>
+                    <span>${this.dataset.city}</span>
+                </span>
+                <span class="city-dash">—</span>
+            `;
 
             // Update section 3 content
             document.getElementById('detailCityName').textContent =
