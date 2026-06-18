@@ -728,7 +728,6 @@ include 'inc/header.php';
                         data-phone="+1 778 297 7108"
                         data-email="info@luxwood.com"
                         data-addr="200-3071 Number 5 Road<br>Richmond<br>British Columbia, Canada"
-                        data-hours="Mon – Fri: 9am – 5pm"
                         data-map="https://maps.google.com/maps?q=Richmond+British+Columbia+Canada&output=embed"
                         data-photo="img/contact/show_room1.webp">
                         Canada
@@ -741,7 +740,6 @@ include 'inc/header.php';
                         data-phone="+64 07 858 3628"
                         data-email="nz@luxwood.com"
                         data-addr="33 Harwood Street<br>Hamilton Central<br>Hamilton, New Zealand"
-                        data-hours="Mon – Fri: 9am – 5pm"
                         data-map="https://maps.google.com/maps?q=Hamilton+New+Zealand&output=embed"
                         data-photo="img/contact/show_room2.webp">
                         New Zealand
@@ -754,7 +752,6 @@ include 'inc/header.php';
                         data-phone="+27 21 555 3226"
                         data-email="sa@luxwood.com"
                         data-addr="Unit 10 Montague Square<br>Montague Gardens<br>Cape Town, South Africa"
-                        data-hours="Mon – Fri: 9am – 5pm"
                         data-map="https://maps.google.com/maps?q=Cape+Town+South+Africa&output=embed"
                         data-photo="img/contact/show_room3.webp">
                         South Africa
@@ -767,7 +764,6 @@ include 'inc/header.php';
                         data-phone="+86 532 0000 0000"
                         data-email="china@luxwood.com"
                         data-addr="7 Huaquan First Road<br>Jimo City<br>Qingdao, China"
-                        data-hours="Mon – Fri: 9am – 5pm"
                         data-map="https://maps.google.com/maps?q=Qingdao+China&output=embed"
                         data-photo="img/contact/show_room1.webp">
                         China
@@ -1104,40 +1100,6 @@ include 'inc/header.php';
         });
     });
 
-    function moveShowroomMap(lat, lng){
-            let zoom = showroomMap.getZoom();
-            const zoomOut = setInterval(() => {
-                if(zoom <= 4){
-                    clearInterval(zoomOut);
-                    showroomMap.panTo({
-                        lat: lat,
-                        lng: lng
-                    });
-
-                    showroomMarker.setPosition({
-                        lat: lat,
-                        lng: lng
-                    });
-
-                    showroomMarker.setAnimation(
-                        google.maps.Animation.DROP
-                    );
-                    let z = 4;
-                    const zoomIn = setInterval(() => {
-                        if(z >= 15){
-                            clearInterval(zoomIn);
-                            return;
-                        }
-                        z++;
-                        showroomMap.setZoom(z);
-                    },100);
-                    return;
-                }
-
-                zoom--;
-                showroomMap.setZoom(zoom);
-            },100);
-        }
 
     function switchView(type) {
 
