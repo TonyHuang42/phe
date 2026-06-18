@@ -424,14 +424,12 @@ function initMap() {
 function goToLocation(key) {
     const loc = LOCATIONS[key];
     if (!map || !marker || !loc) return;
-
     let zoom = map.getZoom();
 
     // Smooth zoom out
     const zoomOut = setInterval(() => {
         if (zoom <= 3) {
             clearInterval(zoomOut);
-
             map.panTo({
                 lat: loc.lat,
                 lng: loc.lng
@@ -443,30 +441,29 @@ function goToLocation(key) {
             });
 
             marker.setAnimation(google.maps.Animation.DROP);
-
             setTimeout(() => {
                 let z = 3;
-
                 const zoomIn = setInterval(() => {
                     if (z >= loc.zoom) {
                         clearInterval(zoomIn);
                         return;
                     }
-
                     z++;
                     map.setZoom(z);
                 }, 120);
-
             }, 400);
-
             return;
         }
-
         zoom--;
         map.setZoom(zoom);
-
     }, 120);
+
+     google.maps.event.addListenerOnce(map, 'idle', () => {
+        map.setZoom(loc.zoom);
+        marker.setAnimation(google.maps.Animation.DROP);
+    });
 }
+
 
 // Tab clicks
 document.querySelectorAll('.ctab').forEach(function(btn) {
